@@ -9,7 +9,7 @@ from django.apps import apps
 from celery import Celery
 
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "moim.settings.local")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "moim.settings.local_base")
 
 app = Celery('moim_tasks')
 app.config_from_object('django.conf:settings', namespace='CELERY')
