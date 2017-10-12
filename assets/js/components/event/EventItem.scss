@@ -1,0 +1,62 @@
+$theme-color-black: #222222;
+$theme-color-purple: #4B2E83;
+$theme-color-lightgrey: #CCCCCC;
+
+.event {
+  height: 100%;
+  .eventWrapper {
+    height: 100%;
+    .eventContent {
+      margin: 0;
+      padding: 0;
+      border: $theme-color-lightgrey;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 2px;
+      width: 234px;
+      .eventImage {
+        height: 240px;
+        width: 234px;
+        background-color: grey;
+      }
+
+      .eventText {
+        padding: 10px;
+        .eventTitle {
+          margin: 0;
+          color: $theme-color-black;
+        }
+
+        .eventHost {
+          display: flex;
+          width: 100%;
+          .from {
+            h4 {
+              font-size: 14px;
+              margin: 0 5px 0 0;
+            }
+          }
+          .groupLink {
+            h4 {
+              font-size: 14px;
+              margin: 0;
+              color: $theme-color-purple;
+            }
+          }
+        }
+
+        .eventDate {
+          margin: 10px 0 0 0;
+          font-size: 14px;
+          font-weight: 100;
+        }
+
+        .eventLoc {
+          margin: 0;
+        }
+
+      }
+    }
+  }
+
+}

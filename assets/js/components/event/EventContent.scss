@@ -1,0 +1,18 @@
+.eventPageWrapper {
+  .eventPageContainer {
+    display: flex;
+    .eventPageImage {
+      height: 600px;
+      width: 500px;
+      background-color: grey;
+    }
+    .info {
+      margin-left: 50px;
+      width: 750px;
+      height: 100%;
+      .description {
+
+      }
+    }
+  }
+}
