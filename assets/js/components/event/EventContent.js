@@ -1,5 +1,4 @@
 import React from 'react';
-import { styles } from './EventContent.scss';
 
 /*
 */
@@ -32,12 +31,9 @@ export class EventContent extends React.Component {
               </div>
             </div>
             <div className="description">
-              <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut, fresh coconut,
-                trust me. The key to more success is to have a lot of pillows. Find peace, life is like a water fall,
-                you’ve gotta flow. Another one. The key to more success is to get a massage once a week, very important,
-                major key, cloth talk. It’s on you how you want to live your life. Everyone has a choice. I pick my choice,
-                squeaky clean. In life there will be road blocks but we will over come it. The key to more success is
-                to get a massage once a week, very important, major key, cloth talk.</p>
+              <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
+                fresh coconut, trust me. The key to more success is to
+                have alot of pillows. Find peace, life is like a waterfall,</p>
             </div>
           </div>
 

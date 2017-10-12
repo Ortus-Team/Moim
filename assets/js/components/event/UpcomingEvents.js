@@ -1,6 +1,5 @@
 import React from 'react';
 // import { EventItem } from 'components/EventItem/EventItem';
-import { styles } from './UpcomingEvents.scss';
 import { EventItem } from './EventItem';
 /*
 NavBar (On all pages)
