@@ -18,7 +18,7 @@ test:
     # pre-commit additional checks
     - SKIP=prospector,isort pre-commit run --all-files
     - >
-        DJANGO_SETTINGS_MODULE=moim.settings.local_base
+        DJANGO_SETTINGS_MODULE=moim.settings.production
             python manage.py has_missing_migrations --ignore authtools;
     - >
         SECRET_KEY=$(python -c 'import uuid; print(uuid.uuid4().hex + uuid.uuid4().hex)')

@@ -6,6 +6,7 @@ venv
 /staticfiles/*
 /mediafiles/*
 __pycache__/
+.env
 
 # coverage result
 .coverage
@@ -24,10 +25,10 @@ npm-debug.log
 .DS_Store
 
 # Webpack
-/assets/bundles/*
-/assets/webpack_bundles/*
-/webpack-stats.json
-/jquery-webpack-stats.json
+#/assets/bundles/*
+#/assets/webpack_bundles/*
+#/webpack-stats.json
+#/jquery-webpack-stats.json
 
 # Sass
 .sass-cache
