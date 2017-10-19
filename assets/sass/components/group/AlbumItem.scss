@@ -1,0 +1,40 @@
+$theme-color-black: #222222;
+$theme-color-purple: #4B2E83;
+$theme-color-lightgrey: #CCCCCC;
+
+.album {
+  height: 100%;
+  .albumWrapper {
+    height: 100%;
+    .albumContent {
+      margin: 0;
+      padding: 0;
+      width: auto;
+
+      .albumImage {
+        height: 200px;
+        width: 300px;
+        background-color: grey;
+        border-radius: 2px;
+      }
+
+      .albumText {
+        text-align: center;
+        margin-top: 10px;
+        .albumName {
+          margin: 0;
+          color: $theme-color-black;
+          font-weight: 300;
+        }
+
+        .albumTitle {
+          margin: 5px 0 0 0;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+      }
+    }
+  }
+
+}

@@ -1,15 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { hashHistory, Route, Router } from 'react-router';
-// import { Home } from './modules/Home/Home';
-// import { EventPage } from './modules/EventPage/EventPage';
-// import { EventsDirectory } from './modules/EventsDirectory/EventsDirectory';
-// import { GroupPage } from './modules/GroupPage/GroupPage';
-// import { GroupPage2 } from './modules/GroupPage2/GroupPage2';
-// import { GroupsDirectory } from './modules/GroupsDirectory/GroupsDirectory';
 import configureStore from './configureStore';
-import HomePageContainer from './containers/HomePageContainer';
+
+// import TestPageContainer from './containers/TestPageContainer';
+import { HomePageContainer } from './containers/HomePageContainer';
 import { EventPageContainer } from './containers/EventPageContainer';
+import { GroupsPageContainer } from './containers/GroupsPageContainer';
+import { EventsPageContainer } from './containers/EventsPageContainer';
+import { GroupPageContainer } from './containers/GroupPageContainer';
 
 const store = configureStore();
 
@@ -19,8 +18,10 @@ class Root extends React.Component {
       <Provider store={store}>
         <Router history={hashHistory}>
           <Route path="/" component={HomePageContainer} />
-          <Route path="/events" component={EventPageContainer} />
-
+          <Route path="/event" component={EventPageContainer} />
+          <Route path="/groups" component={GroupsPageContainer} />
+          <Route path="/events" component={EventsPageContainer} />
+          <Route path="/group" component={GroupPageContainer} />
         </Router>
       </Provider>
     );

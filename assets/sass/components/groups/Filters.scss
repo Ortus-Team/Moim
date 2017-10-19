@@ -1,0 +1,94 @@
+$theme-color-white: #fff;
+$theme-color-purple: #4B2E83;
+$theme-color-blue: #34D9E9;
+$filters-height: 40px;
+$theme-color-lightgrey: #CCCCCC;
+
+.dirFiltersWrapper {
+  position: relative;
+  height: $filters-height;
+  width: 100%;
+  z-index: 999;
+  color: #555555;
+
+  .text {
+    margin-top: 10px;
+  }
+  .dirFiltersContainer {
+    height: $filters-height;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: $theme-color-white;
+    padding: 15px 20px;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+    }
+    
+    .dropbtn {
+      border: $theme-color-lightgrey;
+      border-style: solid;
+      border-width: .5px;
+      border-radius: 3px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 10px 15px;
+      background-color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
+
+    .dirFilters {
+      height: 100%;
+      display: flex;
+
+      .dirCatDrop {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .dirSizDrop {
+        margin-right: 20px;
+      }
+    }
+
+    .dirSort {
+      display: flex;
+      .dirSortDrop {
+        margin-left: 20px;
+      }
+    }
+
+
+  }
+}
