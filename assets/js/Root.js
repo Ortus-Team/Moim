@@ -5,6 +5,7 @@ import configureStore from './configureStore';
 
 // import TestPageContainer from './containers/TestPageContainer';
 import { HomePageContainer } from './containers/HomePageContainer';
+import { DashboardPageContainer } from './containers/DashboardPageContainer';
 import { EventPageContainer } from './containers/EventPageContainer';
 import { GroupsPageContainer } from './containers/GroupsPageContainer';
 import { EventsPageContainer } from './containers/EventsPageContainer';
@@ -24,6 +25,7 @@ class Root extends React.Component {
       <Provider store={store}>
         <Router history={hashHistory}>
           <Route path="/" component={HomePageContainer} />
+          <Route path="/dashboard" component={DashboardPageContainer} />
           <Route path="/event" component={EventPageContainer} />
           <Route path="/groups" component={GroupsPageContainer} />
           <Route path="/events" component={EventsPageContainer} />

@@ -1,0 +1,58 @@
+.dashboardPageWrapper {
+    padding: 0;
+    margin: 0;
+    .dashboardPageContent {
+        padding: 60px 0 120px 0;
+        margin: 0 auto;
+        width: 1250px;
+        display: flex;
+        justify-content: space-between;
+
+        .dashboardProfile {
+            width: 250px;
+            height: 500px;
+            border: red 1px solid;
+            padding: 20px;
+
+            .dashboardProfilePic {
+                width: 210px;
+                height: 210px;
+                border-radius: 100%;
+                background-color: lightgrey;
+            }
+
+            .dashboardProfileText {
+                width: auto;
+                margin: 15px auto 0 auto;
+                border: orange 1px solid;
+                text-align: center;
+
+            }
+        }
+
+        .dashboardMainContent {
+            width: 710px;
+            height: 500px;
+            border: red 1px solid;
+
+            .dashboardMainContentNav {
+                display: flex;
+                justify-content: space-between;
+                .dashboardNavLink {
+                    width: 230px;
+                    height: 50px;
+                    line-height: 50px;
+                    border: orange 1px solid;
+                    text-align: center;
+                }
+            }
+        }
+
+        .dashboardSideContent {
+            width: 250px;
+            height: 500px;
+            border: red 1px solid;
+        }
+    }
+}
+

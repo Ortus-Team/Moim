@@ -27,7 +27,7 @@ export class Navbar extends React.Component {
 
             {/* Account */}
             <div className="account">
-              <div className="accountLink" />
+              <Link key='dashboard' to='/dashboard'><div className="accountLink" /></Link>
             </div>
 
             {/*
