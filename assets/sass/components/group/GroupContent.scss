@@ -1,7 +1,11 @@
 .groupContent {
   height: 100%;
+  
   .groupContentWrapper {
     height: 100%;
+    position: relative;
+    width: 1250px;
+    margin: 0 auto;
     .groupContentContent {
       margin: 40px 0 0 0;
       padding: 0;
@@ -60,8 +64,6 @@
           margin-top: 10px;
 
           .groupUpcomingEvent {
-            height: 100%;
-            width: 100%;
             margin-top: 20px;
           }
         }

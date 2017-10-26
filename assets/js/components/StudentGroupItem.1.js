@@ -8,6 +8,10 @@ export class StudentGroupItem extends React.Component {
             <div className="groupWrapper">
                 <Link key='group' to='/group'>
                     <div className="groupContent">
+                        {/* Cover Image */}
+                        <div className="groupImage">
+                            <img src="#" alt="group_name" />
+                        </div>
 
                         {/* Logo */}
                         <div className="groupLogo">
@@ -16,20 +20,13 @@ export class StudentGroupItem extends React.Component {
 
                         {/* Label */}
                         <div className="groupText">
-                            <h3 className="groupItemName">Name of Group is long</h3>
+                            <h3>Name of Group</h3>
 
                             {/* Tags */}
                             <div className="groupTags">
                                 <div className="groupCats">
-                                    <div className="groupCat">
-                                        <h4 className="groupCatText">Category</h4>
-                                    </div>
-                                    <div className="groupCat">
-                                        <h4 className="groupCatText">Category</h4>
-                                    </div>
                                 </div>
                                 <div className="groupSize">
-                                    <h4 className="groupSizeText">250 members</h4>
                                 </div>
                             </div>
                         </div>

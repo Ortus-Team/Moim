@@ -1,118 +1,62 @@
-$theme-color-purple: #4B2E83;
-
-.groupHeader2 {
+.groupHeader {
   height: 100%;
-  .groupHeader2Wrapper {
-    height: 100%;
-    .groupHeader2Content {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: #fff;
-      position: relative;
-      z-index: -9;
-      .groupHeader2Image {
-        position: absolute;
-        z-index: -1;
-        height: 200px;
-        width: 100%;
-        background-color: grey;
-        margin: 0;
-      }
+  width: 100%;
+  .groupHeaderContent {
+    position: relative;
+    background-color: pink;
+    height: 440px;
+    width: 100%;
+    z-index: 0;
 
-      .groupHeader2MainContent {
+    .groupHeaderCoverImageWrapper {
+      width: 100%;
+      background-color: lightgrey;
+      position: absolute;
+      height: 440px;
+      z-index: 10;
+      .groupHeaderCoverImage {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .groupHeaderLogoWrapper {
+      z-index: 12;
+      position: absolute;
+      width: 100%;
+      top: 180px;
+      text-align: center;
+      .groupHeaderLogoWidth {
+        position: relative;
         width: 1250px;
         margin: 0 auto;
-        padding-top: 130px;
-        height: auto;
-
-        .groupHeader2Logo {
-          position: absolute;
-          z-index: 1;
+        .groupHeaderLogo {
+          border: #fff 1.5px solid;
+          border-radius: 3px;
           height: 180px;
           width: 180px;
-          
-          border: lightgrey;
-          border-style: solid;
-          background-color: grey;
-          border-width: 1px;
-          border-radius: 100%;
-        }
-
-        .groupHeader2Text {
-          height: auto;
-          margin: 90px 0 0 230px;
-
-          .groupHeader2MainText {
-            width: 100%;
-            color: #212121;
-
-            .groupName {
-              margin: 0;
-              padding: 0;
-              font-weight: 600;
-            }
-
-            .followers {
-              margin: 0;
-              padding: 0;
-              font-weight: 100;
-              font-size: 16px;
-            }
-
-            .membership {
-              margin-top: 10px;
-              button {
-                background-color: #fff;
-                border-color: $theme-color-purple;
-                border-width: 2px;
-                border-style: solid;
-                color: $theme-color-purple;
-                font-weight: 600;
-                padding: 5px 20px;
-                text-align: center;
-                text-decoration: none;
-                display: inline-block;
-                font-size: 15px;
-                border-radius: 2px;
-              }
-
-              .join {
-                margin-right: 15px;
-              }
-            }
-          }
+          background-color: lightgrey;
         }
       }
     }
-    
-    .groupHeader2Menu {
-      width: 100%;
-      border: #ddd;
-      border-style: solid;
-      border-width: 0.5px;
-      margin-top: 30px;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-      
-      .groupHeader2TabsWrapper {
-        display: inline-flex;
-        justify-content: space-between;
-        width: 1250px;
-        height: 100%;
-        align-items: center;
 
-        .groupHeader2Tab {
-          height: 50px;
-          width: 240px;
-          text-align: center;
-          a {
-            text-decoration: none;
-            padding: auto 0;
-            vertical-align: middle;
-            line-height: 50px;
-            color: $theme-color-purple;
-            font-weight: 500;
-          }
+    .groupHeaderTextWrapper {
+      z-index: 11;
+      background-color: #fff;
+      position: absolute;
+      height: 210px;
+      width: 100%;
+      top: 230px;
+      .groupHeaderTextWrapper2 {
+        width: 1250px;
+        margin: 0 auto;
+        position: relative;
+        .groupHeaderText {
+          right: 0;
+          top: 20px;
+          position: absolute;
+          width: 1050px;
+          border: solid red 1px;
         }
       }
     }

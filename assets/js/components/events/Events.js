@@ -5,7 +5,7 @@ import { EventItem } from '../EventItem';
 export class Events extends React.Component {
   render() {
     return (
-      <div className="sectionWrapper">
+      <div className="dirSectionWrapper">
         <div className="topStudentGroups">
           <EventItem />
           <EventItem />

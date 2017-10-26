@@ -4,10 +4,10 @@ export class Filters extends React.Component {
   render() {
     return (
       <div className='dirFiltersWrapper'>
-        <div className='dirFiltersContainer'>
+        <div className='eventsDirFiltersContainer'>
           {/* Filters */}
           <div className='dirFilters'>
-            <div className="dirCatDrop">
+            <div className="dirGridDrop">
               <button className="dropbtn">Grid</button>
               <div className="dropdown-content">
                 <a href="#">Link 1</a>
@@ -15,7 +15,7 @@ export class Filters extends React.Component {
                 <a href="#">Link 3</a>
               </div>
             </div>
-            <div className="dirSizDrop">
+            <div className="dirListDrop">
               <button className="dropbtn">List</button>
               <div className="dropdown-content">
                 <a href="#">Link 1</a>

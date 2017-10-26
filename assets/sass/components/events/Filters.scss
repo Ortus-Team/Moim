@@ -1,11 +1,10 @@
 $theme-color-white: #fff;
 $theme-color-purple: #4B2E83;
 $theme-color-blue: #34D9E9;
-$filters-height: 40px;
+$filters-height: 70px;
 $theme-color-lightgrey: #CCCCCC;
 
 .dirFiltersWrapper {
-  position: relative;
   height: $filters-height;
   width: 100%;
   z-index: 999;
@@ -14,7 +13,7 @@ $theme-color-lightgrey: #CCCCCC;
   .text {
     margin-top: 10px;
   }
-  .dirFiltersContainer {
+  .eventsDirFiltersContainer {
     height: $filters-height;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     background-color: $theme-color-white;
@@ -34,7 +33,7 @@ $theme-color-lightgrey: #CCCCCC;
       border-style: solid;
       border-width: .5px;
       border-radius: 3px;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      // box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
       padding: 10px 15px;
       background-color: white;
       cursor: pointer;
@@ -46,7 +45,7 @@ $theme-color-lightgrey: #CCCCCC;
       position: absolute;
       background-color: #f9f9f9;
       min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      // box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       z-index: 1;
     }
 
@@ -71,13 +70,13 @@ $theme-color-lightgrey: #CCCCCC;
       height: 100%;
       display: flex;
 
-      .dirCatDrop {
+      .dirGridDrop {
         position: relative;
         display: inline-block;
         margin-right: 20px;
       }
 
-      .dirSizDrop {
+      .dirListDrop {
         margin-right: 20px;
       }
     }

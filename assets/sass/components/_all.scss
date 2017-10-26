@@ -3,6 +3,7 @@
 @import 'EventItem';
 @import 'StudentGroupItem';
 @import 'UpcomingEvents';
+@import 'DirectoryHeader'; // events and groups directories
 
 // event
 @import './event/EventContent';
@@ -16,17 +17,16 @@
 @import './home/Category';
 
 // groups (directory)
-@import './groups/DirectoryHeader';
 @import './groups/Filters';
 @import './groups/StudentGroups';
 
 // events (directory)
-@import './events/DirectoryHeader';
 @import './events/Filters';
 @import './events/Events';
 
 // group 
 @import './group/AlbumItem';
+@import './group/GroupContentNav';
 @import './group/GroupContent';
 @import './group/GroupContentEvents';
 @import './group/GroupContentGallery';

@@ -88,7 +88,7 @@ export class Navbar extends React.Component {
           <div className="navbarComponentContainer">
             {/* Logo */}
             <div className="navbarLogo">
-              <Link key='home' to='/'>Logo</Link>
+              <Link key='home' to='/'>moim</Link>
             </div>
 
             {/* Search

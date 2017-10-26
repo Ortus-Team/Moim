@@ -1,9 +1,11 @@
 $theme-color-white: #fff;
 $theme-color-purple: #4B2E83;
 $theme-color-blue: #34D9E9;
-$navbar-height: 80px;
+$navbar-height: 70px;
 
 .moimNav {
+  font-family: 'Karla';
+
   .displayLogin {
     width: 100%;
     height: 100%;
@@ -19,7 +21,8 @@ $navbar-height: 80px;
   }
 
   .navbarComponent {
-    position: fixed;
+    // position: fixed;
+    position: relative;
     height: $navbar-height;
     width: 100%;
     z-index: 999;
@@ -27,7 +30,8 @@ $navbar-height: 80px;
 
     .navbarComponentContainer {
       height: $navbar-height;
-      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      border-bottom: 0.5px solid #CCC;
       background-color: $theme-color-white;
       padding: 20px;
       margin: 0;
@@ -62,7 +66,7 @@ $navbar-height: 80px;
           background-color: $theme-color-blue;
           border: none;
           color: $theme-color-white;
-          padding: 12px 15px;
+          padding: 8px 12px;
           text-align: center;
           text-decoration: none;
           display: inline-block;

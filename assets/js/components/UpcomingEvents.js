@@ -15,7 +15,7 @@ export class UpcomingEvents extends React.Component {
   render() {
     return (
       <div className="sectionWrapper">
-        <h1>More Events</h1>
+        <h1>Upcoming Events</h1>
         <div className="upcomingEvents">
           <EventItem />
           <EventItem />
