@@ -47,7 +47,7 @@
       height: 210px;
       width: 100%;
       top: 230px;
-      .groupHeaderTextWrapper2 {
+      .groupHeaderTextWrapperWidth {
         width: 1250px;
         margin: 0 auto;
         position: relative;
@@ -56,7 +56,37 @@
           top: 20px;
           position: absolute;
           width: 1050px;
-          border: solid red 1px;
+          // border: solid red 1px;
+          display: flex;
+          justify-content: space-between;
+
+          .groupHeaderTextLeft {
+            width: 500px;
+            // border: yellow 1px solid;
+            .groupHeaderButtonsWrapper {
+              /* display: flex;
+              justify-content: space-between; */
+              width: 200px;
+              margin-top: 15px;
+              a.groupHeaderButton {
+                background-color: lightgrey;
+                border: 1px solid grey;
+                border-radius: 1px;
+                padding: 4px 12px;
+                font-size: 1em;
+                color: darkslategray;
+                margin-right: 10px;
+              }
+            }
+          }
+
+          /* .groupHeaderTextRight {
+            width: 200px;
+            border: green 1px solid;
+            .groupHeaderSettings {
+              background-color: orange;
+            }
+          } */
         }
       }
     }

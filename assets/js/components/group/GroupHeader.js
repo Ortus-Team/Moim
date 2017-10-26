@@ -7,7 +7,7 @@ export class GroupHeader extends React.Component {
             <div className="groupHeaderContent">
                 <div className="groupHeaderCoverImageWrapper">
                     <div className="groupHeaderCoverImage">
-                        Image
+                        Cover Image
                     </div>
                 </div>
                 <div className="groupHeaderLogoWrapper">
@@ -18,9 +18,18 @@ export class GroupHeader extends React.Component {
                     </div>
                 </div>
                 <div className="groupHeaderTextWrapper">
-                    <div className="groupHeaderTextWrapper2">
+                    <div className="groupHeaderTextWrapperWidth">
                         <div className="groupHeaderText">
-                            Text
+                            <div className="groupHeaderTextLeft">
+                                <h2>Name of Student Group</h2>
+                                <div className="groupHeaderButtonsWrapper">
+                                    <a href="/group-home" className="groupHeaderButton">Join +</a>
+                                    <a href="/group-home" className="groupHeaderButton">Follow +</a>
+                                </div>
+                            </div>
+                            <div className="groupHeaderTextRight">
+                                <div className="groupHeaderSettings" />
+                            </div>
                         </div>
                     </div>
                 </div>

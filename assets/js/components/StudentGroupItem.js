@@ -6,7 +6,7 @@ export class StudentGroupItem extends React.Component {
     return (
         <div className="group">
             <div className="groupWrapper">
-                <Link key='group' to='/group'>
+                <Link key='group-home' to='/group-home'>
                     <div className="groupContent">
 
                         {/* Logo */}

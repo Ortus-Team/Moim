@@ -13,6 +13,8 @@ import { GroupPageContainerEvents } from './containers/GroupPageContainerEvents'
 import { GroupPageContainerPeople } from './containers/GroupPageContainerPeople';
 import { GroupPageContainerGallery } from './containers/GroupPageContainerGallery';
 
+import { HomePageContainerLI } from './containers/HomePageContainerLI';
+
 
 const store = configureStore();
 

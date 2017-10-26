@@ -21,7 +21,7 @@ export class EventItem extends React.Component {
                     <h4>From </h4>
                   </div>
                   <div className="groupLink">
-                    <h4>Name of Student Group</h4>
+                    <Link key='group-home' to='/group-home'><h4>Name of Student Group</h4></Link>
                   </div>
                 </div>
                 <h4 className="eventItemDate">Oct. 15th @ 6PM • HUB Ballroom</h4>

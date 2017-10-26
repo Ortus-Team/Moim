@@ -13,7 +13,7 @@ export class EventContent extends React.Component {
           <div className="info">
             <div className="overview">
               <h1 className="eventTitle">Event Title</h1>
-              <h2 className="whoDaHost">Hosted by <Link key='group' to='/group'>Student Group</Link></h2>
+              <h2 className="whoDaHost">Hosted by <Link key='group-home' to='/group-home'>Student Group</Link></h2>
             </div>
             <div className="deets">
               <h2 className="dateTime">Date/Time</h2>
