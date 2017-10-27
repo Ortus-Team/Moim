@@ -1,1 +1,36 @@
-@import 'EventPageContainer';
+// used on multiple pages
+@import 'Navbar';
+@import 'EventItem';
+@import 'StudentGroupItem';
+@import 'UpcomingEvents';
+@import 'DirectoryHeader'; // events and groups directories
+
+// event
+@import './event/EventContent';
+
+// home
+@import './home/DynamicContent';
+@import './home/FeaturedGroups';
+@import './home/Explore';
+@import './home/Login';
+@import './home/Register';
+@import './home/Category';
+
+// groups (directory)
+@import './groups/Filters';
+@import './groups/StudentGroups';
+
+// events (directory)
+@import './events/Filters';
+@import './events/Events';
+
+// group 
+@import './group/AlbumItem';
+@import './group/GroupContentNav';
+@import './group/GroupContent';
+@import './group/GroupContentEvents';
+@import './group/GroupContentGallery';
+@import './group/GroupContentOfficers';
+@import './group/GroupHeader';
+@import './group/OfficerItem';
+

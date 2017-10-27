@@ -1,0 +1,14 @@
+.dirSectionWrapper {
+  padding-top: 80px;
+  .topStudentGroups {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .studentGroups {
+    padding-top: 20px;
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}

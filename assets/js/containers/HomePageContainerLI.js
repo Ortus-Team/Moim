@@ -7,7 +7,7 @@ import { Explore } from '../components/home/Explore';
 import { UpcomingEvents } from '../components/UpcomingEvents';
 import { Navbar } from '../components/Navbar';
 
-export class HomePageContainer extends React.Component {
+export class HomePageContainerLI extends React.Component {
 
   render() {
     return (

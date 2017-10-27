@@ -1,0 +1,19 @@
+$theme-color-white: #fff;
+
+.dirHeadWrapper {
+  width: 100%;
+  height: 100%;
+  .dirHeadContent {
+    width: 100%;
+    height: 300px;
+    background-color: lightgrey;
+    text-align: center;
+    h1 {
+      line-height: 200px;
+      color: $theme-color-white;
+      text-transform: none;
+      font-size: 30px;
+      font-weight: 200;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+$theme-color-lightgrey: #DDDDDD;
+$theme-color-black: #222222;
+
+.group {
+  height: 100%;
+  .groupWrapper {
+    height: 100%;
+    a:hover {
+      text-decoration: none;
+    }
+    .groupContent {
+      margin: 0;
+      padding: 0;
+      border: $theme-color-lightgrey;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 3px;
+      width: 403.33px;
+      display: flex;
+
+      .groupLogo {
+        margin: 0;
+        height: 180px;
+        width: 180px;
+        border: $theme-color-lightgrey;
+        border-style: solid;
+        background-color: lightgrey;
+        border-width: 1px;
+        border-radius: 3px;
+      }
+
+      .groupText {
+        padding: 15px;
+        width: 223.33px;
+
+        .groupItemName {
+          margin: 0;
+          color: $theme-color-black;
+          font-weight: 600;
+          font-size: 1.6em;
+        }
+
+        .groupTags {
+          margin-top: 11px;
+
+          .groupCats {
+            display: flex;
+            flex-wrap: wrap;
+            .groupCat {
+              background-color: lightgrey;
+              border: none;
+              border-radius: 5px;
+              padding: 3px 5px;
+              margin-right: 7px;
+              margin-bottom: 3px;
+              .groupCatText{
+                color: #777;
+                font-size: .8em;
+                text-transform: uppercase;
+                padding: 0;
+                margin: 0;
+                font-weight: 400;
+              }
+            }
+          }
+
+          .groupSize {
+            margin-top: 7px;
+            .groupSizeText {
+              margin: 0;
+              padding: 0;
+              font-size: .9em;
+              font-weight: 400;
+              color: #666;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+}

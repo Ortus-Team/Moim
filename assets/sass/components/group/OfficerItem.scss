@@ -1,0 +1,40 @@
+$theme-color-black: #222222;
+$theme-color-purple: #4B2E83;
+$theme-color-lightgrey: #CCCCCC;
+
+.officer {
+  height: 100%;
+  .officerWrapper {
+    height: 100%;
+    .officerContent {
+      margin: 0;
+      padding: 10px 0 0 0;
+      width: auto;
+
+      .officerImage {
+        height: 200px;
+        width: 200px;
+        background-color: grey;
+        border-radius: 100%;
+      }
+
+      .officerText {
+        text-align: center;
+        margin-top: 10px;
+        .officerName {
+          margin: 0;
+          color: $theme-color-black;
+          font-weight: 300;
+        }
+
+        .officerTitle {
+          margin: 5px 0 0 0;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+      }
+    }
+  }
+
+}
