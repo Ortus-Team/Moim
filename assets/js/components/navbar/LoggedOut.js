@@ -10,8 +10,12 @@ export class LoggedOut extends React.Component {
     return (
       <div className="account">
         <div className="accountButtons">
-          <a href="javascript:void(0)" className='login' onClick={this.props.loginOn}>Log In</a>
-          <a href="javascript:void(0)" className='signup' onClick={this.props.registerOn}>Sign up</a>
+          <div className='login'>
+            <a href="javascript:void(0)" className='loginLink' onClick={this.props.loginOn}><h6>Log In</h6></a>
+          </div>
+          <div className='signup'>
+            <a href="javascript:void(0)" className='signupLink' onClick={this.props.registerOn}><h6>Sign up</h6></a>
+          </div>
         </div>
       </div>
     );

@@ -1,24 +1,68 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto|Karla);
+@import url(https://fonts.googleapis.com/css?family=Roboto|Karla|Space+Mono|Work+Sans|Cousine);
 
 body {
   font-family: 'Roboto';
   color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
 }
 
-h1, h2, h3 {
-  font-family: 'Karla';
+p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+p.caption{
+  font-size: 12px;
+}
+
+.legal p {
+  font-size: 11px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cousine', Helvetica, Arial;
+  font-weight: lighter;
+  margin: 0;
 }
 
 h1 {
-  font-size: 1.3em;
-  font-weight: bolder;
-  text-transform: uppercase;
+  font-size: 36px;
 }
 
-a {
-  color: #2e2e2e;
+h2 {
+  font-size: 28px;
 }
 
-a:hover {
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.display1 h1 {
+  font-size: 75px;
+  font-weight: 600;
+}
+
+.display2 h1 {
+  font-size: 54px;
+  font-weight: 600;
+}
+
+a, a:hover {
   color: #2e2e2e;
+  text-decoration: none;
 }

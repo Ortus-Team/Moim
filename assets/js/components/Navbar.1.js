@@ -119,21 +119,19 @@ export class Navbar extends React.Component {
           <div className="navbarComponentContainer">
             {/* Logo */}
             <div className="navbarLogo">
-              <Link key='home' to='/'><h2>moim</h2></Link>
+              <Link key='home' to='/'>moim</Link>
             </div>
+
+            {/* Search
+            <div className='search'>
+                <a href="#">Search</a>
+            </div> */}
 
             {/* Main links */}
             <div className="mainLinks">
-              <Link key='groups' to='/groups'>
-                <div className='navGroups'>
-                  <h6>Student Group Directory</h6>
-                </div>
-              </Link>
-              <Link key='events' to='/events'>
-                <div className='navEvents'>
-                  <h6>Upcoming Events</h6>
-                </div>
-              </Link>
+              <a href="#">Search</a>
+              <Link key='groups' to='/groups'>Student Group Directory</Link>
+              <Link key='events' to='/events'>Events</Link>
             </div>
 
             {/* Account */}

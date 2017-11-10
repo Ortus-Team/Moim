@@ -6,8 +6,12 @@ export class StudentGroupItem extends React.Component {
     return (
         <div className="group">
             <div className="groupWrapper">
-                <Link key='group-home' to='/group-home'>
+                <Link key='group' to='/group'>
                     <div className="groupContent">
+                        {/* Cover Image */}
+                        <div className="groupImage">
+                            <img src="#" alt="group_name" />
+                        </div>
 
                         {/* Logo */}
                         <div className="groupLogo">
@@ -16,7 +20,7 @@ export class StudentGroupItem extends React.Component {
 
                         {/* Label */}
                         <div className="groupText">
-                            <h3 className="groupItemName">Korean Student Union</h3>
+                            <h3>Undergraduate Business Association</h3>
 
                             {/* Tags */}
                             <div className="groupTags">

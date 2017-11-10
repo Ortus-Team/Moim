@@ -1,17 +1,28 @@
 .accountButtons {
-  right: 0;
+  /* right: 0;
   width: auto;
   top: 50%;
   position: absolute;
-  transform: translate(0, -50%);
+  transform: translate(0, -50%); */
+  float: right;
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: $navbar-height;
   // border: orange 1px solid;
   
-  a.login {
+  /* a.login {
     margin-right: 20px;
-    color: #555555;
-  }
+    color: $theme-color-white;
+  } */
 
-  .signup {
+  a {
+    color: $theme-color-white;
+    line-height: $navbar-height;
+  }
+  // blue sign up button
+  /* .signup {
     background-color: $theme-color-blue;
     border: none;
     color: $theme-color-white;
@@ -20,5 +31,5 @@
     text-decoration: none;
     display: inline-block;
     border-radius: 3px;
-  }
+  } */
 }
