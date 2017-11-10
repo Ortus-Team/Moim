@@ -1,0 +1,16 @@
+.loggedIn {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  .accountLink {
+    background-color: lightgray;
+    border: $theme-color-purple 1.5px solid;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    right: 0;
+    top: 50%;
+    position: absolute;
+    transform: translate(0, -50%);
+  }
+}

@@ -31,7 +31,7 @@ $navbar-height: 70px;
     .navbarComponentContainer {
       height: $navbar-height;
       //box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-      border-bottom: 0.5px solid #CCC;
+      border-bottom: 0.5px solid #ddd;
       background-color: $theme-color-white;
       padding: 20px;
       margin: 0;
@@ -67,42 +67,6 @@ $navbar-height: 70px;
         // border: red 1px solid;
         height: 70px;
         position: relative;
-        .accountLink {
-          background-color: lightgray;
-          border: $theme-color-purple 1.5px solid;
-          border-radius: 100%;
-          width: 45px;
-          height: 45px;
-          right: 0;
-          top: 50%;
-          position: absolute;
-          transform: translate(0, -50%);
-        }
-
-        .accountButtons {
-          right: 0;
-          width: auto;
-          top: 50%;
-          position: absolute;
-          transform: translate(0, -50%);
-          // border: orange 1px solid;
-          
-          a.login {
-            margin-right: 20px;
-            color: #555555;
-          }
-
-          .signup {
-            background-color: $theme-color-blue;
-            border: none;
-            color: $theme-color-white;
-            padding: 8px 12px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 3px;
-          }
-        }
       }
     }
   }

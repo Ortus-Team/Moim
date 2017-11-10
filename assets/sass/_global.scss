@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Roboto';
+  color: #2e2e2e;
 }
 
 h1, h2, h3 {
@@ -12,4 +13,12 @@ h1 {
   font-size: 1.3em;
   font-weight: bolder;
   text-transform: uppercase;
+}
+
+a {
+  color: #2e2e2e;
+}
+
+a:hover {
+  color: #2e2e2e;
 }

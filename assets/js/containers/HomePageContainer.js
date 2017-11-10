@@ -12,11 +12,19 @@ export class HomePageContainer extends React.Component {
   render() {
     return (
       <div className='homeWrapper'>
-        <Navbar />
+        {/* <Navbar />
         <div className='homeHeader'>
           <DynamicContent />
         </div>
         <div className='homeContent'>
+          <UpcomingEvents />
+          <FeaturedGroups />
+          <Explore />
+        </div> */}
+
+        <Navbar />
+        <div className='homeContent2'>
+          <DynamicContent />
           <UpcomingEvents />
           <FeaturedGroups />
           <Explore />

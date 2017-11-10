@@ -17,9 +17,9 @@ export class Register extends React.Component {
           <div className='overlay' onClick={this.props.off} />
           <div className='registerBox'>
             <div className='registerContent'>
-              <h2>Sign up</h2>
+              <h3>Sign up</h3>
               <button className='registerGoogle'>Sign up with Google</button>
-              <h3>Already have an account? <a href="javascript:void(0)" className='login' onClick={this.props.login}>Log in</a></h3>
+              <p>Already have an account? <a href="javascript:void(0)" className='login' onClick={this.props.login}>Log in</a></p>
             </div>
           </div>
         </div>
