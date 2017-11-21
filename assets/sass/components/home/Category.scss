@@ -5,12 +5,12 @@
     .catContent {
       margin: 0;
       padding: 0;
-      border: grey;
+      border: $theme-color-lightergrey;
       border-style: solid;
       border-width: 1px;
       border-radius: 3px;
       width: 300px;
-      background-color: grey;
+      background-color: lightgrey;
       height: 200px;
       text-align: center;
       .catText {

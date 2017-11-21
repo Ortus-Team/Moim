@@ -2,11 +2,12 @@
     padding: 0;
     margin: 0;
     position: relative;
-    z-index: 0;
-
+    //background-color: $theme-color-lightergrey;
     .homeHeader {
         // padding: 60px 0 0 0;
         padding: 0;
+        position: relative;
+        z-index: -10;
     }
 
     .homeContent {

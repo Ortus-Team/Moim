@@ -6,13 +6,22 @@ export class StudentGroupItem extends React.Component {
     return (
         <div className="group">
             <div className="groupWrapper">
-                <Link key='group-home' to='/group-home'>
+                <Link key='group' to='/group'>
                     <div className="groupContent">
-                        <div className='groupItemNameWrapper'>
-                            <h3 className="groupItemName">American Water Works Association-Water Environment Federation Student Chapter</h3>
+                        {/* Cover Image */}
+                        <div className="groupImage">
+                            <img src="#" alt="group_name" />
                         </div>
+
+                        {/* Logo */}
+                        <div className="groupLogo">
+                            <img src="#" alt="logo" />
+                        </div>
+
                         {/* Label */}
-                        <div className="groupItemInfo">
+                        <div className="groupText">
+                            <h3>Undergraduate Business Association</h3>
+
                             {/* Tags */}
                             <div className="groupTags">
                                 <div className="groupCats">
@@ -26,11 +35,6 @@ export class StudentGroupItem extends React.Component {
                                 <div className="groupSize">
                                     <p className="caption">250 members</p>
                                 </div>
-                            </div>
-
-                            {/* Logo */}
-                            <div className="groupLogo">
-                                <img src="#" alt="logo" />
                             </div>
                         </div>
                     </div>

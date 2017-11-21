@@ -2,49 +2,45 @@
   height: 100%;
   .groupWrapper {
     height: 100%;
+    a:hover {
+      text-decoration: none;
+    }
     .groupContent {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       border: $theme-color-lightgrey solid 0.5px;
       border-radius: 2px;
-      width: 395px;
+      width: 403.33px;
+      height: 175px;
       background-color: $theme-color-white;
-      position: relative;
-      z-index: 1;
       box-shadow: $content-shadow;
-
-      .groupImage {
-        position: absolute;
-        z-index: 2;
-        height: 100px;
-        width: 395px;
-        background-color: lightgrey;
+      
+      .groupItemNameWrapper {
+        width: 100%;
+        .groupItemName {
+          font-weight: 500;
+        }
       }
 
-      .groupLogo {
-        margin: 60px 0 0 280px;
-        position: absolute;
-        z-index: 4;
-        height: 90px;
-        width: 90px;
-        background-color: lightgrey;
-        border-width: 1px;
-        border-radius: 100%;
-      }
+      .groupItemInfo {
+        width: 100%;
+        // border: red solid 1px;
 
-      .groupText {
-        height: 160px;
-        width: 280px;
-        z-index: 3;
-        margin: 115px 0 0 20px;
-        position: relative;
-        padding: 10px 10px 20px 0px;
-        h3 {
-          font-weight: 600;
+        display: flex;
+
+        .groupLogo {
+          margin: 0;
+          height: 80px;
+          width: 80px;
+          border: $theme-color-lightgrey;
+          border-style: solid;
+          background-color: lightgrey;
+          border-width: 1px;
+          border-radius: 2px;
         }
 
         .groupTags {
-          margin-top: 9px;
+          margin-top: 10px;
 
           .groupCats {
             display: flex;
@@ -52,10 +48,10 @@
             .groupCat {
               border: 0.5px $theme-color-lightgrey solid;
               border-radius: 100px;
-              padding: 3px 10px;
+              padding: 2px 10px;
               margin-right: 7px;
               margin-bottom: 3px;
-              text-transform: uppercase;
+              // text-transform: uppercase;
             }
           }
 

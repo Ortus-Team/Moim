@@ -22,12 +22,13 @@
 
     .navbarComponentContainer {
       height: $navbar-height;
-      box-shadow: $navbar-shadow;
-      background-color: $theme-color-purple;
+      // box-shadow: $navbar-shadow;
+      background-color: $theme-color-white;
       padding: 20px;
       margin: 0;
-      border-bottom: 2px $theme-color-lightpurple solid;
-      border-top: 2px $theme-color-purple solid;
+      border-bottom: 0.5px solid #ddd;
+      //border-bottom: 1px $theme-color-lightpurple solid;
+      // border-top: 1px $theme-color-purple solid;
 
       display: flex;
       align-items: center;
@@ -35,38 +36,65 @@
 
       .navbarLogo {
         width: 200px;
+        
         a {
-          color: $theme-color-white;
+          h2 {
+            font-weight: 500;
+            letter-spacing: 0.6px;
+            -webkit-font-smoothing: antialiased;
+
+          }
+          // color: $theme-color-white;
+          color: $theme-color-purple;
         }
+        
       }
 
       .mainLinks {
         display: flex;
         justify-content: space-between;
         width: auto;
+        
+        .navLink {
+          font-weight: 500;
+          height: 10px;
+        }
+
         a {
-          text-transform: uppercase;
+          // text-transform: uppercase;
+          letter-spacing: 0.6px;
+          
           div {
-            border-left: 0.2px $theme-color-lightpurple solid;
+            // border-left: 1px $theme-color-lightpurple solid;
             height: $navbar-height;
-            color: $theme-color-white;
-            padding: 20px 30px;
+            // color: $theme-color-white;
+            color: $theme-color-grey;
+            
+            padding: 22px 30px;
           }
 
           .navEvents {
-            border-right: 0.2px $theme-color-lightpurple solid;
+            // border-right: 1px $theme-color-lightpurple solid;
           }
         }
 
         a:hover {
-          div {
-            border-left: 0.5px $theme-color-lightpurple solid;
+          /* .navLink {
+            color: $theme-color-purple;
+            border-bottom: 2px $theme-color-purple;
+            
+          }*/ 
+          /*div {
+            // border-left: 1px $theme-color-lightpurple solid;
             height: $navbar-height;
-            color: $theme-color-white;
-            padding: 20px 30px;
+            color: $theme-color-purple;
+            padding: 22px 30px;
             transition: background-color $ease-time ease;
-            background-color: $theme-color-lightpurple;
-          }
+            // background-color: $theme-color-purple3;
+            text-decoration: underline;
+            text-decoration-line: $theme-color-lightpurple solid 3px;
+          
+          } */
         }
       }
 

@@ -16,7 +16,7 @@ export class FeaturedGroups extends React.Component {
   render() {
     return (
         <div className="sectionWrapper">
-            <h1>Featured Groups</h1>
+            <h2 className='subheading'>Featured Groups</h2>
             <div className="featuredGroups">
               <StudentGroupItem />
               <StudentGroupItem />
