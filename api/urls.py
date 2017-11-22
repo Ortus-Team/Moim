@@ -11,7 +11,8 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
     url(r'^', include(router.urls, namespace='rest_api')),
-    url(r'^members$', viewsets.member_list),
+    url(r'^members', viewsets.member_list),
+    url(r'^orgs', viewsets.org_list),
     url(r'^members/(?P<pk>[0-9]+)$', viewsets.member_detail),
     url(r'^events/(?P<pk>[0-9]+)$', viewsets.event_detail),
     url(r'^orgs/(?P<pk>[0-9]+)$', viewsets.org_detail),
