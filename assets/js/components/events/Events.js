@@ -11,17 +11,14 @@ export class Events extends React.Component {
           <EventItem />
           <EventItem />
           <EventItem />
-          <EventItem />
         </div>
         <div className="studentGroups">
           <EventItem />
           <EventItem />
           <EventItem />
           <EventItem />
-          <EventItem />
         </div>
         <div className="studentGroups">
-          <EventItem />
           <EventItem />
           <EventItem />
           <EventItem />

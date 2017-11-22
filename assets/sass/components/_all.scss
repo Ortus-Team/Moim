@@ -12,9 +12,14 @@
 @import './home/DynamicContent';
 @import './home/FeaturedGroups';
 @import './home/Explore';
-@import './home/Login';
-@import './home/Register';
 @import './home/Category';
+@import './home/DirectoryLink';
+
+// nav 
+@import './navbar/LoggedIn';
+@import './navbar/LoggedOut';
+@import './navbar/Login';
+@import './navbar/Register';
 
 // groups (directory)
 @import './groups/Filters';
@@ -33,4 +38,7 @@
 @import './group/GroupContentOfficers';
 @import './group/GroupHeader';
 @import './group/OfficerItem';
+
+// dashboard
+@import './dashboard/Feed';
 

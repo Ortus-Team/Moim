@@ -1,0 +1,28 @@
+.dashboardMainContent {
+    width: 690x;
+    height: 500px;
+    // border: red 1px solid;
+
+    .dashboardMainContentNav {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: #CCC solid 0.5px;
+        .dashboardNavLink {
+            width: 223px;
+            height: 60px;
+            line-height: 60px;
+            // border: orange 1px solid;
+            text-align: center;
+        }
+        .dashboardActiveNavLink {
+            width: 223px;
+            height: 60px;
+            line-height: 60px;
+            // border: orange 1px solid;
+            text-align: center;
+            border-bottom: $theme-color-purple solid 5px;
+            color: $theme-color-purple;
+            font-weight: 600;
+        }
+    }
+}

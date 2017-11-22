@@ -7,44 +7,40 @@
     }
     .groupContent {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       border: $theme-color-lightgrey solid 0.5px;
-      border-radius: 3px;
+      border-radius: 2px;
       width: 403.33px;
-      height: 130px;
-      padding: 0px;
-      display: flex;
+      height: 175px;
       background-color: $theme-color-white;
-      // box-shadow: $content-shadow;
-
-
-      .groupLogo {
-        margin: 0;
-        height: 130px;
-        width: 130px;
-        border: $theme-color-lightgrey;
-        border-style: solid;
-        background-color: lightgrey;
-        border-width: 1px;
-        border-radius: 2px;
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-      }
-
-      .groupText {
-        padding: 13px 15px 15px 15px;
-        width: 280px;
-        // border: red solid 1px;
-
+      box-shadow: $content-shadow;
+      
+      .groupItemNameWrapper {
+        width: 100%;
         .groupItemName {
           font-weight: 500;
         }
+      }
+
+      .groupItemInfo {
+        width: 100%;
+        // border: red solid 1px;
+
+        display: flex;
+
+        .groupLogo {
+          margin: 0;
+          height: 80px;
+          width: 80px;
+          border: $theme-color-lightgrey;
+          border-style: solid;
+          background-color: lightgrey;
+          border-width: 1px;
+          border-radius: 2px;
+        }
 
         .groupTags {
-          margin-top: 8px;
+          margin-top: 10px;
 
           .groupCats {
             display: flex;
@@ -60,7 +56,7 @@
           }
 
           .groupSize {
-            margin-top: 4px;
+            margin-top: 7px;
           }
         }
 

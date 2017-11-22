@@ -1,23 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
-import logo from './ksa_logo.png';
 
 export class StudentGroupItem extends React.Component {
   render() {
     return (
         <div className="group">
             <div className="groupWrapper">
-                <Link key='group-home' to='/group-home'>
+                <Link key='group' to='/group'>
                     <div className="groupContent">
+                        {/* Cover Image */}
+                        <div className="groupImage">
+                            <img src="#" alt="group_name" />
+                        </div>
 
                         {/* Logo */}
                         <div className="groupLogo">
-                            <img src={logo} alt="logo" />
+                            <img src="#" alt="logo" />
                         </div>
 
                         {/* Label */}
                         <div className="groupText">
-                            <h3 className="groupItemName">Korean Student Association</h3>
+                            <h3>Undergraduate Business Association</h3>
 
                             {/* Tags */}
                             <div className="groupTags">

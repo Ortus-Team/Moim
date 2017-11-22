@@ -20,9 +20,9 @@ export class GroupsPageContainer extends React.Component {
     return (
       <div className='dirWrapper'>
         <Navbar />
-        <div className='dirHeader'>
+        {/*<div className='dirHeader'>
           <DirectoryHeader />
-        </div>
+        </div>*/}
         <div className='dirFilters'>
           <Filters />
         </div>

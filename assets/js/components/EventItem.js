@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import eventImage from './event_poster.jpg';
 
 export class EventItem extends React.Component {
   render() {
@@ -10,12 +11,12 @@ export class EventItem extends React.Component {
             <div className="eventItemContent">
               {/* Image */}
               <div className="eventItemImage">
-                <img src="#" alt="image" />
+                <img src={eventImage} alt="image" />
               </div>
 
               {/* Date */}
               <div className="eventItemText">
-                <h3 className="eventItemTitle">Event Title</h3>
+                <h3 className="eventItemTitle">Snowboarding with Owls in Kenya</h3>
                 <div className="eventItemHost">
                   <div className="from">
                     <h4>From </h4>
