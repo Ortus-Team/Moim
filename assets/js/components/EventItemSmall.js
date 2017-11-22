@@ -2,22 +2,22 @@ import React from 'react';
 import { Link } from 'react-router';
 import eventImage from './event_poster.jpg';
 
-export class EventItem extends React.Component {
+export class EventItemSmall extends React.Component {
   render() {
     return (
-      <div className="eventItemComponent">
-        <div className="eventItemWrapper">
+      <div className="eventItemSmallComponent">
+        <div className="eventItemSmallWrapper">
           <Link key='event' to='/event'>
-            <div className="eventItemContent">
+            <div className="eventItemSmallContent">
               {/* Image */}
-              <div className="eventItemImage">
+              <div className="eventItemSmallImage">
                 <img src={eventImage} alt="image" />
               </div>
 
               {/* Date */}
-              <div className="eventItemText">
-                <h3 className="eventItemTitle">Dead Poetry: SDHS Open Mic Night</h3>
-                <div className="eventItemHost">
+              <div className="eventItemSmallText">
+                <h3 className="eventItemSmallTitle">Dead Poetry: SDHS Open Mic Night</h3>
+                <div className="eventItemSmallHost">
                   <div className="from">
                     <h4>From </h4>
                   </div>
@@ -25,8 +25,8 @@ export class EventItem extends React.Component {
                     <Link key='group-home' to='/group-home'><h4>Name of Student Group</h4></Link>
                   </div>
                 </div>
-                <h4 className="eventItemDate">Nov. 14th @ 5PM • SDHS Auditorium</h4>
-                {/* <h4 className="eventItemLoc">- Location</h4> */}
+                <h4 className="eventItemSmallDate">Nov. 14th @ 5PM • SDHS Auditorium</h4>
+                {/* <h4 className="eventItemSmallLoc">- Location</h4> */}
                 {/* Logo
                 <div>
                     <img src="#" alt="logo" />

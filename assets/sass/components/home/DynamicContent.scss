@@ -31,14 +31,17 @@ $theme-color-white: #fff;
       // padding: 50px;
       .dynamicContentText {
         background-color: $theme-color-white;
+        // background-color: $theme-color-purple;
         // border: solid 3px $theme-color-purple;
         padding: 60px 50px;
         height: 400px;
         width: 450px;
         // float: right;
         color: $theme-color-grey;
+        // color: $theme-color-white;
         h1 {
           color: $theme-color-black;
+          // color: $theme-color-white;
         }
         // border-top: solid 3px $theme-color-purple;
 
