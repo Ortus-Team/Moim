@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'main',
     'common',
     'api',
+    'anymail',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,10 @@ WEBPACK_LOADER = {
 CELERY_ACCEPT_CONTENT = ['json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
+
+ANYMAIL = {
+    "MAILGUN_API_KEY": "key-01b84a49af3c1ffe1d33303badb3aa43",
+    "MAILGUN_SENDER_DOMAIN": "sandbox7753ac446ae245839c2bcaf1639cc1fb.mailgun.org"
+}
+
+EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"  # or sendgrid.EmailBackend, or...

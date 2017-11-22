@@ -9,14 +9,13 @@ from api.permissions import IsAuthenticatedOrCreate
 from api.serializers import *
 from main.models import *
 
+from django.core.mail import send_mail, EmailMultiAlternatives
 
-# from rest_framework import status
-# from rest_framework.response import Response
-# # from social.apps.django_app.utils import load_strategy
-# # from social.apps.django_app.utils import load_backend
-# import social.apps.django_app
-# from social.backends.oauth import BaseOAuth1, BaseOAuth2
-# from social.exceptions import AuthAlreadyAssociated
+@csrf_exempt
+def send_email(request):
+	send_mail("It works!", "This will get sent through Mailgun",
+          "Anymail Sender <moim@example.com>", ["joshualim.1@gmail.com"])
+	return HttpResponse(status=201)
 
 @csrf_exempt
 def member_list(request):
