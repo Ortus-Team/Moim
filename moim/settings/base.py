@@ -72,10 +72,38 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Social OAuth
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        # OAuth
+        'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
+        'rest_framework_social_oauth2.authentication.SocialAuthentication',
+    )
+}
+
+AUTHENTICATION_BACKENDS = (
+
+    # Others auth providers (e.g. Google, OpenId, etc)
+
+    # Facebook OAuth2
+    'social_core.backends.facebook.FacebookAppOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+
+    # django-rest-framework-social-oauth2
+    'rest_framework_social_oauth2.backends.DjangoOAuth2',
+
+    # Django
+    'django.contrib.auth.backends.ModelBackend',
+
+)
+
 
 WSGI_APPLICATION = 'moim.wsgi.application'
 
@@ -133,3 +161,14 @@ ANYMAIL = {
 }
 
 EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"  # or sendgrid.EmailBackend, or...
+DEFAULT_FROM_EMAIL = "you@example.com"  # if you don't already have this in settings
+
+# Facebook configuration
+SOCIAL_AUTH_FACEBOOK_KEY = '110760716216901'
+SOCIAL_AUTH_FACEBOOK_SECRET = '34130c24a27d19a9f8d06ac2e9d18fa4'
+
+# Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from facebook. Email is not sent by default, to get it, you must request the email permission:
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
+    'fields': 'id, name, email'
+}
