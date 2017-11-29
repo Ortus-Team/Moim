@@ -1,0 +1,35 @@
+.accountButtons {
+  /* right: 0;
+  width: auto;
+  top: 50%;
+  position: absolute;
+  transform: translate(0, -50%); */
+  float: right;
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  height: $navbar-height;
+  // border: orange 1px solid;
+  
+  /* a.login {
+    margin-right: 20px;
+    color: $theme-color-white;
+  } */
+
+  a {
+    color: $theme-color-grey;
+    line-height: $navbar-height;
+  }
+  // blue sign up button
+  /* .signup {
+    background-color: $theme-color-blue;
+    border: none;
+    color: $theme-color-white;
+    padding: 8px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+  } */
+}

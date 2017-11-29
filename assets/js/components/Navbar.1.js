@@ -1,21 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import { LoggedIn } from './navbar/LoggedIn';
+import { LoggedOut } from './navbar/LoggedOut';
 import { Login } from './navbar/Login';
 import { Register } from './navbar/Register';
-
+let isLoggedIn = null;
 export class Navbar extends React.Component {
 
   constructor(props) {
     super(props);
+    // this.handleLoginClick = this.handleLoginClick.bind(this);
+    // this.handleLogoutClick = this.handleLogoutClick.bind(this);
     this.state = {
-        styleLogin : {
-          display: 'none'
-        },
-        
-        styleRegister: {
-          display: 'none'
-        }
+      isLoggedIn: isLoggedIn,
+      styleLogin : {
+        display: 'none'
+      },
+      
+      styleRegister: {
+        display: 'none'
+      }
     };
     this.loginOn = this.loginOn.bind(this);
     this.loginOff = this.loginOff.bind(this);
@@ -23,6 +28,7 @@ export class Navbar extends React.Component {
     this.registerOff = this.registerOff.bind(this);
     this.registerLogin = this.registerLogin.bind(this);
     this.loginRegister = this.loginRegister.bind(this);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
   }
 
   componentDidMount() {
@@ -31,7 +37,23 @@ export class Navbar extends React.Component {
 
   componentWillUnmount() {
       document.removeEventListener("click", this.loginOff);
+      isLoggedIn = this.isLoggedIn;
   }
+
+  // log in and log out
+
+  // Login.js
+  handleLoginClick() {
+    this.setState({isLoggedIn: true});
+    document.removeEventListener("click", this.loginOff);
+    const styleLogin = { display: 'none' };
+    this.setState({ styleLogin });
+  }
+
+  /*
+  handleLogoutClick() {
+    this.setState({isLoggedIn: false});
+  } */
   
   // log in display functions
   loginOn() {
@@ -74,10 +96,19 @@ export class Navbar extends React.Component {
   }
 
   render() {
+    const isLoggedIn = this.state.isLoggedIn;
+
+    let loginControl = null;
+    if (isLoggedIn == true) {
+      loginControl = <LoggedIn />;
+    } else {
+      loginControl = <LoggedOut loginOn={this.loginOn} registerOn={this.registerOn} />;
+    }
+
     return (
       <div className='moimNav'>
         <div className='displayLogin' style={this.state.styleLogin}>
-          <Login off={this.loginOff} register={this.loginRegister} />
+          <Login off={this.loginOff} register={this.loginRegister} login={this.handleLoginClick} />
         </div>
 
         <div className='displayRegister' style={this.state.styleRegister}>
@@ -105,16 +136,13 @@ export class Navbar extends React.Component {
 
             {/* Account */}
             <div className="account">
-              <div className="accountButtons">
-                <a href="javascript:void(0)" className='login' onClick={this.loginOn}>Log In</a>
-                <a href="javascript:void(0)" className='signup' onClick={this.registerOn}>Sign up</a>
-              </div>
+              {loginControl}
             </div>
 
             {/* Translate
-                  <div className='translate'>
-                      <a href="#">Translate</a>
-                  </div> */}
+            <div className='translate'>
+                <a href="#">Translate</a>
+            </div> */}
           </div>
         </div>
       </div>

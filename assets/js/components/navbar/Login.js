@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 /*
 NavBar (On all pages)
@@ -17,9 +18,9 @@ export class Login extends React.Component {
         <div className='overlay' onClick={this.props.off} />
         <div className='loginBox'>
           <div className='loginContent'>
-            <h2>Log in to mo-im</h2>
-            <button className='loginGoogle'>Log in with Google</button>
-            <h3>Don't have an account? <a href="javascript:void(0)" className='signup' onClick={this.props.register}>Sign Up</a></h3>
+            <h3>Log in to moim</h3>
+            <button className='loginGoogle' onClick={this.props.login}>Log in with Google</button>
+            <p>Don't have an account? <a href="javascript:void(0)" className='signup' onClick={this.props.register}>Sign Up</a></p>
           </div>
         </div>
       </div>

@@ -1,15 +1,134 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto|Karla);
+@import url(https://fonts.googleapis.com/css?family=Roboto|Karla|Space+Mono|Work+Sans|Cousine|Questrial|Muli|Nunito+Sans|Source+Sans+Pro|Chivo);
+* {-webkit-font-smoothing: antialiased;
+-webkit-filter: blur(0.000001px);}
 
 body {
-  font-family: 'Roboto';
+  font-family: 'Nunito Sans';
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+  font-weight: lighter;
 }
 
-h1, h2, h3 {
-  font-family: 'Karla';
+p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+p.caption{
+  font-size: 12px;
+}
+
+.legal p {
+  font-size: 11px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Karla', Helvetica, Arial;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1.title {
+  font-size: 42px;
+  font-weight: 300;
+}
+
+.subheading {
+  margin-bottom: 25px;
+  color: $theme-color-grey;
 }
 
 h1 {
-  font-size: 1.3em;
-  font-weight: bolder;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h3.body {
+  font-weight: 100;
+  line-height: 26px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6.titleLabel {
+  letter-spacing: 0.6px;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+.display1 h1 {
+  font-size: 75px;
+  font-weight: 600;
+}
+
+.display2 h1 {
+  font-size: 54px;
+  font-weight: 600;
+}
+
+a, a:hover {
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.titleAndLabel {
+  .titleLabel {
+    margin-bottom: 15px;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+
+}
+
+.button {
+  padding: 12px 30px;
+  border: $theme-color-purple solid 1px;
+  background-color: $theme-color-white;
+  p {
+    font-family: 'Chivo', Helvetica, Arial;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $theme-color-purple;
+  }
+}
+
+// #b73d4c
+
+.button2 {
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background-color: yellow;
+  p {
+    font-family: 'Chivo', Helvetica, Arial;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $theme-color-grey;
+  }
+}
+
+.learnMore {
+  color: $theme-color-purple;
+  font-family: 'Chivo';
   text-transform: uppercase;
+  font-size: 12px;
 }

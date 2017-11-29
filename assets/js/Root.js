@@ -13,9 +13,7 @@ import { GroupPageContainerHome } from './containers/GroupPageContainerHome';
 import { GroupPageContainerEvents } from './containers/GroupPageContainerEvents';
 import { GroupPageContainerPeople } from './containers/GroupPageContainerPeople';
 import { GroupPageContainerGallery } from './containers/GroupPageContainerGallery';
-
-import { HomePageContainerLI } from './containers/HomePageContainerLI';
-
+import { SignUpContainer } from './containers/SignUpContainer';
 
 const store = configureStore();
 
@@ -33,6 +31,7 @@ class Root extends React.Component {
           <Route path="/group-events" component={GroupPageContainerEvents} />
           <Route path="/group-people" component={GroupPageContainerPeople} />
           <Route path="/group-gallery" component={GroupPageContainerGallery} />
+          <Route path="/signup" component={SignUpContainer} />
         </Router>
       </Provider>
     );

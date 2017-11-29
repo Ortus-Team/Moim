@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import logo from './ksa_logo.png';
 
 export class StudentGroupItem extends React.Component {
   render() {
@@ -11,25 +12,25 @@ export class StudentGroupItem extends React.Component {
 
                         {/* Logo */}
                         <div className="groupLogo">
-                            <img src="#" alt="logo" />
+                            <img src={logo} alt="logo" />
                         </div>
 
                         {/* Label */}
                         <div className="groupText">
-                            <h3 className="groupItemName">Name of Group is long</h3>
+                            <h3 className="groupItemName">Korean Student Association</h3>
 
                             {/* Tags */}
                             <div className="groupTags">
                                 <div className="groupCats">
                                     <div className="groupCat">
-                                        <h4 className="groupCatText">Category</h4>
+                                        <p className="caption">Business</p>
                                     </div>
                                     <div className="groupCat">
-                                        <h4 className="groupCatText">Category</h4>
+                                        <p className="caption">Networking</p>
                                     </div>
                                 </div>
                                 <div className="groupSize">
-                                    <h4 className="groupSizeText">250 members</h4>
+                                    <p className="caption">250 members</p>
                                 </div>
                             </div>
                         </div>
