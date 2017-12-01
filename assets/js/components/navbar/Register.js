@@ -1,5 +1,6 @@
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
+import { GoogleLogin } from 'react-google-login-component';
 
 /*
 NavBar (On all pages)
@@ -18,6 +19,16 @@ export class Register extends React.Component {
     console.log(response);
   }
 
+  constructor (props, context) {
+    super(props, context);
+  }
+
+  responseGoogle (googleUser) {
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log({accessToken: id_token});
+    //anything else you want to do(save to localStorage)...
+  }
+
   render() {
     return (
         <div className='registerWrapper'>
@@ -31,6 +42,12 @@ export class Register extends React.Component {
                 fields="name,email,picture"
                 callback={this.handleFbLogin}
               />
+              <GoogleLogin socialId="536753927994-6jcc5jtp350uu2jaj498fo4kldjpl50e.apps.googleusercontent.com"
+                     className="google-login"
+                     scope="profile"
+                     fetchBasicProfile={false}
+                     responseHandler={this.responseGoogle}
+                     buttonText="Login With Google"/>
               <p>Already have an account? <a href="javascript:void(0)" className='login' onClick={this.props.login}>Log in</a></p>
             </div>
           </div>
