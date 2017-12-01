@@ -1,4 +1,5 @@
 import React from 'react';
+import FacebookLogin from 'react-facebook-login';
 
 /*
 NavBar (On all pages)
@@ -11,6 +12,12 @@ NavBar (On all pages)
 */
 
 export class Register extends React.Component {
+
+  handleFbLogin(response) {
+    console.log("FACEBOOK LOGIN TOKEN");
+    console.log(response);
+  }
+
   render() {
     return (
         <div className='registerWrapper'>
@@ -18,7 +25,12 @@ export class Register extends React.Component {
           <div className='registerBox'>
             <div className='registerContent'>
               <h3>Sign up</h3>
-              <button className='registerGoogle'>Sign up with Google</button>
+              <FacebookLogin
+                appId="168701917052804"
+                autoLoad={true}
+                fields="name,email,picture"
+                callback={this.handleFbLogin}
+              />
               <p>Already have an account? <a href="javascript:void(0)" className='login' onClick={this.props.login}>Log in</a></p>
             </div>
           </div>

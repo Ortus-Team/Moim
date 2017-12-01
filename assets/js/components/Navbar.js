@@ -50,6 +50,10 @@ export class Navbar extends React.Component {
     this.setState({ styleLogin });
   }
 
+  handleFacebookLogin(response) {
+    console.log(response);
+  }
+
   /*
   handleLogoutClick() {
     this.setState({isLoggedIn: false});
@@ -108,7 +112,7 @@ export class Navbar extends React.Component {
     return (
       <div className='moimNav'>
         <div className='displayLogin' style={this.state.styleLogin}>
-          <Login off={this.loginOff} register={this.loginRegister} login={this.handleLoginClick} />
+          <Login off={this.loginOff} register={this.loginRegister} login={this.handleLoginClick} facebookLogin={this.handleFacebookLogin}/>
         </div>
 
         <div className='displayRegister' style={this.state.styleRegister}>
