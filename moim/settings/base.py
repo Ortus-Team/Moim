@@ -46,6 +46,10 @@ INSTALLED_APPS = [
     'common',
     'api',
     'anymail',
+    'tag',
+    'org',
+    'category',
+    'event',
 ]
 
 MIDDLEWARE = [

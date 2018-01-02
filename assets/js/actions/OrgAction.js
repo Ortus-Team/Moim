@@ -6,7 +6,7 @@ const host = window.location.host;
 export const ROOT_URL = 'http://' + host + '/api';
 
 export function getOrgs() {
-    var orgs_url = `${ROOT_URL}/members`;
+    var orgs_url = `${ROOT_URL}/orgs`;
     var page_url = "";
     const url = orgs_url + page_url;
     console.log(url);

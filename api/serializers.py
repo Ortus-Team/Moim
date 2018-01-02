@@ -25,9 +25,9 @@ class PhotoSerializer(serializers.ModelSerializer):
 
 
 class OrgSerializer(serializers.ModelSerializer):
-    name = serializers.CharField(source='org.name')
-    join_date = serializers.DateTimeField(source='org.join_date')
-    description = serializers.CharField(source='org.description')
+    name = serializers.CharField()
+    join_date = serializers.DateTimeField()
+    description = serializers.CharField()
 
     class Meta:
         model = Org
@@ -35,11 +35,11 @@ class OrgSerializer(serializers.ModelSerializer):
 
 
 class EventSerializer(serializers.ModelSerializer):
-    name = serializers.CharField(source='event.name')
-    event_date = serializers.DateTimeField(source='event.event_date')
-    access_level = serializers.CharField(source='event.access_level')
-    location = serializers.CharField(source='event.location')
-    description = serializers.CharField(source='event.description')
+    name = serializers.CharField()
+    event_date = serializers.DateTimeField()
+    access_level = serializers.CharField()
+    location = serializers.CharField()
+    description = serializers.CharField()
 
     class Meta:
         model = Event
