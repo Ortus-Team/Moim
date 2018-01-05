@@ -3,7 +3,7 @@ from rest_framework import serializers
 from main.models import (
     Event, EventToOrg, EventToPost, FollowerToOrg, OfficerToOrg, Org, OrgToPost, Photo,
     PhotoToEvent, PhotoToOrg, PhotoToPost, PhotoToUser, Post, PostToOrg, PostToUser, User,
-    UserToOrg, UserToPost
+    UserToOrg, UserToPost, Token
 )
 
 
@@ -17,6 +17,13 @@ class UserSerializer(serializers.ModelSerializer):
         # fields = ('id', 'class_standing', 'join_date',)
         fields = ('id', 'username', 'first_name', 'class_standing', 'join_date')
 
+class AccessTokenSerializer(serializers.ModelSerializer):
+    access_token = serializers.CharField(source='token.access_token')
+    user = UserSerializer
+
+    class Meta:
+        model = Token
+        fields = ('access_token', 'user')
 
 class PhotoSerializer(serializers.ModelSerializer):
     class Meta:

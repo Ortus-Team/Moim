@@ -21,6 +21,9 @@ class Member(models.Model):
     def save_user_profile(sender, instance, created, **kwargs):
         instance.member.save()
 
+class Token(models.Model):
+    access_token = models.CharField(max_length=6000)
+    user = models.ForeignKey('Member')
 
 class Photo(models.Model):
     owner = models.ForeignKey('auth.User', related_name='image')

@@ -18,6 +18,18 @@ def send_email(request):
               "Anymail Sender <moim@example.com>", ["joshualim.1@gmail.com"])
     return HttpResponse(status=201)
 
+@csrf_exempt
+def convert_token(request, token):
+    print("convert token call3d")
+    try:
+        tokenToUser = Token.objects.get(access_token__exact=token)
+    except Token.DoesNotExist:
+        print("Token Does Not exists, Exception caught")
+        return HttpResponse(status=304)
+
+    if request.method == 'GET':
+        serializer = AccessTokenSerializer(tokenToUser)
+        return JsonResponse(serializer.data)
 
 @csrf_exempt
 def member_list(request):
