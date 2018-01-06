@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login-component';
+import { getUser } from "../../actions/TokenAction";
 
 
 /*
@@ -20,6 +21,7 @@ export class Login extends React.Component {
   handleFacebookLogin(response) {
     console.log("FACEBOOK LOGIN TOKEN");
     console.log(response);
+
   }
 
   constructor (props, context) {
@@ -29,6 +31,7 @@ export class Login extends React.Component {
   responseGoogle (googleUser) {
     var id_token = googleUser.getAuthResponse().id_token;
     console.log({accessToken: id_token});
+    getUser(id_token);
     //anything else you want to do(save to localStorage)...
   }
 
