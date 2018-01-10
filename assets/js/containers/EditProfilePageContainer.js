@@ -10,10 +10,10 @@ export class EditProfilePageContainer extends React.Component {
           <div className='ePMenu'>
             <div className='ePMenuTabs'>
               <div className='ePMenuTabSelected'>
-                <h4>Edit Profile</h4>
+                <h5>Edit Profile</h5>
               </div>
               <div className='ePMenuTab'>
-                <h4>Account Settings</h4>
+                <h5>Account Settings</h5>
               </div>
             </div>
           </div>
