@@ -10,7 +10,7 @@ export class GroupHeader extends React.Component {
                         Cover Image
                     </div>
                 </div>
-                {/*}
+                {/*
                 <div className="groupHeaderLogoWrapper">
                     <div className="groupHeaderLogoWidth">
                         <div className="groupHeaderLogo">
@@ -38,13 +38,17 @@ export class GroupHeader extends React.Component {
                                         <div className="groupSize">
                                             <p className="caption">250 members</p>
                                         </div>
-                                    </div>
-                                    
+                                    </div> 
+                                </div>
+                                <div className='groupContact'>
+                                    <h6>www.ksauw.com</h6>
+                                    <h6>ksa@uw.edu</h6>
                                 </div>
                                 
                             </div>
                             <div className="groupHeaderTextRight">
                                 <div className="groupHeaderButtonsWrapper">
+                                    <div id='bookmark-ribbon' />
                                     <a href="/group-home" className="groupHeaderButton">+ Join group</a>
                                 </div>
                                 <div className="groupHeaderSettings" />

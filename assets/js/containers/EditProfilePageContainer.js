@@ -18,6 +18,7 @@ export class EditProfilePageContainer extends React.Component {
             </div>
           </div>
           <div className='ePTabContent'>
+            
             <div className='ePItem'>
               <div className='ePItemLabel'>
                 <p>Profile Picture</p>

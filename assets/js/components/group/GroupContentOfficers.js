@@ -22,13 +22,40 @@ export class GroupContentOfficers extends React.Component {
                     <div className="groupPageMembers">
                         <h3 className='subheading'>Members</h3>
                         <div className="groupPageMembersList">
+                            <div className='groupPageMemberListHeading'>
+                                <div className="groupPageMemberLHName">
+                                    <p>Name</p>
+                                </div>
+                                <div className='groupPageMemberLHEmail'>
+                                    <p>Email</p>
+                                </div>
+                                <div className='groupPageMemberLHStatus'>
+                                    <p>Student Status</p>
+                                </div>
+                                <div className='groupPageMemberLHMajor'>
+                                    <p>Major</p>
+                                </div>
+                                <div className='groupPageMemberLHJoined'>
+                                    <p>Joined Group</p>
+                                </div>
+                            </div>
                             <div className="groupPageMemberListItem">
                                 <div className="groupPageMemberLIName">
-                                    <h2>Name</h2>
-                                    <h3>Alternative name</h3>
+                                    <p>Tony Stark</p>
+                                    <p>토니 스타크</p>
                                 </div>
-                                <h2>Year in school</h2>
-                                <h3>Other detail</h3>
+                                <div className='groupPageMemberLIEmail'>
+                                    <p>ironman@uw.edu</p>
+                                </div>
+                                <div className='groupPageMemberLIStatus'>
+                                    <p>UW Alumni</p>
+                                </div>
+                                <div className='groupPageMemberLIMajor'>
+                                    <p>Electrical Engineering</p>
+                                </div>
+                                <div className='groupPageMemberLIJoined'>
+                                    <p>September 2016</p>
+                                </div>
                             </div>
                         </div>
                     </div>

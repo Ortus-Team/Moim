@@ -10,13 +10,13 @@ export class GroupContentEvents extends React.Component {
                 <div className="groupContentEventsContent">
                     <div className="groupPageTopContent">
                         <div className="groupPageEvents">
-                            <h3 className='groupSectionHeading'>Upcoming Events</h3>
+                            <h3 className='subheading'>Upcoming Events</h3>
                             <div className="groupUpcomingEvents">
                                 <EventItemSmall />
                             </div>
                         </div>
                         <div className="groupPageEvents">
-                            <h3 className='groupSectionHeading'>Past Events</h3>
+                            <h3 className='subheading'>Past Events</h3>
                             <div className="groupPastEvents">
                                 <EventItemSmall />
                                 <EventItemSmall />

@@ -3,7 +3,7 @@
   .groupContentOfficersWrapper {
     height: 100%;
     .groupContentOfficersContent {
-      margin: 60px 0 0 0;
+      margin: 60px 0;
       padding: 0;
       width: 100%;
       height: 100%;
@@ -14,7 +14,7 @@
       .groupPageOfficers {
         height: auto;
         width: 100%;
-        margin-top: 40px;
+        // margin-top: 40px;
         margin-bottom: 60px;
           .groupUpcomingOfficers {
             // border: red 1px solid;
@@ -30,11 +30,60 @@
       }
       
       .groupPageMembers {
+        margin-top: 60px;
         .groupPageMembersList {
-          .groupPageMembersListItem {
+          width: 100%;
+
+          .groupPageMemberListHeading {
+            display: flex;
+            padding: 0 20px 10px 20px;
+            .groupPageMemberLHName {
+              width: 200px;
+            }
+            .groupPageMemberLHEmail {
+              width: 200px;
+            }
+            .groupPageMemberLHStatus {
+              width: 250px;
+            }
+            .groupPageMemberLHMajor {
+              width: 250px;
+            }
+            .groupPageMemberLHJoined {
+              width: 200px;
+            }
+          }
+
+          .groupPageMemberListItem {
             width: 100%;
-            border: solid 1px red;
-            height: 50px;
+            border: solid 1px $theme-color-lightgrey;
+            height: 80px;
+            display: flex;
+            padding: 0 20px;
+
+            .groupPageMemberLIName {
+              width: 200px;
+              display: flex;
+              justify-content: center;
+              flex-direction: column;
+              height: 80px;
+            }
+            .groupPageMemberLIEmail {
+              width: 200px;
+              line-height: 80px;
+            }
+            .groupPageMemberLIStatus {
+              width: 250px;
+              line-height: 80px;
+            }
+            .groupPageMemberLIMajor {
+              width: 250px;
+              line-height: 80px;
+            }
+            .groupPageMemberLIJoined {
+              width: 200px;
+              line-height: 80px;
+            }
           }
         }
       }
