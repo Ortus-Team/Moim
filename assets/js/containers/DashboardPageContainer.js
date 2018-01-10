@@ -15,16 +15,22 @@ export class DashboardPageContainer extends React.Component {
             <div className='dashboardProfileInfo'>
               <div className='dashboardProfileInfoMain'>
                 <h2>Tony Stark</h2>
-                <div className='dPInfoMainDeets'>
+              </div>
+              <div className='dPInfoMainDeets'>
+                <div className='dashboardProfileInfoDeet'>
+                  <p className='caption'>STUDENT STATUS</p>
                   <p>UW Alumni</p>
+                </div>
+                <div className='dashboardProfileInfoDeet'>
+                  <p className='caption'>MAJOR</p>
                   <p>B.S. Electrical Engineering</p>
                 </div>
+                <div className='dashboardProfileInfoDeet'>
+                  <p className='caption'>EMAIL</p>
+                  <p>ironman@uw.edu</p>
+                </div>
               </div>
-              <div className='dashboardProfileInfoBio'>
-                <p className='caption'>BIO</p>
-                <p>Hi. I like making things.</p>
-              </div>
-              <p className='dashboardEditLink'><Link key='edit-profile' to='#'>Edit profile</Link></p>
+              <p className='dashboardEditLink'><Link key='edit-profile' to='edit-profile'>Edit Profile</Link></p>
             </div>
           </div>
 

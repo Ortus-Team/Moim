@@ -6,6 +6,7 @@ import configureStore from './configureStore';
 // import TestPageContainer from './containers/TestPageContainer';
 import { HomePageContainer } from './containers/HomePageContainer';
 import { DashboardPageContainer } from './containers/DashboardPageContainer';
+import { EditProfilePageContainer } from './containers/EditProfilePageContainer';
 import { EventPageContainer } from './containers/EventPageContainer';
 import { GroupsPageContainer } from './containers/GroupsPageContainer';
 import { EventsPageContainer } from './containers/EventsPageContainer';
@@ -27,6 +28,7 @@ class Root extends React.Component {
         <Router history={hashHistory}>
           <Route path="/" component={HomePageContainer} />
           <Route path="/dashboard" component={DashboardPageContainer} />
+          <Route path="/edit-profile" component={EditProfilePageContainer} />
           <Route path="/event" component={EventPageContainer} />
           <Route path="/groups" component={GroupsPageContainer} />
           <Route path="/events" component={EventsPageContainer} />
