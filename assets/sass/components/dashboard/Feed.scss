@@ -1,28 +1,36 @@
-.dashboardMainContent {
-    width: 690x;
-    height: 500px;
-    // border: red 1px solid;
+.dashboardFeed {
+    padding-top: 40px;
+    margin-top: 40px;
+    width: 700px;
 
-    .dashboardMainContentNav {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: #CCC solid 0.5px;
-        .dashboardNavLink {
-            width: 223px;
-            height: 60px;
-            line-height: 60px;
-            // border: orange 1px solid;
-            text-align: center;
-        }
-        .dashboardActiveNavLink {
-            width: 223px;
-            height: 60px;
-            line-height: 60px;
-            // border: orange 1px solid;
-            text-align: center;
-            border-bottom: $theme-color-purple solid 5px;
-            color: $theme-color-purple;
-            font-weight: 600;
+    .dashboardFeedItems {
+        padding-top: 10px;
+        
+        .dashboardFeedItem {
+            padding: 30px 30px;
+            border: solid 1px lightgrey;
+            border-radius: 2px;
+            height: 320px;
+            margin-bottom: 20px;
+            .dashboardFeedItemTop {
+                display: flex;
+                .dashboardFeedItemIcon {
+                    height: 50px;
+                    width: 50px;
+                    background-color: lightgrey;
+                    border-radius: 2px;
+                    margin-right: 10px;
+                }
+            }
+
+            .dashboardFeedItemTitle {
+                margin-top: 10px;
+            }
+
+            .dashboardFeedItemPost {
+                margin-top: 15px;
+            }
+
         }
     }
 }

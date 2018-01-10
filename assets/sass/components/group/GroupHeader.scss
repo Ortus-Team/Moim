@@ -4,7 +4,7 @@
   .groupHeaderContent {
     position: relative;
     background-color: pink;
-    height: 440px;
+    height: 410px;
     width: 100%;
     z-index: 0;
 
@@ -12,7 +12,7 @@
       width: 100%;
       background-color: lightgrey;
       position: absolute;
-      height: 440px;
+      height: 400px;
       z-index: 10;
       .groupHeaderCoverImage {
         width: 100%;
@@ -20,7 +20,7 @@
       }
     }
 
-    .groupHeaderLogoWrapper {
+    /* .groupHeaderLogoWrapper {
       z-index: 12;
       position: absolute;
       width: 100%;
@@ -38,55 +38,73 @@
           background-color: lightgrey;
         }
       }
-    }
+    } */
 
-    .groupHeaderTextWrapper {
+    .groupHeaderContentWrapper {
       z-index: 11;
       background-color: #fff;
       position: absolute;
-      height: 210px;
+      height: 220px;
       width: 100%;
-      top: 230px;
-      .groupHeaderTextWrapperWidth {
+      top: 190px;
+      
+      .groupHeaderContentWrapperWidth {
         width: 1250px;
         margin: 0 auto;
         position: relative;
+        padding: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        .groupHeaderLogo {
+          // border: #fff 1.5px solid;
+          border-radius: 3px;
+          height: 150px;
+          width: 150px;
+          background-color: lightgrey;
+        }
+        
         .groupHeaderText {
-          right: 0;
-          top: 20px;
-          position: absolute;
-          width: 1050px;
+          // border: red 1px solid;
+          // right: 0;
+          // top: 20px;
+          // position: absolute;
+          width: 1060px;
           // border: solid red 1px;
           display: flex;
           justify-content: space-between;
 
           .groupHeaderTextLeft {
+            // border: orange 1px solid;
             width: 500px;
             // border: yellow 1px solid;
-            .groupHeaderButtonsWrapper {
-              /* display: flex;
-              justify-content: space-between; */
-              width: 200px;
-              margin-top: 15px;
-              a.groupHeaderButton {
-                background-color: lightgrey;
-                border: 1px solid grey;
-                border-radius: 1px;
-                padding: 4px 12px;
-                font-size: 1em;
-                color: darkslategray;
-                margin-right: 10px;
-              }
+            .groupSize {
+              margin-left: 10px;
             }
           }
 
-          /* .groupHeaderTextRight {
+          .groupHeaderTextRight {
             width: 200px;
-            border: green 1px solid;
+            height: 100%;
+            // border: green 1px solid;
+            .groupHeaderButtonsWrapper {
+              /* display: flex;
+              justify-content: space-between; */
+              height: 100%;
+              width: 100%;
+              a.groupHeaderButton {
+                background-color: $theme-color-white;
+                border: 1px solid $theme-color-purple;
+                border-radius: 1px;
+                padding: 6px 20px;
+                font-size: 1em;
+                color: $theme-color-purple;
+                float: right;
+              }
+            }
             .groupHeaderSettings {
               background-color: orange;
             }
-          } */
+          } 
         }
       }
     }

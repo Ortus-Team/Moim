@@ -1,40 +1,97 @@
 .dashboardPageWrapper {
     padding: 0;
     margin: 0;
+    
     .dashboardPageContent {
-        padding: 60px 0 120px 0;
+        padding: 0;
         margin: 0 auto;
-        width: 1250px;
-        display: flex;
-        justify-content: space-between;
-
+        width: 100%;
+        // text-align: center;
         .dashboardProfile {
-            width: 250px;
-            height: 500px;
-            border: red 1px solid;
-            padding: 20px;
+            width: 100%;
+            height: 240px;
 
-            .dashboardProfilePic {
-                width: 210px;
-                height: 210px;
-                border-radius: 100%;
-                background-color: lightgrey;
+            .dashboardProfileBackPic {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+                height: auto;
+                position: absolute;
+                z-index: -10;
+
             }
 
-            .dashboardProfileText {
-                width: auto;
-                margin: 15px auto 0 auto;
-                border: orange 1px solid;
+            .dashboardProfileContent {
+                position: absolute;
+                z-index: 10;
+                width: 100%;
+                height: 240px;
+                // background-color: $theme-color-purple;
+                // border: red 1px solid;
+                // padding: 20px;
                 text-align: center;
+                padding: 20px;
 
+                .dashboardProfileTop {
+                    display: flex;
+                    width: 100%;
+                    .dashboardGearEven {
+                        height: 50px;
+                        width: 50px;
+                        // border: solid red 1px;
+                    }
+                    .dashboardProfilePic {
+                        margin: 20px auto 0 auto;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 100%;
+                        //border-radius: 2px;
+                        background-color: lightgrey;
+                    }
+                    .dashboardProfileGear {
+                        height: 50px;
+                        width: 50px;
+                        background-color: lightgrey;
+                    }
+                }
+
+                .dashboardProfileText {
+                    width: 1020px;
+                    margin: 0 auto;
+                    // border: orange 1px solid;
+                    color: $theme-color-white;
+                    text-align: center;
+                    margin-top: 10px;
+
+                }
             }
         }
 
-        .dashboardSideContent {
-            width: 250px;
-            height: 500px;
-            border: red 1px solid;
+        .dashboardSubContent {
+            background-color: $theme-color-white;
+            width: 100%;
+            padding-bottom: 120px;
+            margin: 0;
+            
+            .dashboardSubContentWidth {
+                width: 1250px;
+                margin: 0 auto;
+            
+                .dashboardFeedEvents {
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    
+                }
+                .dashboardEvents{
+                    width: 100%;
+                    height: 500px;
+                    border: red 1px solid;
+                }
+            }
         }
+
     }
 }
 

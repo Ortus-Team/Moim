@@ -1,6 +1,8 @@
 import React from 'react';
+import backPic from './uw.jpg';
 import { Navbar } from '../components/Navbar';
 import { Feed } from '../components/dashboard/Feed';
+import { YourEvents } from '../components/dashboard/YourEvents';
 
 export class DashboardPageContainer extends React.Component {
   render() {
@@ -9,18 +11,31 @@ export class DashboardPageContainer extends React.Component {
         <Navbar />
         <div className="dashboardPageContent">
           <div className="dashboardProfile">
-            <div className="dashboardProfilePic">
-              profile pic
+            <div className="dashboardProfileBackPic">
+              <img src={backPic} />
             </div>
-            <div className="dashboardProfileText">
-              <h3>First Last</h3>
-              <h4>Majors</h4>
+            <div className="dashboardProfileContent">
+              <div className="dashboardProfileTop">
+                <div className="dashboardGearEven" />
+                <div className="dashboardProfilePic">
+                  profile pic
+                </div>
+                <div className="dashboardProfileGear">
+                  Settings
+                </div>
+              </div>
+              <div className="dashboardProfileText">
+                <h2>Welcome back, Firstname!</h2>
+              </div>
             </div>
-
           </div>
-          <Feed />
-          <div className="dashboardSideContent">
-            additional content
+          <div className="dashboardSubContent">
+            <div className="dashboardSubContentWidth">
+              <div className="dashboardFeedEvents">
+                <Feed />                
+                <YourEvents />
+              </div>
+            </div>
           </div>
         </div>
       </div>

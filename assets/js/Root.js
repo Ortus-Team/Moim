@@ -10,6 +10,7 @@ import { EventPageContainer } from './containers/EventPageContainer';
 import { GroupsPageContainer } from './containers/GroupsPageContainer';
 import { EventsPageContainer } from './containers/EventsPageContainer';
 import { GroupPageContainerHome } from './containers/GroupPageContainerHome';
+import { AdminGroupPageContainerHome } from './containers/AdminGroupPageContainerHome';
 import { GroupPageContainerEvents } from './containers/GroupPageContainerEvents';
 import { GroupPageContainerPeople } from './containers/GroupPageContainerPeople';
 import { GroupPageContainerGallery } from './containers/GroupPageContainerGallery';
@@ -33,6 +34,7 @@ class Root extends React.Component {
           <Route path="/group-events" component={GroupPageContainerEvents} />
           <Route path="/group-people" component={GroupPageContainerPeople} />
           <Route path="/group-gallery" component={GroupPageContainerGallery} />
+          <Route path="/admin-group-home" component={AdminGroupPageContainerHome} />
           <Route path="/signup1" component={SignUpContainer1} />
           <Route path="/signup2" component={SignUpContainer2} />
           <Route path="/signup3" component={SignUpContainer3} />

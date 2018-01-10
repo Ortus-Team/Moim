@@ -134,3 +134,47 @@ a, a:hover {
   text-transform: uppercase;
   font-size: 12px;
 }
+
+.groupTags {
+  margin-top: 8px;
+
+  .groupCats {
+    display: flex;
+    flex-wrap: wrap;
+    .groupCat {
+      border: 0.5px $theme-color-lightgrey solid;
+      border-radius: 100px;
+      padding: 2px 10px;
+      margin-right: 7px;
+      margin-bottom: 3px;
+      // text-transform: uppercase;
+    }
+  }
+
+  .groupSize {
+    margin-top: 4px;
+  }
+}
+
+.oAuthButtons {
+  height: 130px;
+  margin: 20px 0;
+  // border: solid red 1px;
+  .oAuthButton {
+    width: 300px;
+    // background-color: $theme-color-blue;
+    border: #ddd solid 1.5px;
+    color: $theme-color-grey;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 3px;
+    font-size: 18px;
+    margin: 5px;
+    img {
+      margin-right: 25px;
+    }
+  }
+
+}
