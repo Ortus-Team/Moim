@@ -134,11 +134,11 @@ export class Navbar extends React.Component {
                   <h6 className="navLink">Upcoming Events</h6>
                 </div>
               </Link>
-              <Link key='translate' to='/'>
+              {/* <Link key='translate' to='/'>
                 <div className='navTranslate'>
                   <h6 className="navLink">English</h6>
                 </div>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Account */}

@@ -4,8 +4,7 @@ export class Feed extends React.Component {
   render() {
     return (
       <div className="dashboardFeed">
-        <h3 className='subheading'>Recent Activity</h3>
-        <hr />
+        <h5 className='subheading'>Recent Activity</h5>
         <div className="dashboardFeedItems">
           <div className="dashboardFeedItem">
             <div className="dashboardFeedItemTop">
