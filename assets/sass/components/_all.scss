@@ -14,6 +14,7 @@
 @import './home/Explore';
 @import './home/Category';
 @import './home/DirectoryLink';
+@import './home/FeaturedEvents';
 
 // nav 
 @import './navbar/LoggedIn';
@@ -28,6 +29,7 @@
 // events (directory)
 @import './events/Filters';
 @import './events/Events';
+@import 'EventItemSmall';
 
 // group 
 @import './group/AlbumItem';
@@ -38,7 +40,9 @@
 @import './group/GroupContentOfficers';
 @import './group/GroupHeader';
 @import './group/OfficerItem';
+@import './group/Feed';
 
 // dashboard
 @import './dashboard/Feed';
+@import './dashboard/YourEvents';
 

@@ -1,21 +1,23 @@
-$groupNavHeight: 70px; // same as main nav
+$groupNavHeight: 60px; // same as main nav
 
 .groupContentNavWrapper {
   .groupContentNav {
     background-color: #fff;
     width: 100%;
     height: $groupNavHeight;
-    border-top: lightgrey 1px solid;
+    border-top: $theme-color-lightgrey 1px solid;
+    border-bottom: $theme-color-lightgrey 1px solid;
 
     .groupContentNavLinksWrapper {
       max-width: 1250px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       .groupContentNavLink {
-        text-align: center;
+        margin-left: 20px;
+        text-align: left;
         line-height: $groupNavHeight;
-        width: 312.5px;
+        width: 160px;
       }
     }
   }
