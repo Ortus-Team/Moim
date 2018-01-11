@@ -16,7 +16,7 @@
 
   .navbarComponent {
     position: relative;
-    height: $navbar-height;
+    height: $navbar-height; // 60px
     width: 100%;
     z-index: 999;
 
@@ -54,15 +54,34 @@
         display: flex;
         justify-content: space-between;
         width: auto;
-        
+
+        .navSearch {
+          padding: 10px 30px 10px 0;
+          input[type=text] {
+            padding: 10px 10px 10px 40px;
+            font-weight: 500;
+            height: 40px;
+            border: solid #ddd 1px;
+            border-radius: 2px;
+            width: 250px;
+            font-size: 14px;
+            outline: none;
+            background-image: url('searchicon.png');
+            background-position: 4px 4px; 
+            background-repeat: no-repeat;
+            background-size: 30px;
+          }
+        }
+
         .navLink {
           font-weight: 500;
           height: 10px;
         }
 
+        // links
         a {
           // text-transform: uppercase;
-          letter-spacing: 0.6px;
+          letter-spacing: 0.2px;
           
           div {
             // border-left: 1px $theme-color-lightpurple solid;

@@ -124,6 +124,9 @@ export class Navbar extends React.Component {
 
             {/* Main links */}
             <div className="mainLinks">
+              <div className='navSearch'>
+                <h6><input type="text" placeholder="Search" /></h6>
+              </div>
               <Link key='groups' to='/groups'>
                 <div className='navGroups'>
                   <h6 className="navLink">Student Group Directory</h6>
