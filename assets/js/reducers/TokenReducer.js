@@ -2,7 +2,7 @@ import {GET_TOKEN} from "../actions/ActionConstants";
 
 const INITIAL_STATE = {
 	registered: false,
-	user: []
+	user: -1
 };
 
 export default function(state=INITIAL_STATE, action) {

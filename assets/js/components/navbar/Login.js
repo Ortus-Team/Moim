@@ -3,8 +3,10 @@ import { Link } from 'react-router';
 import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login-component';
 import { getUser } from "../../actions/TokenAction";
+import { createStore } from 'redux'
+import reducer from '../../reducers/TokenReducer'
 
-
+var store = createStore(reducer)
 /*
 NavBar (On all pages)
   Logo (link: Home)
@@ -21,7 +23,7 @@ export class Login extends React.Component {
   handleFacebookLogin(response) {
     console.log("FACEBOOK LOGIN TOKEN");
     console.log(response);
-
+    getUser(response, 1);
   }
 
   constructor (props, context) {
@@ -29,10 +31,12 @@ export class Login extends React.Component {
   }
 
   responseGoogle (googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
-    console.log({accessToken: id_token});
-    getUser(id_token);
-    //anything else you want to do(save to localStorage)...
+    var auth_response = googleUser.getAuthResponse();
+    //console.log({accessToken: id_token});
+    console.log(auth_response.access_token);
+    getUser(auth_response.access_token, 0);
+    // console.log("STORE STATE_________________________");
+    // console.log(store.getState());
   }
 
   render() {

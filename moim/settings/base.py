@@ -100,8 +100,11 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookAppOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
 
+    'social_core.backends.google.GoogleOAuth2',
+
     # django-rest-framework-social-oauth2
     'rest_framework_social_oauth2.backends.DjangoOAuth2',
+
 
     # Django
     'django.contrib.auth.backends.ModelBackend',
@@ -168,8 +171,12 @@ EMAIL_BACKEND = "anymail.backends.mailgun.EmailBackend"  # or sendgrid.EmailBack
 DEFAULT_FROM_EMAIL = "you@example.com"  # if you don't already have this in settings
 
 # Facebook configuration
-SOCIAL_AUTH_FACEBOOK_KEY = '110760716216901'
-SOCIAL_AUTH_FACEBOOK_SECRET = '34130c24a27d19a9f8d06ac2e9d18fa4'
+SOCIAL_AUTH_FACEBOOK_KEY = '168701917052804'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'a21b778023708a2b18037ee54c6120d9'
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '536753927994-6jcc5jtp350uu2jaj498fo4kldjpl50e.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'hGFFH23gj23zF9DpiHqI2de2'
+
 
 # Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from facebook. Email is not sent by default, to get it, you must request the email permission:
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
