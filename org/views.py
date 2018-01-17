@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework.generics import ListAPIView
 
-# Create your views here.
+from org.serializers import OrgSerializer
+from .models import Org
+
+
+class OrgList(ListAPIView):
+    queryset = Org.objects.all()
+    serializer_class = OrgSerializer
