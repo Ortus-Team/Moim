@@ -10,24 +10,47 @@ export class GroupHeader extends React.Component {
                         Cover Image
                     </div>
                 </div>
+                {/*
                 <div className="groupHeaderLogoWrapper">
                     <div className="groupHeaderLogoWidth">
                         <div className="groupHeaderLogo">
                             Logo
                         </div>
                     </div>
-                </div>
-                <div className="groupHeaderTextWrapper">
-                    <div className="groupHeaderTextWrapperWidth">
+                </div>*/}
+                <div className="groupHeaderContentWrapper">
+                    
+                    <div className="groupHeaderContentWrapperWidth">
+                        <div className="groupHeaderLogo">
+                            Logo
+                        </div>
                         <div className="groupHeaderText">
                             <div className="groupHeaderTextLeft">
-                                <h2>Name of Student Group</h2>
-                                <div className="groupHeaderButtonsWrapper">
-                                    <a href="/group-home" className="groupHeaderButton">Join +</a>
-                                    <a href="/group-home" className="groupHeaderButton">Follow +</a>
+                                <h1>Name of Student Group</h1>
+                                <div className="groupTags">
+                                    <div className="groupCats">
+                                        <div className="groupCat">
+                                            <p className="caption">Business</p>
+                                        </div>
+                                        <div className="groupCat">
+                                            <p className="caption">Networking</p>
+                                        </div>
+                                        <div className="groupSize">
+                                            <p className="caption">250 members</p>
+                                        </div>
+                                    </div> 
                                 </div>
+                                <div className='groupContact'>
+                                    <h6>www.ksauw.com</h6>
+                                    <h6>ksa@uw.edu</h6>
+                                </div>
+                                
                             </div>
                             <div className="groupHeaderTextRight">
+                                <div className="groupHeaderButtonsWrapper">
+                                    <div id='bookmark-ribbon' />
+                                    <a href="/group-home" className="groupHeaderButton">+ Join group</a>
+                                </div>
                                 <div className="groupHeaderSettings" />
                             </div>
                         </div>

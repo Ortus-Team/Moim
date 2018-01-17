@@ -1,0 +1,73 @@
+$theme-color-black: #222222;
+
+$theme-color-lightgrey: #DDDDDD;
+
+.eventItemSmallComponent {
+  height: 100%;
+  .eventItemSmallWrapper {
+    height: 100%;
+    a:hover {
+      text-decoration: none;
+    }
+    .eventItemSmallContent {
+      margin: 0;
+      padding: 0;
+      // border: solid 1px $theme-color-lightgrey;
+      border-radius: 2px;
+      width: 234px;
+      .eventItemSmallImage {
+        height: 330px;
+        img {
+          width: 234px;
+          overflow: hidden;
+          // border-radius: 2px 2px 0 0;
+          border-radius: 2px;
+        }
+        
+        // background-color: lightgrey;
+        // background-image: url("event_poster.jpg");
+      }
+
+      .eventItemSmallText {
+        // padding: 10px;
+        padding-top: 15px;
+        // background-color: #fff;
+        .eventItemSmallTitle {
+          margin: 0 0 5px 0;
+          color: $theme-color-black;
+          // font-weight: 600;
+        }
+
+        .eventItemSmallHost {
+          display: flex;
+          width: 100%;
+          .from {
+            h4 {
+              font-size: 14px;
+              margin: 0 5px 0 0;
+            }
+          }
+          .groupLink {
+            h4 {
+              font-size: 14px;
+              margin: 0;
+              color: $theme-color-purple;
+            }
+          }
+        }
+
+        .eventItemSmallDate {
+          margin: 10px 0 0 0;
+          font-size: 14px;
+          font-weight: 100;
+        }
+
+        .eventItemSmallLoc {
+          margin: 0;
+        }
+
+      }
+    }
+  }
+
+}

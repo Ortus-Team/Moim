@@ -16,7 +16,7 @@ $theme-color-lightgrey: #DDDDDD;
       border-radius: 2px;
       width: 300px;
       .eventItemImage {
-        height: 420px;
+        height: 425px;
         img {
           width: 100%;
           overflow: hidden;
@@ -31,11 +31,11 @@ $theme-color-lightgrey: #DDDDDD;
       .eventItemText {
         // padding: 10px;
         padding-top: 15px;
-        background-color: #fff;
+        // background-color: #fff;
         .eventItemTitle {
           margin: 0 0 5px 0;
           color: $theme-color-black;
-          // font-weight: 600;
+          font-weight: bold 700;
         }
 
         .eventItemHost {

@@ -1,0 +1,159 @@
+.dashboardPageWrapper {
+    padding: 0;
+    margin: 0;
+    .dashboardPageContent {
+        display: flex;
+        width: 1250px;
+        margin: 0 auto;
+        padding-top: 60px;
+
+        .dashboardProfile {
+            // border: red 1px solid;
+            width: 220px;
+            margin-right: 80px;
+            // padding: 20px;
+            .dashboardProfilePic {
+                width: 220px;
+                height: 220px;
+                background-color: lightgrey;
+                border-radius: 3px;
+            }
+            .dashboardProfileInfo {
+                .dashboardProfileInfoMain {
+                    margin-top: 20px;
+                    .dPInfoMainDeets {
+                        margin-top: 5px;
+                    }
+                }
+
+                .dashboardProfileInfoDeet {
+                    margin-top: 10px;
+                }
+
+                .dashboardProfileInfoBio {
+                    margin-top: 30px;
+                }
+                .dashboardEditLink {
+                    margin-top: 20px;
+                    a {
+                        color: $theme-color-purple;
+                    }
+                }
+            }
+        }
+
+        .dashboardContent {
+            width: 950px;
+            // border: red 1px solid;
+
+            .dCMenu {
+                width: 100%;
+                height: 40px;
+                border-bottom: $theme-color-lightgrey 1px solid;
+                display: flex;
+                .dCMenuTab {
+                    width: auto;
+                    padding: 5px 40px 10px 0;
+                }
+            }
+        }
+    }
+}
+
+/* .dashboardPageWrapper {
+    padding: 0;
+    margin: 0;
+    
+    .dashboardPageContent {
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        // text-align: center;
+        .dashboardProfile {
+            width: 100%;
+            height: 240px;
+
+            .dashboardProfileBackPic {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+                height: auto;
+                position: absolute;
+                z-index: -10;
+
+            }
+
+            .dashboardProfileContent {
+                position: absolute;
+                z-index: 10;
+                width: 100%;
+                height: 240px;
+                // background-color: $theme-color-purple;
+                // border: red 1px solid;
+                // padding: 20px;
+                text-align: center;
+                padding: 20px;
+
+                .dashboardProfileTop {
+                    display: flex;
+                    width: 100%;
+                    .dashboardGearEven {
+                        height: 50px;
+                        width: 50px;
+                        // border: solid red 1px;
+                    }
+                    .dashboardProfilePic {
+                        margin: 20px auto 0 auto;
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 100%;
+                        //border-radius: 2px;
+                        background-color: lightgrey;
+                    }
+                    .dashboardProfileGear {
+                        height: 50px;
+                        width: 50px;
+                        background-color: lightgrey;
+                    }
+                }
+
+                .dashboardProfileText {
+                    width: 1020px;
+                    margin: 0 auto;
+                    // border: orange 1px solid;
+                    color: $theme-color-white;
+                    text-align: center;
+                    margin-top: 10px;
+
+                }
+            }
+        }
+
+        .dashboardSubContent {
+            background-color: $theme-color-white;
+            width: 100%;
+            padding-bottom: 120px;
+            margin: 0;
+            
+            .dashboardSubContentWidth {
+                width: 1250px;
+                margin: 0 auto;
+            
+                .dashboardFeedEvents {
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    
+                }
+                .dashboardEvents{
+                    width: 100%;
+                    height: 500px;
+                    border: red 1px solid;
+                }
+            }
+        }
+
+    }
+} */
+

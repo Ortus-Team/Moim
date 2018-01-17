@@ -5,7 +5,7 @@ import { DirectoryLink } from '../components/home/DirectoryLink';
 import { FeaturedGroups } from '../components/home/FeaturedGroups';
 import { Explore } from '../components/home/Explore';
 
-import { UpcomingEvents } from '../components/UpcomingEvents';
+import { FeaturedEvents } from '../components/home/FeaturedEvents';
 import { Navbar } from '../components/Navbar';
 
 export class HomePageContainer extends React.Component {
@@ -19,18 +19,10 @@ export class HomePageContainer extends React.Component {
           {/*<DirectoryLink />*/}
         </div>
         <div className='homeContent'>
-          <UpcomingEvents />
+          <FeaturedEvents />
           <FeaturedGroups />
           <Explore />
         </div>
-        {/*
-        <Navbar />
-        <div className='homeContent2'>
-          <DynamicContent />
-          <UpcomingEvents />
-          <FeaturedGroups />
-          <Explore />
-        </div> */}
       </div>
     );
   }
