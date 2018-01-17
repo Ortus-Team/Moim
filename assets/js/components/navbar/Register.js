@@ -1,6 +1,8 @@
 import React from 'react';
 import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login-component';
+import google from './google.png';
+import facebook from './facebook.png';
 
 /*
 NavBar (On all pages)
@@ -36,6 +38,7 @@ export class Register extends React.Component {
           <div className='registerBox'>
             <div className='registerContent'>
               <h3>Sign up</h3>
+<<<<<<< HEAD
               <FacebookLogin
                 appId="168701917052804"
                 autoLoad={true}
@@ -48,6 +51,12 @@ export class Register extends React.Component {
                      fetchBasicProfile={false}
                      responseHandler={this.responseGoogle}
                      buttonText="Login With Google"/>
+=======
+              <div className='oAuthButtons'>
+                <button className='oAuthButton' onClick={this.props.login}><img src={google} height='20' width='20' />Sign up with Google</button>
+                <button className='oAuthButton' onClick={this.props.login}><img src={facebook} height='20' width='20' />Sign up with Facebook</button>
+              </div>
+>>>>>>> origin/yujin
               <p>Already have an account? <a href="javascript:void(0)" className='login' onClick={this.props.login}>Log in</a></p>
             </div>
           </div>

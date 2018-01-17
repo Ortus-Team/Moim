@@ -3,6 +3,7 @@ $theme-color-purple: #5943eb; // #4B2E83; // #6F34E1;
 $theme-color-lightpurple: #9f7fd4;
 $theme-color-blue: #34D9E9;
 $theme-color-lightgrey: #CCC;
+$theme-color-medgrey: #aaa;
 $theme-color-black: #3C3C3C;
 $theme-color-purple3: #6750FF;
 $theme-color-grey: rgba(0,0,0,0.67);
@@ -10,6 +11,6 @@ $theme-color-grey: rgba(0,0,0,0.67);
 $theme-color-lightergrey: #fafafa;
 
 $navbar-height: 60px;
-$navbar-shadow: 0px 2px 6px #212121;
+$navbar-shadow: 0px 2px 6px rgba(0,0,0,0.3);
 $content-shadow: 0px 0px 6px #eaeaea;
 $ease-time: 0.3s;
