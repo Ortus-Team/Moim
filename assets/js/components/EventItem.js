@@ -16,7 +16,7 @@ export class EventItem extends React.Component {
 
               {/* Date */}
               <div className="eventItemText">
-                <h3 className="eventItemTitle">Snowboarding with Owls in Kenya</h3>
+                <h3 className="eventItemTitle">Dead Poetry: SDHS Open Mic Night</h3>
                 <div className="eventItemHost">
                   <div className="from">
                     <h4>From </h4>
@@ -25,7 +25,7 @@ export class EventItem extends React.Component {
                     <Link key='group-home' to='/group-home'><h4>Name of Student Group</h4></Link>
                   </div>
                 </div>
-                <h4 className="eventItemDate">Oct. 15th @ 6PM • HUB Ballroom</h4>
+                <h4 className="eventItemDate">Nov. 14th @ 5PM • SDHS Auditorium</h4>
                 {/* <h4 className="eventItemLoc">- Location</h4> */}
                 {/* Logo
                 <div>

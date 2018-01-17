@@ -2,8 +2,13 @@ import React from 'react';
 import { Link } from 'react-router';
 import FacebookLogin from 'react-facebook-login';
 import { GoogleLogin } from 'react-google-login-component';
+import { getUser } from "../../actions/TokenAction";
+import { createStore } from 'redux'
+import reducer from '../../reducers/TokenReducer'
 
-
+var store = createStore(reducer)
+import google from './google.png';
+import facebook from './facebook.png';
 /*
 NavBar (On all pages)
   Logo (link: Home)
@@ -20,6 +25,7 @@ export class Login extends React.Component {
   handleFacebookLogin(response) {
     console.log("FACEBOOK LOGIN TOKEN");
     console.log(response);
+    getUser(response, 1);
   }
 
   constructor (props, context) {
@@ -27,9 +33,12 @@ export class Login extends React.Component {
   }
 
   responseGoogle (googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
-    console.log({accessToken: id_token});
-    //anything else you want to do(save to localStorage)...
+    var auth_response = googleUser.getAuthResponse();
+    //console.log({accessToken: id_token});
+    console.log(auth_response.access_token);
+    getUser(auth_response.access_token, 0);
+    // console.log("STORE STATE_________________________");
+    // console.log(store.getState());
   }
 
   render() {
@@ -38,8 +47,7 @@ export class Login extends React.Component {
         <div className='overlay' onClick={this.props.off} />
         <div className='loginBox'>
           <div className='loginContent'>
-            <h3>Log in to moim</h3>
-            
+            <h3>Log in to moim</h3>          
             <FacebookLogin
               appId="168701917052804"
               autoLoad={true}
@@ -54,6 +62,10 @@ export class Login extends React.Component {
                      responseHandler={this.responseGoogle}
                      buttonText="Login With Google"/>
 
+              <div className='oAuthButtons'>
+                <button className='oAuthButton' onClick={this.props.login}><img src={google} height='20' width='20' />Log in with Google</button>
+                <button className='oAuthButton' onClick={this.props.login}><img src={facebook} height='20' width='20' />Log in with Facebook</button>
+              </div>
             <p>Don't have an account? <a href="javascript:void(0)" className='signup' onClick={this.props.register}>Sign Up</a></p>
           </div>
         </div>

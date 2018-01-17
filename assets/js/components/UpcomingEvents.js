@@ -1,15 +1,6 @@
 import React from 'react';
 // import { EventItem } from 'components/EventItem/EventItem';
-import { EventItem } from './EventItem';
-/*
-NavBar (On all pages)
-  Logo (link: Home)
-  Search
-  Student Group Directory
-  Events
-  Login
-  Translate
-*/
+import { EventItemSmall } from './EventItemSmall';
 
 export class UpcomingEvents extends React.Component {
   render() {
@@ -17,10 +8,11 @@ export class UpcomingEvents extends React.Component {
       <div className="sectionWrapper">
         <h2 className='subheading'>Upcoming Events</h2>
         <div className="upcomingEvents">
-          <EventItem />
-          <EventItem />
-          <EventItem />
-          <EventItem />
+          <EventItemSmall />
+          <EventItemSmall />
+          <EventItemSmall />
+          <EventItemSmall />
+          <EventItemSmall />
         </div>
       </div>
     );
