@@ -33,7 +33,7 @@ export class Login extends React.Component {
   responseGoogle (googleUser) {
     var auth_response = googleUser.getAuthResponse();
     //console.log({accessToken: id_token});
-    console.log(auth_response.access_token);
+    console.log(auth_response);
     getUser(auth_response.access_token, 0);
     // console.log("STORE STATE_________________________");
     // console.log(store.getState());
