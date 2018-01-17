@@ -5,31 +5,28 @@ from rest_framework import generics
 from rest_framework.parsers import JSONParser
 from rest_framework.renderers import JSONRenderer
 
+from oauth2_provider.models import AccessToken
+
 from api.permissions import IsAuthenticatedOrCreate
 from api.serializers import *
 from main.models import *
 
 from django.core.mail import send_mail, EmailMultiAlternatives
 
+@csrf_exempt
+def user_pk(request, access_token):
+    try:
+        user_id = AccessToken.objects.get(token=access_token).user.pk
+        return JsonResponse({"user_id":user_id}, status=201)
+    except AccessToken.DoesNotExist:
+        print("Token Does Not exists, Exception caught")
+        return HttpResponse(status=404)
 
 @csrf_exempt
 def send_email(request):
     send_mail("It works!", "This will get sent through Mailgun",
               "Anymail Sender <moim@example.com>", ["joshualim.1@gmail.com"])
     return HttpResponse(status=201)
-
-@csrf_exempt
-def convert_token(request, token):
-    print("convert token call3d")
-    try:
-        tokenToUser = Token.objects.get(access_token__exact=token)
-    except Token.DoesNotExist:
-        print("Token Does Not exists, Exception caught")
-        return HttpResponse(status=304)
-
-    if request.method == 'GET':
-        serializer = AccessTokenSerializer(tokenToUser)
-        return JsonResponse(serializer.data)
 
 @csrf_exempt
 def member_list(request):
