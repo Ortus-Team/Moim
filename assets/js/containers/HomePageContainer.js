@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import { DynamicContent } from '../components/home/DynamicContent';
 import { DirectoryLink } from '../components/home/DirectoryLink';
@@ -22,6 +23,9 @@ export class HomePageContainer extends React.Component {
           <FeaturedEvents />
           <FeaturedGroups />
           <Explore />
+        </div>
+        <div className='footer'>
+          This is the footer. Add create moim and about links here.
         </div>
       </div>
     );

@@ -1,7 +1,10 @@
-.eventPageWrapper {
+.adminEventPageWrapper {
     padding: 0;
     margin: 0;
-    .eventPageContent {
+
+    .displayEventEdit {
+    }
+    .adminEventPageContent {
         padding: $content-top-padding 0 120px 0;
         margin: 0 auto;
         width: 1250px;

@@ -8,6 +8,7 @@ import { HomePageContainer } from './containers/HomePageContainer';
 import { DashboardPageContainer } from './containers/DashboardPageContainer';
 import { EditProfilePageContainer } from './containers/EditProfilePageContainer';
 import { EventPageContainer } from './containers/EventPageContainer';
+import { AdminEventPageContainer } from './containers/AdminEventPageContainer';
 import { GroupsPageContainer } from './containers/GroupsPageContainer';
 import { EventsPageContainer } from './containers/EventsPageContainer';
 import { GroupPageContainerHome } from './containers/GroupPageContainerHome';
@@ -30,6 +31,7 @@ class Root extends React.Component {
           <Route path="/dashboard" component={DashboardPageContainer} />
           <Route path="/edit-profile" component={EditProfilePageContainer} />
           <Route path="/event" component={EventPageContainer} />
+          <Route path="/admin-event" component={AdminEventPageContainer} />
           <Route path="/groups" component={GroupsPageContainer} />
           <Route path="/events" component={EventsPageContainer} />
           <Route path="/group-home" component={GroupPageContainerHome} />

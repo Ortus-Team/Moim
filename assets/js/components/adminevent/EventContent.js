@@ -4,17 +4,22 @@ import { Link } from 'react-router';
 export class EventContent extends React.Component {
   render() {
     return (
-      <div className="eventPageWrapper">
-        <div className="eventPageContainer">
-          <div className="eventPageImage">
+      <div className="adminEventPageWrapper">
+        <div className="adminEventPageContainer">
+          <div className="adminEventPageImage">
             <img src="#" alt="image" />
           </div>
 
           <div className="info">
             <div className="overview">
-              <div className='overviewMain'>
-                <h1 className="eventTitle">Dead Poetry</h1>
-                <h3 className="whoDaHost">Hosted by <Link key='group-home' to='/group-home'>Name of Student Group</Link></h3>
+              <div className='overviewMainAdmin'>
+                <div className='overviewMainText'>
+                  <h1 className="adminEventTitle">(Admin) Dead Poetry</h1>
+                  <h3 className="whoDaHost">Hosted by <Link key='group-home' to='/group-home'>Name of Student Group</Link></h3>
+                </div>
+                <div className='overviewMainEdit'>
+                  <p><a className='purple' href='#'>Edit Event Details</a></p>
+                </div>
               </div>
               <div className="rsvpButts">
                 <button className="rsvpButtI">Interested</button>

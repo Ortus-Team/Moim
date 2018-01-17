@@ -14,7 +14,7 @@ export class Navbar extends React.Component {
     // this.handleLogoutClick = this.handleLogoutClick.bind(this);
     this.state = {
       isLoggedIn: isLoggedIn,
-      styleLogin : {
+      styleLogin: {
         display: 'none'
       },
       
@@ -115,6 +115,17 @@ export class Navbar extends React.Component {
           <Register off={this.registerOff} login={this.registerLogin} />
         </div>
 
+        <div className='createMoim'>
+          <div className='createMoimTextWrapper'>
+            <div className='createMoimText'>
+              <h5>Are you the officer of a student group?</h5>
+            </div>
+            <div className='createMoimButtonWrapper'>
+              <Link key='create' to='/create'><button className='createMoimButton'>Register your group</button></Link>
+            </div>
+          </div>
+        </div>
+
         <div className="navbarComponent">
           <div className="navbarComponentContainer">
             {/* Logo */}
@@ -129,7 +140,7 @@ export class Navbar extends React.Component {
               </div>
               <Link key='groups' to='/groups'>
                 <div className='navGroups'>
-                  <h6 className="navLink">Student Group Directory</h6>
+                  <h6 className="navLink">Groups Directory</h6>
                 </div>
               </Link>
               <Link key='events' to='/events'>
