@@ -29,8 +29,10 @@ urlpatterns = [
     url(r'^photoevent/(?P<pk>[0-9]+)$', viewsets.photo_event_list),
     url(r'^eventorg/(?P<pk>[0-9]+)$', viewsets.event_org_list),
     url(r'^officerorg/(?P<pk>[0-9]+)$', viewsets.officer_org_list),
+    url(r'^fbeventdetail/(?P<event_id>[\w{}.-]+)$', viewsets.get_fbevent_detail),
     url(r'^userid/(?P<access_token>[\w{}.-]+)$', viewsets.user_pk),
     url(r'^sendemail$', viewsets.send_email),
+    url(r'^checkregistered/(?P<pk>[0-9]+)$', viewsets.check_email),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^members', viewsets.member_list),
     url(r'^orgs', viewsets.org_list)

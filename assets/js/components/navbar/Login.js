@@ -25,7 +25,14 @@ export class Login extends React.Component {
   handleFacebookLogin(response) {
     console.log("FACEBOOK LOGIN TOKEN");
     console.log(response);
-    getUser(response, 1);
+    getUser(response, 1)
+      .then(res => {
+        if (res.registered == false) {
+          console.log("NOT REGISTERED");
+        } else {
+          console.log("REGISTERED");
+        }
+      });
   }
 
   constructor (props, context) {
@@ -36,7 +43,15 @@ export class Login extends React.Component {
     var auth_response = googleUser.getAuthResponse();
     //console.log({accessToken: id_token});
     console.log(auth_response);
-    getUser(auth_response.access_token, 0);
+    getUser(auth_response.access_token, 0)
+      .then(res => {
+        if (res.registered == false) {
+          console.log("NOT REGISTERED");
+        } else {
+          console.log("REGISTERED");
+        }
+      });
+
     // console.log("STORE STATE_________________________");
     // console.log(store.getState());
   }
