@@ -24,7 +24,8 @@ class Event(models.Model):
     slug = models.SlugField(max_length=256, default="")
     event_date = models.DateTimeField(blank=True, null=True)
     pub_date = models.DateTimeField(auto_now_add=True, null=True)
-    access_level = models.CharField(max_length=10)  # 0: open 1: member only 2: officer only
+    access_level = models.ForeignKey('AccessLevel',
+                                     blank=True, null=True)
     location = models.CharField(max_length=200)
     body = models.TextField(default="", null=True, blank=True)
     category = models.ForeignKey('category.Category',
@@ -36,11 +37,12 @@ class Event(models.Model):
     publisher = models.ForeignKey(settings.AUTH_USER_MODEL,
                                   on_delete=models.CASCADE, related_name="publisher", null=True)
 
-    # org = models.ManyToManyField('org.Org',
-    #                              related_name="orgs")
+    org = models.ForeignKey('org.Org',
+                            related_name="org",
+                            null=True)
 
     def __str__(self):
-        return self.title
+        return self.title + " hosted by " + self.org.name
 
     def save(self, slug="", *args, **kwargs):
         if not self.id:
@@ -55,3 +57,20 @@ class Event(models.Model):
 
     class Meta:
         ordering = ('-pub_date',)
+
+
+class AccessLevel(models.Model):
+    title = models.CharField(max_length=64)
+    slug = models.SlugField(max_length=64, default="")
+    description = models.TextField(max_length=512, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(AccessLevel, self).save(*args, **kwargs)
+
+    @permalink
+    def get_absolute_url(self):
+        return ('view_access_level', None, {'slug': self.slug})

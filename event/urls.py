@@ -1,31 +1,19 @@
 from django.conf.urls import url
 
-from .views import PostList, PostCreate, PostRetrieveUpdateDestroy
-from .views import TagListCreate, TagRetrieveUpdateDestroy
-
-from .activities import posts_stream
+from .views import EventList, EventCreate, EventRetrieveUpdateDestroy
 
 urlpatterns = [
-    # List posts
-    url(r'^posts/$', PostList.as_view(), name='post_list'),
-    # List posts filtered by tag
-    url(r'^events/tag/(?P<tag>[^\.]+)/$', PostList.as_view()),
-    url(r'^category/(?P<category>[^\.]+)/$', PostList.as_view()),
+    # List events
+    url(r'^events/$', EventList.as_view(), name='post_list'),
+    # List events filtered by tag or category
+    url(r'^events/tag/(?P<tag>[^\.]+)/$', EventList.as_view()),
+    url(r'^category/(?P<category>[^\.]+)/$', EventList.as_view()),
 
-    # Create post
-    url(r'^post/new$', PostCreate.as_view(), name='post_create'),
+    # Create event
+    url(r'^events/new$', EventCreate.as_view(), name='post_create'),
 
-    # Retreive/Update/Delete Post
-    url(r'post/(?P<slug>[^\.]+)/$',
-        PostRetrieveUpdateDestroy.as_view(),
+    # Retreive/Update/Delete Event
+    url(r'event/(?P<slug>[^\.]+)/$',
+        EventRetrieveUpdateDestroy.as_view(),
         name='post_detail'),
-
-    url(r'^tags/$', TagListCreate.as_view(), name='tag_list'),
-    url(r'tag/(?P<slug>[^\.]+)/$', TagRetrieveUpdateDestroy.as_view(), name='tag_detail'),
-
-    # Atom Feed
-    url(r'^feed/rss$', MainFeed()),
-    # Activities
-    url(r'^feed/posts/new$', posts_stream),
-
 ]
