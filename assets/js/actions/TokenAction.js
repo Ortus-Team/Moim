@@ -30,7 +30,7 @@ export function getUser(userResponse, provider) {
 	}
 	const url = orgs_url;
 	var authresponse;
-	fetch(url, {
+	return fetch(url, {
 			method: 'post',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
@@ -52,14 +52,34 @@ export function getUser(userResponse, provider) {
 				})
 				.then((response) => response.json())
 				.then((userpk) => 
-					(store.dispatch({
-						type: GET_TOKEN,
-						payload: userpk.user_id
-					}))
+					(fetch('http://' + host + '/api/checkregistered/' + userpk.user_id)
+						.then(response => {
+							return response
+						})
+						.then((response) => response.json())
+						.then((userregister) => {
+							(store.dispatch({
+								type: GET_TOKEN,
+								payload: userpk.user_id
+							}))	
+							return userregister
+						})
+					)	
 				) 
 			)
 		)
 		.catch(function() {
 			console.log("Exception happen while getUser function");
 		});
+}
+
+function registerAction(userregister) {
+	if (userregister.registered == false) {
+		console.log(userregister)
+	} else {
+		(store.dispatch({
+			type: GET_TOKEN,
+			payload: userpk.user_id
+		}))	
+	}
 }

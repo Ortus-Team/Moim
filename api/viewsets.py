@@ -12,6 +12,7 @@ from api.serializers import *
 from main.models import *
 
 from django.core.mail import send_mail, EmailMultiAlternatives
+import requests
 
 @csrf_exempt
 def user_pk(request, access_token):
@@ -21,6 +22,10 @@ def user_pk(request, access_token):
     except AccessToken.DoesNotExist:
         print("Token Does Not exists, Exception caught")
         return HttpResponse(status=404)
+
+@csrf_exempt
+def get_fbevent_detail(request, event_id):
+    return HttpResponse(requests.get("https://graph.facebook.com/v2.11/" + event_id + "?access_token=110760716216901|1Ur5eg8Jb07Oglk0Io4HICV8feA"))
 
 @csrf_exempt
 def send_email(request):
@@ -42,8 +47,19 @@ def member_list(request):
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
+      
+@csrf_exempt
+def check_email(request, pk):
+    try:
+        user = User.objects.get(pk=pk)
+    except User.DoesNotExist:
+        return HttpResponse(status=404)
 
-#
+    if user.email == '':
+        return JsonResponse({"registered":False, "userpk":pk}, status=201)
+    else:
+        return JsonResponse({"registered":True, "userpk":pk}, status=201)
+      
 # @csrf_exempt
 # def org_list(request):
 #     if request.method == 'GET':
@@ -394,7 +410,6 @@ def member_list(request):
 #             serializer.save()
 #             return JsonResponse(serializer.data)
 #         return JsonResponse(serializer.errors, status=404)
-
 
 class SignUp(generics.CreateAPIView):
     queryset = User.objects.all()
