@@ -140,12 +140,17 @@ export class Navbar extends React.Component {
               </div>
               <Link key='groups' to='/groups'>
                 <div className='navGroups'>
-                  <h6 className="navLink">Groups Directory</h6>
+                  <h6 className="navLink">Groups</h6>
                 </div>
               </Link>
               <Link key='events' to='/events'>
                 <div className='navEvents'>
                   <h6 className="navLink">Upcoming Events</h6>
+                </div>
+              </Link>
+              <Link key='about' to='/'>
+                <div className='navEvents'>
+                  <h6 className="navLink">About</h6>
                 </div>
               </Link>
               {/* <Link key='translate' to='/'>

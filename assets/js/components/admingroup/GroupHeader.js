@@ -1,31 +1,37 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export class GroupHeader extends React.Component {
   render() {
     return (
-        <div className="groupHeader">
-            <div className="groupHeaderContent">
-                <div className="groupHeaderCoverImageWrapper">
-                    <div className="groupHeaderCoverImage">
+        <div className="adminGroupHeader">
+            <div className="adminGroupHeaderContent">
+                <div className="adminGroupHeaderCoverImageWrapper">
+                    <div className="adminGroupHeaderCoverImage">
                         Cover Image
+                        <Link key='editgroup' to='/edit-group'>
+                        <div className='adminGroupHeaderEditButton'>
+                            <h5>/ Edit Group Details</h5>
+                        </div>
+                        </Link>
                     </div>
                 </div>
                 {/*
-                <div className="groupHeaderLogoWrapper">
-                    <div className="groupHeaderLogoWidth">
-                        <div className="groupHeaderLogo">
+                <div className="adminGroupHeaderLogoWrapper">
+                    <div className="adminGroupHeaderLogoWidth">
+                        <div className="adminGroupHeaderLogo">
                             Logo
                         </div>
                     </div>
                 </div>*/}
-                <div className="groupHeaderContentWrapper">
+                <div className="adminGroupHeaderContentWrapper">
                     
-                    <div className="groupHeaderContentWrapperWidth">
-                        <div className="groupHeaderLogo">
+                    <div className="adminGroupHeaderContentWrapperWidth">
+                        <div className="adminGroupHeaderLogo">
                             Logo
                         </div>
-                        <div className="groupHeaderText">
-                            <div className="groupHeaderTextLeft">
+                        <div className="adminGroupHeaderText">
+                            <div className="adminGroupHeaderTextLeft">
                                 <h1>(Admin) Name of Student Group</h1>
                                 <div className="groupTags">
                                     <div className="groupCats">
@@ -40,18 +46,18 @@ export class GroupHeader extends React.Component {
                                         </div>
                                     </div> 
                                 </div>
-                                <div className='groupContact'>
+                                <div className='adminGroupContact'>
                                     <h6>www.ksauw.com</h6>
                                     <h6>ksa@uw.edu</h6>
                                 </div>
                                 
                             </div>
-                            <div className="groupHeaderTextRight">
-                                <div className="groupHeaderButtonsWrapper">
+                            <div className="adminGroupHeaderTextRight">
+                                <div className="adminGroupHeaderButtonsWrapper">
                                     <div id='bookmark-ribbon' />
-                                    <a href="/group-home" className="groupHeaderButton">+ Join group</a>
+                                    <a href="/adminGroup-home" className="adminGroupHeaderButton">+ Join Group</a>
                                 </div>
-                                <div className="groupHeaderSettings" />
+                                <div className="adminGroupHeaderSettings" />
                             </div>
                         </div>
                     </div>
