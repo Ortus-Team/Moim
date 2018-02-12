@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.serializers import UserSerializer
+from oauth.serializers import UserSerializer
 from category.serializers import CategorySerializer
 from org.serializers import OrgSerializer
 from tag.serializers import TagSerializer

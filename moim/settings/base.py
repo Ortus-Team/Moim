@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     'main',
     'common',
-    'api',
+    'oauth',
     'anymail',
     'tag',
     'org',
