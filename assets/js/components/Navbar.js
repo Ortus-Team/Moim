@@ -118,10 +118,10 @@ export class Navbar extends React.Component {
         <div className='createMoim'>
           <div className='createMoimTextWrapper'>
             <div className='createMoimText'>
-              <h5>Are you the officer of a student group?</h5>
+              <h6>Are you the officer of a student group?</h6>
             </div>
             <div className='createMoimButtonWrapper'>
-              <Link key='create' to='/create'><button className='createMoimButton'>Register your group</button></Link>
+              <Link key='create' to='/create'>{/*<h6 className='createGroupText'>Register your group</h6>*/}<button className='createMoimButton'><h6>Register your group</h6></button></Link>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@ export class Navbar extends React.Component {
               </Link>
               <Link key='events' to='/events'>
                 <div className='navEvents'>
-                  <h6 className="navLink">Upcoming Events</h6>
+                  <h6 className="navLink">Events</h6>
                 </div>
               </Link>
               <Link key='about' to='/'>

@@ -15,7 +15,7 @@ export class Explore extends React.Component {
   render() {
     return (
       <div className="sectionWrapper">
-        <h2 className='subheading'>Find your niche</h2>
+        <h2 className='homeSection'>Find your niche</h2>
         <div className="expContent">
           <Category />
           <Category />

@@ -6,7 +6,7 @@ export class FeaturedEvents extends React.Component {
   render() {
     return (
       <div className="sectionWrapper">
-        <h2 className='subheading'>Featured Events</h2>
+        <h2 className='homeSection'>Upcoming Events</h2>
         <div className="featuredEvents">
           <EventItem />
           <EventItem />

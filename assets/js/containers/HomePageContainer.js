@@ -16,12 +16,16 @@ export class HomePageContainer extends React.Component {
       <div className='homeWrapper'>
         <Navbar />
         <div className='homeHeader'>
-          <DynamicContent />
+          
           {/*<DirectoryLink />*/}
         </div>
         <div className='homeContent'>
+          <DynamicContent />
+          <hr />
           <FeaturedEvents />
+          <hr />
           <FeaturedGroups />
+          <hr />
           <Explore />
         </div>
         <div className='footer'>
