@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'org',
     'category',
     'event',
+    'event_type',
+    'officer'
 ]
 
 MIDDLEWARE = [

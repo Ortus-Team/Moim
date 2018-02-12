@@ -28,9 +28,9 @@ class Event(models.Model):
                                      blank=True, null=True)
     location = models.CharField(max_length=200)
     body = models.TextField(default="", null=True, blank=True)
-    category = models.ForeignKey('category.Category',
-                                 related_name="categories",
-                                 blank=True, null=True)
+    event_types = models.ManyToManyField('event_type.EventType',
+                                         related_name="event_types",
+                                         blank=True)
     tags = models.ManyToManyField('tag.Tag',
                                   related_name="tags",
                                   blank=True)

@@ -18,5 +18,7 @@ urlpatterns = [
     url(r'^api/v1/', include('event.urls', namespace='events')),
     url(r'^api/v1/', include('category.urls', namespace='categories')),
     url(r'^api/v1/', include('tag.urls', namespace='tags')),
+    url(r'^api/v1/', include('event_type.urls', namespace='event_types')),
+    url(r'^api/v1/', include('org.urls', namespace='orgs')),
     url(r'^$', TemplateView.as_view(template_name='exampleapp/itworks.html'), name='home'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
