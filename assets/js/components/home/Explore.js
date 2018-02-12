@@ -14,8 +14,8 @@ NavBar (On all pages)
 export class Explore extends React.Component {
   render() {
     return (
-      <div className="sectionWrapper">
-        <h2 className='homeSection'>Find your niche</h2>
+      <div className="exploreSectionWrapper">
+        <h1 className='title'>Find your niche</h1>
         <div className="expContent">
           <Category />
           <Category />
@@ -23,6 +23,12 @@ export class Explore extends React.Component {
           <Category />
         </div>
         <div className="expContent">
+          <Category />
+          <Category />
+          <Category />
+          <Category />
+        </div>
+         <div className="expContent">
           <Category />
           <Category />
           <Category />

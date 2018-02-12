@@ -4,9 +4,9 @@ $theme-color-white: #fff;
   width: 100%;
   height: 100%;
   .dynamicContent {
-    margin: 140px auto 40px auto;
+    margin: 100px auto 0 auto;
     border-radius: 2px;
-    height: 450px;
+    height: 700px;
     background: #fff url("./ksa_yale.jpg") no-repeat top center; //fixed;
     z-index: -5;
     position: relative;
@@ -23,56 +23,63 @@ $theme-color-white: #fff;
     }
 
     .dynamicContentTextWrapper {
-      position: relative;
-      z-index: -3;
-      height: 100%;
-      width: 1250px;
-      margin: 0 auto;
-      // padding: 150px 0 0 0;
-      // padding: 50px;
-      .dynamicContentText {
-        margin: 0 0 0 800px;
-        background-color: $theme-color-white;
-        // background-color: $theme-color-purple;
-        // border: solid 3px $theme-color-purple;
-        padding: 70px 0 70px 40px;
-        // padding: 20px;
-        height: 100%;
-        width: 450px;
-        // float: right;
-        color: $theme-color-grey;
-        // color: $theme-color-white;
-        
-        h1 {
+       position: relative;
+       z-index: -3;
+       display: flex;
+       width: 100%;
+       height: 100%;
+       margin: 0;
+       padding: 0;
+        // padding: 150px 0 0 0;
+        // padding: 50px;
+        .dynamicContentBackground {
+          background-color: $theme-color-white;
+          width: 80px;
+          height: 100%;
+        }
+        .dynamicContentText {
+          margin: 300x 0 0 0;
+          background-color: $theme-color-white;
+          // background-color: $theme-color-purple;
+          // border: solid 3px $theme-color-purple;
+          padding: 140px 100px 0 0px;
+          // padding: 20px;
+          height: 100%;
+          width: 500px;
+          // float: right;
+          color: $theme-color-grey;
           // color: $theme-color-white;
-        }
-        // border-top: solid 3px $theme-color-purple;
+          
+          h1 {
+            // color: $theme-color-white;
+          }
+          // border-top: solid 3px $theme-color-purple;
 
-        border-radius: 2px;
+          border-radius: 2px;
 
-        .groupTags {
-          margin-top: 15px;
-          margin-bottom: 15px;
-          .groupCats {
-            display: flex;
-            flex-wrap: wrap;
+          .groupTags {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            .groupCats {
+              display: flex;
+              flex-wrap: wrap;
 
+            }
+
+            .groupSize {
+              margin-top: 4px;
+            }
           }
 
-          .groupSize {
-            margin-top: 4px;
+          .learnMore {
+            margin-top: 15px;
+          }
+          .button2 {
+            margin-top: 15px;
           }
         }
 
-        .learnMore {
-          margin-top: 15px;
-        }
-        .button2 {
-          margin-top: 15px;
-        }
+        
       }
-
-      
-    }
   }
 }

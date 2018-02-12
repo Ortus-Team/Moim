@@ -16,17 +16,31 @@ export class HomePageContainer extends React.Component {
       <div className='homeWrapper'>
         <Navbar />
         <div className='homeHeader'>
-          
+          <DynamicContent />
+          <div className='homeButtonBarWrapper'>
+            <div className='homeButtonBar'>
+              <div className='homeButtonBarSubWrapper'>
+                <div className='homeButtonText'>
+                  <h1 className='title2'>Looking for a new experience?</h1>
+                </div>
+                <div className='homeButtonWrapper'>
+                  <button className='homeButton'><h2>Find a Group</h2></button>
+                </div>
+              </div>
+            </div>
+          </div>
           {/*<DirectoryLink />*/}
         </div>
         <div className='homeContent'>
-          <DynamicContent />
-          <hr />
           <FeaturedEvents />
-          <hr />
           <FeaturedGroups />
-          <hr />
-          <Explore />
+        </div>
+        <div className='homeContentExploreWrapper'>
+          <div className='homeContentExploreBorder'>
+            <div className='homeContentExplore'>
+              <Explore />
+            </div>
+          </div>
         </div>
         <div className='footer'>
           This is the footer. Add create moim and about links here.

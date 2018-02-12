@@ -14,11 +14,12 @@ $theme-color-lightgrey: #DDDDDD;
       padding: 0;
       // border: solid 1px $theme-color-lightgrey;
       border-radius: 2px;
-      width: 234px;
+      width: 272px;
+      height: auto;
       .eventItemSmallImage {
-        height: 330px;
+        height: auto;
         img {
-          width: 234px;
+          width: 272px;
           overflow: hidden;
           // border-radius: 2px 2px 0 0;
           border-radius: 2px;
@@ -35,12 +36,13 @@ $theme-color-lightgrey: #DDDDDD;
         .eventItemSmallTitle {
           margin: 0 0 5px 0;
           color: $theme-color-black;
-          // font-weight: 600;
+          font-weight: 900;
         }
 
         .eventItemSmallHost {
           display: flex;
           width: 100%;
+          margin-bottom: 10px;
           .from {
             h4 {
               font-size: 14px;
@@ -48,17 +50,16 @@ $theme-color-lightgrey: #DDDDDD;
             }
           }
           .groupLink {
-            h4 {
-              font-size: 14px;
-              margin: 0;
+            h5 {
+              margin-left: 5px;
               color: $theme-color-purple;
             }
           }
         }
 
         .eventItemSmallDate {
-          margin: 10px 0 0 0;
-          font-size: 14px;
+          margin: 0;
+          // font-size: 14px;
           font-weight: 100;
         }
 

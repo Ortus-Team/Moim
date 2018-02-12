@@ -121,7 +121,7 @@ export class Navbar extends React.Component {
               <h6>Are you the officer of a student group?</h6>
             </div>
             <div className='createMoimButtonWrapper'>
-              <Link key='create' to='/create'>{/*<h6 className='createGroupText'>Register your group</h6>*/}<button className='createMoimButton'><h6>Register your group</h6></button></Link>
+              <Link key='create' to='/create'><h6 className='createGroupText'>Register your group today</h6>{/*<button className='createMoimButton'><h6>Register your group</h6></button>*/}</Link>
             </div>
           </div>
         </div>

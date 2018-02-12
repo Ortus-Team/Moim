@@ -16,7 +16,10 @@ export class FeaturedGroups extends React.Component {
   render() {
     return (
         <div className="sectionWrapper">
-            <h2 className='homeSection'>Featured Groups</h2>
+            <div className='homeSectionSeeAll'>
+              <h2 className='homeSection'>Featured Groups</h2>
+              <h3 className='seeAll'>See all</h3>
+            </div>
             <div className="featuredGroups">
               <StudentGroupItem />
               <StudentGroupItem />

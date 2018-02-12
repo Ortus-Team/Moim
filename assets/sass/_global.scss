@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Hind+Madurai|Open+Sans|Noto+Sans|Work+Sans|Rubik|Hind+Madurai|Heebo|Nunito+Sans|Source+Sans+Pro|Chivo|Assistant|Palanquin+Dark|Biryani|Patua+One|Noto+Sans|Poppins|Didact+Gothic);
+@import url(https://fonts.googleapis.com/css?family=Poppins|Open+Sans|Noto+Sans|Work+Sans|Rubik|Hind+Madurai|Heebo|Nunito+Sans|Source+Sans+Pro|Chivo|Assistant|Palanquin+Dark|Biryani|Patua+One|Noto+Sans|Poppins|Didact+Gothic|Lato);
 * {// -webkit-font-smoothing: antialiased;
 }
 
@@ -6,7 +6,7 @@
 
 body {
   // background-color: $theme-color-lightestgrey;
-  font-family: 'Rubik';
+  font-family: 'Karla';
   color: #2e2e2e;
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
@@ -27,25 +27,50 @@ p.legal {
   font-size: 11px;
 }
 
-h1, h2, h3 {
-  font-family: 'Hind Madurai', Helvetica, Arial;
+h1, h2 {
+  font-family: 'Poppins', Helvetica, Arial;
+  // font-family: 'Patua One', Helvetica, Arial;
+  margin: 0;
+  font-weight: 900;
+  // color: $theme-color-black
+}
+
+ h3, h4, h5, h6 {
+  font-family: 'Karla', Helvetica, Arial;
   // font-family: 'Patua One', Helvetica, Arial;
   margin: 0;
   // color: $theme-color-black
 }
 
- h4, h5, h6 {
-  font-family: 'Hind Madurai', Helvetica, Arial;
-  // font-family: 'Patua One', Helvetica, Arial;
-  margin: 0;
-  // color: $theme-color-black
+.moimNav {
+   h3, h4, h5, h6 {
+    font-family: 'Poppins', Helvetica, Arial;
+    // font-family: 'Patua One', Helvetica, Arial;
+    margin: 0;
+    font-weight: 400;
+    // color: $theme-color-black
+  }
+}
+
+.createMoimTextWrapper {
+  h6 {
+    font-family: 'Karla';
+  }
 }
 
 h1.title {
-  font-size: 52px;
-  font-weight: 100;
+  font-size: 74px;
   letter-spacing: 0.3px;
   color: black;
+  font-family: 'Karla';
+}
+
+h1.title2 {
+  font-size: 46px;
+  letter-spacing: 0.3px;
+  color: black;
+  font-family: 'Karla';
+  font-weight: 200;
 }
 
 
@@ -64,7 +89,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 h3.body {
@@ -73,11 +98,11 @@ h3.body {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h6.titleLabel {
@@ -85,7 +110,7 @@ h6.titleLabel {
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .display1 h1 {
