@@ -9,9 +9,17 @@ DEBUG = False
 SECRET_KEY = config('SECRET_KEY')
 
 DATABASES = {
-    'default': config('DATABASE_URL', cast=db_url),
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': base_dir_join('db.sqlite3'),
+    }
 }
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+
+#DATABASES = {
+#    'default': config('DATABASE_URL', cast=db_url),
+#}
+
+#DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 

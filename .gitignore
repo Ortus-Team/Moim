@@ -6,7 +6,7 @@ venv
 /staticfiles/*
 /mediafiles/*
 __pycache__/
-.env
+#.env
 
 # coverage result
 .coverage

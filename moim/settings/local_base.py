@@ -28,11 +28,6 @@ AUTH_PASSWORD_VALIDATORS = []  # allow easy passwords only on local
 # Celery
 CELERY_TASK_ALWAYS_EAGER = True
 
-# Email
-INSTALLED_APPS += ('naomi',)
-EMAIL_BACKEND = 'naomi.mail.backends.naomi.NaomiBackend'
-EMAIL_FILE_PATH = base_dir_join('tmp_email')
-
 # Fix My Django
 INSTALLED_APPS += ('fixmydjango',)
 FIX_MY_DJANGO_ADMIN_MODE = True
