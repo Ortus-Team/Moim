@@ -1,17 +1,22 @@
 import React from 'react';
 import { EventItem } from '../EventItem';
+import { EventItemSmall } from '../EventItemSmall';
 
 
 export class FeaturedEvents extends React.Component {
   render() {
     return (
       <div className="sectionWrapper">
-        <h2 className='subheading'>Featured Events</h2>
+        <div className='homeSectionSeeAll'>
+          <h2 className='homeSection'>Upcoming Events</h2>
+          <h3 className='seeAll'>See all</h3>
+        </div>
         <div className="featuredEvents">
-          <EventItem />
-          <EventItem />
-          <EventItem />
-          <EventItem />
+          <EventItemSmall />
+          <EventItemSmall />
+          <EventItemSmall />
+          <EventItemSmall />
+          <EventItemSmall />
         </div>
       </div>
     );

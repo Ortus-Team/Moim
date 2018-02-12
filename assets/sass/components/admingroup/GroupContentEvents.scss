@@ -1,0 +1,65 @@
+.groupContentEvents {
+  height: 100%;
+  .groupContentEventsWrapper {
+    height: 100%;
+    .groupContentEventsContent {
+      // margin-top: 60px;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      color: #212121;
+
+      .groupSectionHeading {
+        font-weight: 400;
+        font-size: 22px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .groupSectionDescription {
+        margin: 20px 0 0 0;
+        padding: 0;
+        font-size: 15px;
+      }
+
+      .groupPageTopContent {
+        height: 100%;
+        width: 100%;
+        align-items: flex-start;
+
+        .groupPageEvents {
+          height: auto;
+          width: 100%;
+          margin-top: 60px;
+          
+          .groupUpcomingEvents {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            margin-top: 10px;
+            // padding-top: 20px;
+            // border-top: 0.5px solid #ccc;
+            width: 100%;
+          }
+
+          .groupPastEvents {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            margin-top: 10px;
+            // padding-top: 20px;
+            // border-top: 0.5px solid #ccc;
+            width: 100%;
+          }
+        }
+      }
+
+      
+    }
+  }
+
+}

@@ -5,10 +5,10 @@
   position: absolute;
   transform: translate(0, -50%); */
   float: right;
-  width: 110px;
+  width: 150px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 10px 0;
   height: $navbar-height;
   // border: orange 1px solid;
   
@@ -17,19 +17,26 @@
     color: $theme-color-white;
   } */
 
+  a.loginLink {
+    h6{
+    line-height: 60px;
+    }
+  }
   a {
     color: $theme-color-grey;
-    line-height: $navbar-height;
+    // line-height: $navbar-height;
   }
   // blue sign up button
-  /* .signup {
-    background-color: $theme-color-blue;
-    border: none;
-    color: $theme-color-white;
-    padding: 8px 12px;
+  .signupLink {
+    background-color: $theme-color-white;
+    border: $theme-color-purple 2px solid;
+    color: $theme-color-purple;
+    padding: 2px 12px;
+    height: 40px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 3px;
-  } */
+    border-radius: 100px;
+    margin: 10px 0;
+  }
 }

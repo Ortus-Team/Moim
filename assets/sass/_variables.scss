@@ -1,16 +1,20 @@
 $theme-color-white: #fff;
 $theme-color-purple: #5943eb; // #4B2E83; // #6F34E1;
-$theme-color-lightpurple: #9f7fd4;
+$theme-color-lightpurple: #F4EFFF; // ECE7F7;
 $theme-color-blue: #34D9E9;
 $theme-color-lightgrey: #CCC;
 $theme-color-medgrey: #aaa;
 $theme-color-black: #3C3C3C;
 $theme-color-purple3: #6750FF;
 $theme-color-grey: rgba(0,0,0,0.67);
+$theme-color-uw: #3400B0; // #31246E;
 
-$theme-color-lightergrey: #fafafa;
+$theme-color-lightestgrey: #fafafa;
+$theme-color-lightergrey: #ddd;
 
-$navbar-height: 60px;
+$navbar-height: 80px;//60px;
 $navbar-shadow: 0px 2px 6px rgba(0,0,0,0.3);
 $content-shadow: 0px 0px 6px #eaeaea;
 $ease-time: 0.3s;
+
+$content-top-padding: 60px;

@@ -1,5 +1,63 @@
 .moimNav {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  top: 0;
   
+  .createMoim {
+    background-color: $theme-color-purple;
+    width: 100%;
+    height: 40px;
+
+    .createMoimTextWrapper {
+      height: 100%;
+      display: flex;
+      width: 500px;
+      justify-content: space-between;
+      margin: 0 auto;
+      h6 {
+          line-height: 40px;
+          color: $theme-color-white;
+          font-weight: 800;
+        }
+      .createMoimText {
+        
+        
+      }
+
+      .createMoimButtonWrapper {
+        .createGroupText{
+          text-decoration: underline;
+        }
+        .createMoimButton {
+          font-size: 14px;
+          color: $theme-color-white;
+          background-color: $theme-color-purple;//$theme-color-blue;
+          padding: 2.5px 10px;
+          margin: 6.5px 0;
+          border: 1px $theme-color-white solid;
+          //border: none;
+          border-radius: 2px;
+          cursor: pointer;
+          text-transform: uppercase;
+          h6 {
+            padding: 0;
+            line-height: 18px;
+            margin: 0;
+            
+          }
+        }
+        button:hover {
+          background-color: $theme-color-white;
+          h6 {color: $theme-color-purple;}
+          transition: ease 0.2s;
+        }
+      }
+    }
+  }
+
   .displayLogin {
     width: 100%;
     height: 100%;
@@ -16,7 +74,7 @@
 
   .navbarComponent {
     position: relative;
-    height: $navbar-height;
+    height: $navbar-height; // 60px
     width: 100%;
     z-index: 999;
 
@@ -26,7 +84,8 @@
       background-color: $theme-color-white;
       padding: 20px;
       margin: 0;
-      border-bottom: 0.5px solid #ddd;
+      // border-bottom: 3px solid $theme-color-purple;
+      // border-bottom: 1px solid #eaeaea;
       //border-bottom: 1px $theme-color-lightpurple solid;
       // border-top: 1px $theme-color-purple solid;
 
@@ -39,7 +98,7 @@
         
         a {
           h2 {
-            font-weight: 500;
+            font-weight: 800;
             letter-spacing: 0.6px;
             -webkit-font-smoothing: antialiased;
 
@@ -54,23 +113,51 @@
         display: flex;
         justify-content: space-between;
         width: auto;
-        
+
+        .navSearch {
+          padding: 20px 30px 20px 0;
+          color: #eee;
+          input[type=text] {
+            padding: 8px 8px 8px 40px;
+            font-weight: 500;
+            height: 40px;
+            // border: none;
+            border: solid #dfdfdf 1px;
+            border-radius: 2px;
+            width: 250px;
+            font-size: 14px;
+            outline: none;
+            color: $theme-color-grey;
+            background-image: url('searchicon.png');
+            background-position: 6px 6px; 
+            background-repeat: no-repeat;
+            background-size: 25px;
+          }
+
+          ::placeholder {
+            color: #bfbfbf;
+            font-weight: 100;
+          }
+        }
+
         .navLink {
-          font-weight: 500;
+          // font-weight: 800;
           height: 10px;
         }
 
+        // links
         a {
           // text-transform: uppercase;
-          letter-spacing: 0.6px;
+          letter-spacing: 0.2px;
           
           div {
             // border-left: 1px $theme-color-lightpurple solid;
             height: $navbar-height;
             // color: $theme-color-white;
+            // color: $theme-color-grey;
             color: $theme-color-grey;
-            
-            padding: 22px 30px;
+            padding: 30px 30px;
+            text-transform: uppercase;
           }
 
           .navEvents {

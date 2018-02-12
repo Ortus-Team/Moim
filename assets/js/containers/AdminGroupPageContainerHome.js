@@ -11,9 +11,9 @@ import { GroupContent } from '../components/admingroup/GroupContent';
 export class AdminGroupPageContainerHome extends React.Component {
   render() {
     return (
-      <div className='adminGroupPageWrapper'>
+      <div className='groupPageWrapper'>
         <Navbar />
-        <div className='adminGroupPageContent'>
+        <div className='groupPageContent'>
           <GroupHeader />
           <GroupContentNav />
           <GroupContent />

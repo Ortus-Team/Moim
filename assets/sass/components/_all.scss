@@ -8,6 +8,10 @@
 // event
 @import './event/EventContent';
 
+// admin event
+@import './adminevent/EventContent';
+@import './adminevent/EditEvent';
+
 // home
 @import './home/DynamicContent';
 @import './home/FeaturedGroups';
@@ -46,3 +50,8 @@
 @import './dashboard/Feed';
 @import './dashboard/YourEvents';
 
+
+// admin group 
+@import './admingroup/GroupHeader';
+@import './admingroup/GroupContentOfficers';
+@import './admingroup/InviteMember';

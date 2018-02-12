@@ -1,0 +1,33 @@
+.groupFeed {
+    margin-top: 60px;
+    width: 700px;
+    .groupFeedItems {
+        padding-top: 10px;
+        .groupFeedItem {
+            padding: 30px 30px;
+            border: solid 1px lightgrey;
+            border-radius: 2px;
+            height: 320px;
+            margin-bottom: 20px;
+            .groupFeedItemTop {
+                display: flex;
+                .groupFeedItemIcon {
+                    height: 50px;
+                    width: 50px;
+                    background-color: lightgrey;
+                    border-radius: 2px;
+                    margin-right: 10px;
+                }
+            }
+
+            .groupFeedItemTitle {
+                margin-top: 10px;
+            }
+
+            .groupFeedItemPost {
+                margin-top: 15px;
+            }
+
+        }
+    }
+}

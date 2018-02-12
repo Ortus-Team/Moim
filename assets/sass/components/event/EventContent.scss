@@ -4,14 +4,45 @@
     .eventPageImage {
       height: 600px;
       width: 500px;
-      background-color: grey;
+      background-color: lightgrey;
     }
     .info {
+      padding-top: 20px;
       margin-left: 50px;
       width: 750px;
       height: 100%;
-      .description {
+      a, a:hover {
+        color: $theme-color-purple;
+      }
+      .overview {
+        .rsvpButts {
+          margin: 20px 0 30px 0;
+          display: flex;
+          justify-content: space-between;
+          width: 281.5px;
 
+          button {
+            padding: 4px 15px;
+            background-color: $theme-color-lightestgrey;
+            border: 1px solid $theme-color-medgrey;
+          }
+
+          .rsvpButtI {
+            border-radius: 3px 0 0 3px;
+          }
+          .rsvpButtG {
+            border-radius: 0;
+          }
+          .rsvpButtN {
+            border-radius: 0 3px 3px 0;
+          }
+        }
+      }
+      .deets {
+        margin: 30px 0;
+      }
+      .description {
+        margin: 30px 0;
       }
     }
   }

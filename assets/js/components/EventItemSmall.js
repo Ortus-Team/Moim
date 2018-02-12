@@ -19,13 +19,14 @@ export class EventItemSmall extends React.Component {
                 <h3 className="eventItemSmallTitle">Dead Poetry: SDHS Open Mic Night</h3>
                 <div className="eventItemSmallHost">
                   <div className="from">
-                    <h4>From </h4>
+                    <h5>From </h5>
                   </div>
                   <div className="groupLink">
-                    <Link key='group-home' to='/group-home'><h4>Name of Student Group</h4></Link>
+                    <Link key='group-home' to='/group-home'><h5>Name of Student Group</h5></Link>
                   </div>
                 </div>
-                <h4 className="eventItemSmallDate">Nov. 14th @ 5PM • SDHS Auditorium</h4>
+                <h5 className="eventItemSmallDate">Nov. 14th @ 5PM</h5>
+                <h5 className="eventItemSmallDate">SDHS Auditorium</h5>
                 {/* <h4 className="eventItemSmallLoc">- Location</h4> */}
                 {/* Logo
                 <div>
