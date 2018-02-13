@@ -122,4 +122,3 @@ class Token(models.Model):
 # #     officer = models.ForeignKey('Member');
 # #     org = models.ForeignKey('Org');
 # #     join_date = models.DateTimeField(auto_now_add=True)
->>>>>>> 42f654f44a4dc278ed0bd39ddda302e1020f4fff
