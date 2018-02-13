@@ -14,7 +14,7 @@ export class Navbar extends React.Component {
     // this.handleLogoutClick = this.handleLogoutClick.bind(this);
     this.state = {
       isLoggedIn: isLoggedIn,
-      styleLogin : {
+      styleLogin: {
         display: 'none'
       },
       
@@ -119,6 +119,17 @@ export class Navbar extends React.Component {
           <Register off={this.registerOff} login={this.registerLogin} />
         </div>
 
+        <div className='createMoim'>
+          <div className='createMoimTextWrapper'>
+            <div className='createMoimText'>
+              <h6>Are you the officer of a student group?</h6>
+            </div>
+            <div className='createMoimButtonWrapper'>
+              <Link key='create' to='/create'><h6 className='createGroupText'>Register your group today</h6>{/*<button className='createMoimButton'><h6>Register your group</h6></button>*/}</Link>
+            </div>
+          </div>
+        </div>
+
         <div className="navbarComponent">
           <div className="navbarComponentContainer">
             {/* Logo */}
@@ -128,14 +139,22 @@ export class Navbar extends React.Component {
 
             {/* Main links */}
             <div className="mainLinks">
+              <div className='navSearch'>
+                <h6><input type="text" placeholder="Search" /></h6>
+              </div>
               <Link key='groups' to='/groups'>
                 <div className='navGroups'>
-                  <h6 className="navLink">Student Group Directory</h6>
+                  <h6 className="navLink">Groups</h6>
                 </div>
               </Link>
               <Link key='events' to='/events'>
                 <div className='navEvents'>
-                  <h6 className="navLink">Upcoming Events</h6>
+                  <h6 className="navLink">Events</h6>
+                </div>
+              </Link>
+              <Link key='about' to='/'>
+                <div className='navEvents'>
+                  <h6 className="navLink">About</h6>
                 </div>
               </Link>
               {/* <Link key='translate' to='/'>

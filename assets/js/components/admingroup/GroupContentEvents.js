@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { EventItem } from '../EventItem';
+import { EventItemSmall } from '../EventItemSmall';
 
 export class GroupContentEvents extends React.Component {
   render() {
@@ -10,19 +10,19 @@ export class GroupContentEvents extends React.Component {
                 <div className="groupContentEventsContent">
                     <div className="groupPageTopContent">
                         <div className="groupPageEvents">
-                            <h3 className='groupSectionHeading'>Upcoming Events</h3>
+                            <h3 className='subheading'>Upcoming Events</h3>
                             <div className="groupUpcomingEvents">
-                                <EventItem />
+                                <EventItemSmall />
                             </div>
                         </div>
                         <div className="groupPageEvents">
-                            <h3 className='groupSectionHeading'>Past Events</h3>
+                            <h3 className='subheading'>Past Events</h3>
                             <div className="groupPastEvents">
-                                <EventItem />
-                                <EventItem />
-                                <EventItem />
-                                <EventItem />
-                                <EventItem />
+                                <EventItemSmall />
+                                <EventItemSmall />
+                                <EventItemSmall />
+                                <EventItemSmall />
+                                <EventItemSmall />
                             </div>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 
 class Tag(models.Model):
-    title = models.CharField(max_length=64)
+    title = models.CharField(max_length=64, unique=True)
     slug = models.SlugField(max_length=64, default="")
 
     def __str__(self):

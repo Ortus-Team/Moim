@@ -4,7 +4,7 @@ from django.template.defaultfilters import slugify
 
 
 class Category(models.Model):
-    title = models.CharField(max_length=64)
+    title = models.CharField(max_length=64, unique=True)
     slug = models.SlugField(max_length=64, default="")
     description = models.TextField(max_length=512, blank=True)
 
@@ -12,7 +12,8 @@ class Category(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        if not self.id:
+            self.slug = slugify(self.title)
         super(Category, self).save(*args, **kwargs)
 
     @permalink

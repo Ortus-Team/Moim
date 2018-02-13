@@ -12,26 +12,35 @@ export class EventContent extends React.Component {
 
           <div className="info">
             <div className="overview">
-              <h1 className="eventTitle">Event Title</h1>
-              <h2 className="whoDaHost">Hosted by <Link key='group-home' to='/group-home'>Student Group</Link></h2>
-            </div>
-            <div className="deets">
-              <h2 className="dateTime">Date/Time</h2>
-              <h2 className="loc">Location</h2>
-            </div>
-            <div className="rsvp">
+              <div className='overviewMain'>
+                <h1 className="eventTitle">Dead Poetry</h1>
+                <h3 className="whoDaHost">Hosted by <Link key='group-home' to='/group-home'>Name of Student Group</Link></h3>
+              </div>
               <div className="rsvpButts">
-                <button className="going">Going</button>
-                <button className="interest">Interested</button>
-              </div>
-              <div className="rsvpData">
-                <h3># Going - # Following</h3>
+                <button className="rsvpButtI">Interested</button>
+                <button className="rsvpButtG">Going</button>
+                <button className="rsvpButtN">Not going</button>
               </div>
             </div>
+            <hr />
+            <div className="deets">
+              <h4 className="dateTime">November 14 at 5:00PM - 9:00PM</h4>
+              <h4 className="loc">SDHS Auditorium, 3F Main Building</h4>
+              <h4># Going - # Following</h4>
+            </div>
+            <hr />
             <div className="description">
               <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
                 fresh coconut, trust me. The key to more success is to
-                have alot of pillows. Find peace, life is like a waterfall,</p>
+                have alot of pillows. Find peace, life is like a waterfall. Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
+                fresh coconut, trust me. The key to more success is to
+                have alot of pillows. Find peace, life is like a waterfall.</p>
+              <br />
+              <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
+                fresh coconut, trust me. The key to more success is to
+                have alot of pillows. Find peace, life is like a waterfall. Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
+                fresh coconut, trust me. The key to more success is to
+                have alot of pillows. Find peace, life is like a waterfall.</p>
             </div>
           </div>
 

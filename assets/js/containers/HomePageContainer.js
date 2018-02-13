@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 import { DynamicContent } from '../components/home/DynamicContent';
 import { DirectoryLink } from '../components/home/DirectoryLink';
@@ -16,12 +17,33 @@ export class HomePageContainer extends React.Component {
         <Navbar />
         <div className='homeHeader'>
           <DynamicContent />
+          <div className='homeButtonBarWrapper'>
+            <div className='homeButtonBar'>
+              <div className='homeButtonBarSubWrapper'>
+                <div className='homeButtonText'>
+                  <h1 className='title2'>Looking for a new experience?</h1>
+                </div>
+                <div className='homeButtonWrapper'>
+                  <button className='homeButton'><h2>Find a Group</h2></button>
+                </div>
+              </div>
+            </div>
+          </div>
           {/*<DirectoryLink />*/}
         </div>
         <div className='homeContent'>
           <FeaturedEvents />
           <FeaturedGroups />
-          <Explore />
+        </div>
+        <div className='homeContentExploreWrapper'>
+          <div className='homeContentExploreBorder'>
+            <div className='homeContentExplore'>
+              <Explore />
+            </div>
+          </div>
+        </div>
+        <div className='footer'>
+          This is the footer. Add create moim and about links here.
         </div>
       </div>
     );

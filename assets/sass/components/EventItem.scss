@@ -32,10 +32,10 @@ $theme-color-lightgrey: #DDDDDD;
         // padding: 10px;
         padding-top: 15px;
         // background-color: #fff;
-        .eventItemTitle {
+        h3.eventItemTitle {
           margin: 0 0 5px 0;
           color: $theme-color-black;
-          font-weight: bold 700;
+          font-weight: 800;
         }
 
         .eventItemHost {
