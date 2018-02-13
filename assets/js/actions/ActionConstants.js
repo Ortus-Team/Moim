@@ -1,2 +1,10 @@
 export const GET_ORGS = 'GET_ORGS';
 export const GET_TOKEN = 'GET_TOKEN';
+export const GET_TAG_LIST = 'GET_TAG_LIST';
+export const GET_TAG = 'GET_TAG';
+export const GET_CATEGORY_LIST = 'GET_CATEGORY_LIST';
+export const GET_EVENT_LIST = 'GET_EVENT_LIST';
+export const GET_EVENT_BY_TAG = 'GET_EVENT_BY_TAG';
+export const GET_EVENT_BY_CATEGORY = 'GET_EVENT_BY_CATEGORY';
+export const POST_EVENT = 'POST_EVENT';
+export const GET_EVENT_BY_SLUG = 'GET_EVENT_BY_SLUG';

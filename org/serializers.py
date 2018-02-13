@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.serializers import UserSerializer
+from oauth.serializers import UserSerializer
 from category.serializers import CategorySerializer
 from officer.serializers import OfficerSerializer
 from org.models import Org

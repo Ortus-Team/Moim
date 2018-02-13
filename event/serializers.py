@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from api.serializers import UserSerializer
+from oauth.serializers import UserSerializer
 from event_type.serializers import EventTypeSerializer
 from org.serializers import OrgSerializer
 from tag.serializers import TagSerializer
