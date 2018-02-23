@@ -22,5 +22,6 @@ urlpatterns = [
 	url(r'^api/v1/', include('oauth.urls', namespace='oauth')),
     url(r'^api/v1/', include('event_type.urls', namespace='event_types')),
     url(r'^api/v1/', include('org.urls', namespace='orgs')),
+    url(r'^api/v1/', include('common.utils.urls', namespace='utils')),
     url(r'^$', TemplateView.as_view(template_name='exampleapp/itworks.html'), name='home'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
