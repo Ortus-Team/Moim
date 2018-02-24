@@ -29,7 +29,7 @@ export class InviteOfficer extends React.Component {
                       <input className='inviteOfficerRole' type='text' name='role' />
                     </div>
                   </div>
-                  <input type="submit" value='send invites' onClick={this.props.confirm} />
+                  <input type="button" value='send invites' onClick={this.props.confirm} />
                 </form>
               </div>
             </div>

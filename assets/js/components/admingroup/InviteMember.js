@@ -20,7 +20,7 @@ export class InviteMember extends React.Component {
               <textarea className='inviteMemberInput' rows="4" name="memberemails" form="invitemembers" />
               <div className='inviteMemberInvites'>
                 <form /* action="/action_page.php" */ id="invitemembers">
-                  <input type="submit" value='send invites' onClick={this.props.confirm} />
+                  <input type="button" value='send invites' onClick={this.props.confirm} />
                 </form>
               </div>
             </div>
