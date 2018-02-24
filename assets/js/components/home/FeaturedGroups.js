@@ -25,6 +25,11 @@ export class FeaturedGroups extends React.Component {
               <StudentGroupItem />
               <StudentGroupItem />
             </div>
+            <div className="featuredGroups2">
+              <StudentGroupItem />
+              <StudentGroupItem />
+              <StudentGroupItem />
+            </div>
         </div>
     );
   }

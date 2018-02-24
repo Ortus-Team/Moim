@@ -8,6 +8,10 @@ import { GroupContentNav } from '../components/admingroup/GroupContentNav';
 import { GroupContentOfficers } from '../components/admingroup/GroupContentOfficers';
 import { OfficerItem } from '../components/admingroup/OfficerItem';
 import { InviteMember } from '../components/admingroup/InviteMember';
+import { InviteMemberConfirm } from '../components/admingroup/InviteMemberConfirm';
+import { InviteOfficer } from '../components/admingroup/InviteOfficer';
+import { InviteOfficerConfirm } from '../components/admingroup/InviteOfficerConfirm';
+
 // import { GroupContentGallery } from '../components/group/GroupContentGallery';
 
 export class AdminGroupPageContainerPeople extends React.Component {
@@ -19,12 +23,24 @@ export class AdminGroupPageContainerPeople extends React.Component {
       },
       styleInviteMember: {
         display: 'none'
+      },
+      styleInviteMemberConfirm: {
+        display: 'none'
+      },
+      styleInviteOfficerConfirm: {
+        display: 'none'
       }
     };
     this.memberOn = this.memberOn.bind(this);
     this.memberOff = this.memberOff.bind(this);
     this.officerOn = this.officerOn.bind(this);
     this.officerOff = this.officerOff.bind(this);
+    this.inviteMemberConfirm = this.inviteMemberConfirm.bind(this);
+    this.inviteMemberConfirmOn = this.inviteMemberConfirmOn.bind(this);
+    this.inviteMemberConfirmOff = this.inviteMemberConfirmOff.bind(this);   
+    this.inviteOfficerConfirm = this.inviteOfficerConfirm.bind(this);
+    this.inviteOfficerConfirmOn = this.inviteOfficerConfirmOn.bind(this);
+    this.inviteOfficerConfirmOff = this.inviteOfficerConfirmOff.bind(this);   
   }
   
   memberOn() {
@@ -49,11 +65,67 @@ export class AdminGroupPageContainerPeople extends React.Component {
     this.setState({ styleInviteOfficer });
   }
 
+  inviteMemberConfirm() {
+    const styleInviteMember = { display: 'none' };
+    this.setState({ styleInviteMember});
+    const styleInviteMemberConfirm = { display: 'block' };
+    this.setState({ styleInviteMemberConfirm });
+  }
+
+  inviteMemberConfirmOff() {
+    document.removeEventListener("click", this.inviteMemberConfirmOff);
+    const styleInviteMemberConfirm = { display: 'none' };
+    this.setState({ styleInviteMemberConfirm });
+  }
+
+  inviteMemberConfirmOn() {
+    document.removeEventListener("click", this.inviteMemberConfirmOn);
+    const styleInviteMemberConfirm = { display: 'block' };
+    this.setState({ styleInviteMemberConfirm });
+  }
+
+  inviteOfficerConfirm() {
+    const styleInviteOfficer = { display: 'none' };
+    this.setState({ styleInviteOfficer});
+    const styleInviteOfficerConfirm = { display: 'block' };
+    this.setState({ styleInviteOfficerConfirm });
+  }
+
+  inviteOfficerConfirmOff() {
+    document.removeEventListener("click", this.inviteOfficerConfirmOff);
+    const styleInviteOfficerConfirm = { display: 'none' };
+    this.setState({ styleInviteOfficerConfirm });
+  }
+
+  inviteOfficerConfirmOn() {
+    document.removeEventListener("click", this.inviteOfficerConfirmOn);
+    const styleInviteOfficerConfirm = { display: 'block' };
+    this.setState({ styleInviteOfficerConfirm });
+  }
+
   render() {
     return (
       <div className='groupPageWrapper'>
         <div className='displayInviteMember' style={this.state.styleInviteMember}>
-          <InviteMember off={this.memberOff} />
+            <div className='inviteMember'>
+                <InviteMember off={this.memberOff} confirm={this.inviteMemberConfirm} />
+            </div>
+        </div>
+        <div className='displayInviteMemberConfirm' style={this.state.styleInviteMemberConfirm}>
+            <div className='inviteMemberConfirm'>
+                <InviteMemberConfirm off={this.inviteMemberConfirmOff} />
+            </div>
+        </div>
+        <div className='displayInviteOfficer' style={this.state.styleInviteOfficer}>
+            <div className='inviteOfficer'>
+                <InviteOfficer off={this.officerOff} confirm={this.inviteOfficerConfirm} />
+            </div>
+        </div>
+
+        <div className='displayInviteOfficerConfirm' style={this.state.styleInviteOfficerConfirm}>
+            <div className='inviteOfficerConfirm'>
+                <InviteOfficerConfirm off={this.inviteOfficerConfirmOff} />
+            </div>
         </div>
         <Navbar />
         <div className='groupPageContent'>
@@ -69,7 +141,7 @@ export class AdminGroupPageContainerPeople extends React.Component {
                                     <h3 className='subheading'>Officers</h3>
                                 </div>
                                 <div className='aInvite'>
-                                    <h5>Invite New Officer</h5>
+                                    <a href='javascript:void(0)' onClick={this.officerOn}>Invite Officers</a>
                                 </div>
                             </div>
                             <div className="adminGroupUpcomingOfficers">
@@ -87,7 +159,7 @@ export class AdminGroupPageContainerPeople extends React.Component {
                                     <h3 className='subheading'>Members</h3>
                                 </div>
                                 <div className='aInvite'>
-                                    <a href='javascript:void(0)' onClick={this.memberOn}><h5>Invite New Member</h5></a>
+                                    <a href='javascript:void(0)' onClick={this.memberOn}><h5>Invite Members</h5></a>
                                 </div>
                             </div>
                             <div className="adminGroupPageMembersList">
