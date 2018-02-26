@@ -1,0 +1,64 @@
+.inviteOfficerWrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+
+  .inviteOfficerOverlay {
+      position: relative;
+      background-color: rgba(33, 33, 33, 0.6);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  }
+  
+  .inviteOfficerBox {
+      width: 800px;
+      height: auto;
+      padding: 80px;
+      margin: 100px auto;
+      border-radius: 3px;
+      background-color: #fff;
+      text-align: center;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      position: relative;
+      z-index: 2;
+
+      .inviteOfficerContent {
+        .inviteOfficerCancel {
+            text-align: right;
+            margin-bottom: 40px;
+        }
+
+        .inviteOfficerForm {
+            .inviteOfficerInvites {
+                .inviteOfficerInfo {
+                    display: flex;
+                    text-align: left;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+
+                    .inviteOfficerEmailWrapper {
+                        width: 45%;
+                        .inviteOfficerEmail {
+                            width: 100%;
+                        }
+                    }
+
+                    .inviteOfficerRoleWrapper {
+                        width: 45%;
+                        .inviteOfficerRole {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+      }
+  }
+}
