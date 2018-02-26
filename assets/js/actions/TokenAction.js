@@ -38,21 +38,20 @@ export function getUser(userResponse, provider) {
 			body: formData,
 		})
 		.then(response => {
-			var tempPayload = 'This is the payload string to be passed';
 			
 			console.log("After dispatch");
 			return response
 		})
 		.then((response)  => response.json())
 		.then((items) => 
-			(fetch('http://' + host + '/api/userid/' + items.access_token)
+			(fetch('http://' + host + '/api/v1/userid/' + items.access_token)
 				.then(response => {
 					console.log(response);
 					return response
 				})
 				.then((response) => response.json())
 				.then((userpk) => 
-					(fetch('http://' + host + '/api/checkregistered/' + userpk.user_id)
+					(fetch('http://' + host + '/api/v1/checkregistered/' + userpk.user_id)
 						.then(response => {
 							return response
 						})
