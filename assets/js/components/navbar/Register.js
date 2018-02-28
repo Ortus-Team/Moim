@@ -3,8 +3,7 @@ import FacebookLogin from 'moim-react-facebook-login';
 import { GoogleLogin } from 'react-google-login-component';
 import { getUser } from "../../actions/TokenAction";
 import { handleLoginClick } from "../Navbar";
-import google from './google.png';
-import facebook from './facebook.png';
+import { hashHistory } from 'react-router';
 
 /*
 NavBar (On all pages)
@@ -25,6 +24,7 @@ export class Register extends React.Component {
       .then(res => {
         if (res.registered == false) {
           console.log("NOT REGISTERED");
+          hashHistory.push('/signup1');
         } else {
           console.log("REGISTERED");
         }
@@ -73,10 +73,6 @@ export class Register extends React.Component {
                        responseHandler={this.responseGoogle}
                        buttonText="Login With Google"/>
                 </div>
-              <div className='oAuthButtons'>
-                <button className='oAuthButton' onClick={this.props.login}><img src={google} height='20' width='20' />Sign up with Google</button>
-                <button className='oAuthButton' onClick={this.props.login}><img src={facebook} height='20' width='20' />Sign up with Facebook</button>
-              </div>
               <p>Already have an account? <a href="javascript:void(0)" className='login' onClick={this.props.login}>Log in</a></p>
             </div>
           </div>

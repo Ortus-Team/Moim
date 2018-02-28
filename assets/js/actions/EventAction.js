@@ -1,6 +1,6 @@
 import {GET_EVENT_LIST} from "./ActionConstants";
 import {GET_EVENT_BY_TAG} from "./ActionConstants";
-import {GET_EVENT_BY_CATEGORY} from "./ActionConstants";
+import {GET_EVENT_BY_TYPE} from "./ActionConstants";
 import {GET_EVENT_BY_SLUG} from "./ActionConstants";
 import {POST_EVENT} from "./ActionConstants";
 import { createStore } from 'redux'
@@ -53,21 +53,21 @@ export function getEventByToken(tag) {
       });	
 }
 
-export function getEventByCategory(category) {
-  var event_url = `${ROOT_URL}/category/`;
-  var page_url = category;
+export function getEventByEventType(eventtype) {
+  var event_url = `${ROOT_URL}/event-type/`;
+  var page_url = eventtype;
   const url = event_url + page_url;
 
   return fetch(url)
       .then(response => {
         console.log(response);
-        console.log("Successfully obtained events by category " + category + ": " + response);
+        console.log("Successfully obtained events by category " + eventtype + ": " + response);
         return response;
       })
       .then(response => response.json())
       .then(item => 
         (store.dispatch({
-           type: GET_EVENT_BY_CATEGORY,
+           type: GET_EVENT_BY_TYPE,
            payload: item
         }))
       )

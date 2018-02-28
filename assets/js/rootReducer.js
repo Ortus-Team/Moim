@@ -4,6 +4,8 @@ import TokenReducer from "./reducers/TokenReducer";
 import TagReducer from "./reducers/TagReducer";
 import CategoryReducer from "./reducers/CategoryReducer";
 import EventReducer from "./reducers/EventReducer";
+import EventTypeReducer from "./reducers/EventTypeReducer";
+import SignUpReducer from "./reducers/SignUpReducer";
 
 export default combineReducers({
 // add reducers here
@@ -15,4 +17,7 @@ export default combineReducers({
   events: EventReducer,
   // might have to add eventPost flag variable, not too sure if it is needed
   eventPost: EventReducer,
+  eventtypes: EventTypeReducer,
+  personalData: SignUpReducer,
+  major: SignUpReducer,
 });
