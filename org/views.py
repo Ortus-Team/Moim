@@ -32,13 +32,27 @@ class OrgList(ListAPIView):
 # Add categories to the org
 def add_categories(org, org_categories_string):
     categories = org_categories_string.split(",")
-    org.categories.set([])
+    if not org.categories:
+        org.categories.set([])
     for category in categories:
         category_title = category.strip()
         category_slug = slugify(category_title)
         try:
             category = Category.objects.get(slug=category_slug)
-            org.event_types.add(category)
+            org.categories.add(category)
+        except:
+            print('category %s not found' % category_title)
+    return org
+
+
+def remove_categories(org, org_categories_string):
+    categories = org_categories_string.split(",")
+    for category in categories:
+        category_title = category.strip()
+        category_slug = slugify(category_title)
+        try:
+            category = Category.objects.get(slug=category_slug)
+            org.categories.add(category)
         except:
             print('category %s not found' % category_title)
     return org
@@ -59,6 +73,8 @@ def remove_members(org, members_to_remove):
 
 def add_members(org, members_to_add):
     members = members_to_add.split(",")
+    if not org.members:
+        org.members.set([])
     for member in members:
         email = member.strip()
         try:
@@ -98,6 +114,8 @@ def remove_officers(org, officers_to_remove):
 
 def add_officers(org, officers_to_add):
     officers = officers_to_add.split(",")
+    if not org.officers:
+        org.officers.set([])
     for officer in officers:
         email = officer.strip()
         try:
@@ -137,9 +155,15 @@ class OrgRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
     def perform_update(self, serializer):
         org = serializer.save()
 
-        # Replace categories
         try:
-            categories = str(self.request.data['categories'])
+            categories = str(self.request.data['categories_to_remove'])
+        except:
+            categories = ""
+        if categories:
+            org = remove_categories(org, categories)
+
+        try:
+            categories = str(self.request.data['categories_to_add'])
         except:
             categories = ""
         if categories:
