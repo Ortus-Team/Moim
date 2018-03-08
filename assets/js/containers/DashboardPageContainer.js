@@ -1,8 +1,11 @@
 import React from 'react';
+import { createStore } from 'redux'
 import { Link } from 'react-router';
 import { Navbar } from '../components/Navbar';
 import { Feed } from '../components/dashboard/Feed';
 import { YourEvents } from '../components/dashboard/YourEvents';
+import signupReduce from '../reducers/SignUpReducer';
+const store = createStore(signupReduce)
 
 export class DashboardPageContainer extends React.Component {
   render() {
@@ -14,7 +17,7 @@ export class DashboardPageContainer extends React.Component {
             <div className='dashboardProfilePic' />
             <div className='dashboardProfileInfo'>
               <div className='dashboardProfileInfoMain'>
-                <h2>Tony Stark</h2>
+                <h2>{store.getState().personalData.firstname} {store.getState().personalData.lastname}</h2>
               </div>
               <div className='dPInfoMainDeets'>
                 <div className='dashboardProfileInfoDeet'>
@@ -23,11 +26,11 @@ export class DashboardPageContainer extends React.Component {
                 </div>
                 <div className='dashboardProfileInfoDeet'>
                   <p className='caption'>MAJOR</p>
-                  <p>B.S. Electrical Engineering</p>
+                  <p>{store.getState().personalData.major}</p>
                 </div>
                 <div className='dashboardProfileInfoDeet'>
                   <p className='caption'>EMAIL</p>
-                  <p>ironman@uw.edu</p>
+                  <p>{store.getState().personalData.email}</p>
                 </div>
               </div>
               <p className='dashboardEditLink'><Link key='edit-profile' to='edit-profile'>Edit Profile</Link></p>

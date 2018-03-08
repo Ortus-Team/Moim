@@ -11,7 +11,9 @@ export default function(state=INITIAL_STATE, action) {
 		case GET_TOKEN:
 			console.log("PAYLOAD DATA IN DEFAULT ");
 			console.log(action.payload);
-			return {...state, user: action.payload.data, registered: true};
+			state.user = action.payload;
+			state.registered = true;
+			return state
 		default:
 			console.log("TokenReducer: default condition");
 			return state;

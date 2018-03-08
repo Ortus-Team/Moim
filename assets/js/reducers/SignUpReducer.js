@@ -2,8 +2,12 @@ import {POST_PERSONAL} from "../actions/ActionConstants";
 import {POST_MAJOR} from "../actions/ActionConstants";
 
 const INITIAL_STATE = {
-	personalData: {},
-	major: {}
+	personalData: {
+		firstname: '',
+		lastname: '',
+		email: '',
+		major: ''
+	},
 };
 
 export default function(state=INITIAL_STATE, action) {
@@ -12,11 +16,17 @@ export default function(state=INITIAL_STATE, action) {
 		case POST_PERSONAL:
 			console.log("POST_PERSONAL called ");
 			console.log(action.payload);
-			return {...state, personalData: action.payload.data};
+			state.personalData.firstname = action.payload.firstname;
+			state.personalData.lastname = action.payload.lastname;
+			state.personalData.email = action.payload.email;
+			console.log(state);
+			return state;
 		case POST_MAJOR:
 			console.log("POST_MAJOR called ");
 			console.log(action.payload);
-			return {...state, major: action.payload.data};
+			state.personalData.major = action.payload.major;
+			console.log(state);
+			return state;
 		default:
 			console.log("SignUpReducer: default condition");
 			return state;

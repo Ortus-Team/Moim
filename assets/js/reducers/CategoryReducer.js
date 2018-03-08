@@ -10,7 +10,8 @@ export default function(state=INITIAL_STATE, action) {
 		case GET_CATEGORY_LIST:
 			console.log("PAYLOAD DATA IN DEFAULT ");
 			console.log(action.payload);
-			return {...state, categories: action.payload.data};
+			state.categories = action.payload
+			return state;
 		default:
 			console.log("CategoryReducer: default condition");
 			return state;

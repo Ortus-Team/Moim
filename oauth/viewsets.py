@@ -10,9 +10,12 @@ from oauth2_provider.models import AccessToken
 from oauth.permissions import IsAuthenticatedOrCreate
 from oauth.serializers import *
 from main.models import *
+from rest_framework.parsers import FormParser
 
 from django.core.mail import send_mail, EmailMultiAlternatives
 import requests
+import json
+
 
 @csrf_exempt
 def user_pk(request, access_token):
@@ -49,16 +52,34 @@ def member_list(request):
         return JsonResponse(serializer.errors, status=400)
       
 @csrf_exempt
+# @parser_classes((FormParser,))
 def check_email(request, pk):
     try:
         user = User.objects.get(pk=pk)
     except User.DoesNotExist:
         return HttpResponse(status=404)
 
-    if user.email == '':
-        return JsonResponse({"registered":False, "userpk":pk}, status=201)
-    else:
-        return JsonResponse({"registered":True, "userpk":pk}, status=201)
+    if request.method == 'GET':
+        if user.email == '':
+            return JsonResponse({"registered":False, "userpk":pk}, status=201)
+        else:
+            return JsonResponse({"registered":True, "userpk":pk}, status=201)
+    if request.method == 'POST':
+        print('Raw Data: "%s"' % request.body)
+
+        request_data = str(request.body, 'utf-8')
+        request_data = request_data.split("&")
+        personalData = []
+        for x in request_data:
+            temp = x.split("=")
+            personalData.append(temp[1])
+        print(personalData)
+        print('user: "%s"' % user.first_name)
+        user.first_name = personalData[0]
+        user.last_name = personalData[1]
+        user.email = personalData[2]
+        user.save()
+        return HttpResponse(status=200)
 
 class SignUp(generics.CreateAPIView):
     queryset = User.objects.all()

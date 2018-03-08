@@ -11,10 +11,12 @@ export default function(state=INITIAL_STATE, action) {
 	switch(action.type) {
 		case GET_TAG_LIST:
 			console.log(action.payload);
-			return {...state, tags: action.payload.data};
+			state.tags = action.payload
+			return state;
 		case GET_TAG:
 			console.log(action.payload);
-			return {...state, currentTag: action.payload.data};
+			state.currentTag = action.payload
+			return state;
 		default:
 			console.log("TagReducer: default condition");
 			return state;

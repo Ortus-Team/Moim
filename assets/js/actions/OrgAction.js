@@ -7,7 +7,7 @@ import {POST_ORGS} from "./ActionConstants";
 //const host = window.location.host.split(':')[0];
 const host = window.location.host;
 
-export const ROOT_URL = 'http://' + host + '/api';
+export const ROOT_URL = 'http://' + host + '/api/v1';
 
 export function getOrgs() {
     var orgs_url = `${ROOT_URL}/orgs`;

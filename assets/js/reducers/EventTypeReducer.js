@@ -10,7 +10,8 @@ export default function(state=INITIAL_STATE, action) {
 		case GET_EVENT_TYPE_LIST:
 			console.log("PAYLOAD DATA IN DEFAULT ");
 			console.log(action.payload);
-			return {...state, eventtypes: action.payload.data};
+			state.eventtypes = action.payload
+			return state;
 		default:
 			console.log("EventTypeReducer: default condition");
 			return state;

@@ -12,14 +12,19 @@ const INITIAL_STATE = {
 export default function(state=INITIAL_STATE, action) {
     switch(action.type) {
       case GET_ORGS:
-          return {...state, orgs: action.payload.data, showOrgs: true };
+          state.orgs = action.payload
+          return state;
       case GET_ORGS_BY_CATEGORY:
-          return {...state, orgs: action.payload.data, showOrgs: false};
+          state.orgs = action.payload
+          return state;
       case GET_ORGS_BY_NAME:
-          return {...state, orgs: action.payload.data, showOrgs: false};
+          state.orgs = action.payload
+          return state;
       case POST_ORGS:
       		// double check this status code
+          state.orgs = action.payload
       	   if (action.payload.status == 202) {
+            state.showOrgs = true
       	  	return {...state, orgs: action.payload.data, showOrgs: true}; 	
       	   }
           return {...state, orgs: action.payload.data, showOrgs: false};

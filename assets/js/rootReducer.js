@@ -19,5 +19,4 @@ export default combineReducers({
   eventPost: EventReducer,
   eventtypes: EventTypeReducer,
   personalData: SignUpReducer,
-  major: SignUpReducer,
 });

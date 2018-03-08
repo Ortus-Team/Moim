@@ -61,6 +61,7 @@ export function getUser(userResponse, provider) {
 								type: GET_TOKEN,
 								payload: userpk.user_id
 							}))	
+							console.log("getting here")
 							return userregister
 						})
 					)	
