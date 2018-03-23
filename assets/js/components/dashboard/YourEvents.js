@@ -1,5 +1,4 @@
 import React from 'react';
-// import { EventItem } from 'components/EventItem/EventItem';
 import { EventItemSmall } from '../EventItemSmall';
 
 export class YourEvents extends React.Component {
@@ -8,8 +7,9 @@ export class YourEvents extends React.Component {
       <div className="dashboardEvents">
         <h5 className='subheading'>Your Events</h5>
         <div className="yourEvents">
-          <EventItemSmall />
-          <EventItemSmall />
+          
+          <div className='eventItem'><EventItemSmall /></div>
+          <div className='eventItem'><EventItemSmall /></div>
           <EventItemSmall />
         </div>
       </div>

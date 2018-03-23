@@ -1,5 +1,5 @@
 .editGroupWrapper {
-    padding: 0;
+    padding: 120px 0 0 0;
     margin: 0;
 
     .eGBack {
@@ -91,7 +91,8 @@
                 }
             }
             .eGOptions {
-                input[type=submit] {
+                // input[type=submit] {
+                button {
                     width: 150px;
                     background-color: $theme-color-blue;
                     color: white;

@@ -5,10 +5,14 @@ import configureStore from './configureStore';
 
 // import TestPageContainer from './containers/TestPageContainer';
 import { HomePageContainer } from './containers/HomePageContainer';
-import { DashboardPageContainer } from './containers/DashboardPageContainer';
+import { DashActPageContainer } from './containers/DashActPageContainer';
+import { DashGroupsPageContainer } from './containers/DashGroupsPageContainer';
+import { DashMessPageContainer } from './containers/DashMessPageContainer';
+
 import { EditProfilePageContainer } from './containers/EditProfilePageContainer';
 import { EventPageContainer } from './containers/EventPageContainer';
 import { AdminEventPageContainer } from './containers/AdminEventPageContainer';
+import { CreateEventPageContainer } from './containers/CreateEventPageContainer';
 import { GroupsPageContainer } from './containers/GroupsPageContainer';
 import { EventsPageContainer } from './containers/EventsPageContainer';
 
@@ -16,6 +20,7 @@ import { GroupPageContainerHome } from './containers/GroupPageContainerHome';
 import { EditGroupPageContainer } from './containers/EditGroupPageContainer';
 import { AdminGroupPageContainerHome } from './containers/AdminGroupPageContainerHome';
 import { AdminGroupPageContainerPeople } from './containers/AdminGroupPageContainerPeople';
+import { AdminGroupPageContainerEvents } from './containers/AdminGroupPageContainerEvents';
 import { GroupPageContainerEvents } from './containers/GroupPageContainerEvents';
 import { GroupPageContainerPeople } from './containers/GroupPageContainerPeople';
 import { GroupPageContainerGallery } from './containers/GroupPageContainerGallery';
@@ -31,10 +36,13 @@ class Root extends React.Component {
       <Provider store={store}>
         <Router history={hashHistory}>
           <Route path="/" component={HomePageContainer} />
-          <Route path="/dashboard" component={DashboardPageContainer} />
+          <Route path="/dash-activity" component={DashActPageContainer} />
+          <Route path="/dash-groups" component={DashGroupsPageContainer} />
+          <Route path="/dash-messages" component={DashMessPageContainer} />
           <Route path="/edit-profile" component={EditProfilePageContainer} />
           <Route path="/event" component={EventPageContainer} />
           <Route path="/admin-event" component={AdminEventPageContainer} />
+          <Route path="/create-event" component={CreateEventPageContainer} />
           <Route path="/groups" component={GroupsPageContainer} />
           <Route path="/events" component={EventsPageContainer} />
           <Route path="/group-home" component={GroupPageContainerHome} />
@@ -44,6 +52,7 @@ class Root extends React.Component {
           <Route path="/group-gallery" component={GroupPageContainerGallery} />
           <Route path="/admin-group-home" component={AdminGroupPageContainerHome} />
           <Route path="/admin-group-people" component={AdminGroupPageContainerPeople} />
+          <Route path="/admin-group-events" component={AdminGroupPageContainerEvents} />
           <Route path="/signup1" component={SignUpContainer1} />
           <Route path="/signup2" component={SignUpContainer2} />
           <Route path="/signup3" component={SignUpContainer3} />

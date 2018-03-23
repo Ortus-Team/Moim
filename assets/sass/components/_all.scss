@@ -4,6 +4,7 @@
 @import 'StudentGroupItem';
 @import 'UpcomingEvents';
 @import 'DirectoryHeader'; // events and groups directories
+@import 'FeedItem';
 
 // event
 @import './event/EventContent';
@@ -49,6 +50,7 @@
 // dashboard
 @import './dashboard/Feed';
 @import './dashboard/YourEvents';
+@import './dashboard/YourGroups';
 
 
 // admin group 
