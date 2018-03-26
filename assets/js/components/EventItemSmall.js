@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import eventImage from './event_poster.jpg';
 
 export class EventItemSmall extends React.Component {
   render() {
