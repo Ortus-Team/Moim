@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { hashHistory, Route, Router } from 'react-router';
 import configureStore from './configureStore';
+import createHistory from 'history/createBrowserHistory';
 
 // import TestPageContainer from './containers/TestPageContainer';
 import { HomePageContainer } from './containers/HomePageContainer';
@@ -29,6 +30,7 @@ import { SignUpContainer2 } from './containers/SignUpContainer2';
 import { SignUpContainer3 } from './containers/SignUpContainer3';
 
 const store = configureStore();
+const history = createHistory();
 
 class Root extends React.Component {
   render() {

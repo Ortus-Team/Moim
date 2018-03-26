@@ -8,7 +8,7 @@ from rest_framework import viewsets
 
 
 class Member(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user')
     class_standing = models.CharField(max_length=10)
     join_date = models.DateTimeField(auto_now_add=True)
 
