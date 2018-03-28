@@ -16,6 +16,8 @@
         padding: 0;
       }
 
+      
+
       .groupSectionDescription {
         margin: 20px 0 0 0;
         padding: 0;
@@ -31,6 +33,24 @@
           height: auto;
           width: 100%;
           margin-top: 60px;
+
+          .adminTitle {
+            display: flex;
+            justify-content: space-between;
+      
+            .aInvite {
+              border: $theme-color-purple 1px solid;
+              color: $theme-color-purple;
+              padding: 4px 20px;
+              height: 40px;
+              h5 {
+                line-height: 30px;
+              }
+              a {
+                color: $theme-color-purple;
+              }
+            }
+          }
           
           .groupUpcomingEvents {
             display: inline-flex;

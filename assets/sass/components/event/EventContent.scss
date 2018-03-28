@@ -15,14 +15,18 @@
         color: $theme-color-purple;
       }
       .overview {
+
+        .eventType {
+          padding-top: 15px;
+        }
         .rsvpButts {
           margin: 20px 0 30px 0;
           display: flex;
           justify-content: space-between;
-          width: 281.5px;
+          width: 300px;
 
           button {
-            padding: 4px 15px;
+            padding: 4px 17.5px;
             background-color: $theme-color-lightestgrey;
             border: 1px solid $theme-color-medgrey;
           }

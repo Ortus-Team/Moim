@@ -10,6 +10,7 @@ $theme-color-white: #fff;
     background: #fff url("./ksa_yale.jpg") no-repeat top center; //fixed;
     z-index: -5;
     position: relative;
+    display: flex;
 
     .layer {
       position: relative;
@@ -26,17 +27,17 @@ $theme-color-white: #fff;
        position: relative;
        z-index: -3;
        display: flex;
-       width: 100%;
+       width: 50%;
        height: 100%;
        margin: 0;
        padding: 0;
         // padding: 150px 0 0 0;
         // padding: 50px;
-        .dynamicContentBackground {
+        /*.dynamicContentBackground {
           background-color: $theme-color-white;
           width: 80px;
           height: 100%;
-        }
+        }*/
         .dynamicContentText {
           margin: 300x 0 0 0;
           background-color: $theme-color-white;
@@ -81,5 +82,12 @@ $theme-color-white: #fff;
 
         
       }
+
+    .dynamicContentImage {
+      width: 50%;
+      height: 100%;
+      background: #fff url("./ksa_yale.jpg"); //fixed;
+      border: red 1px solid; 
+    }
   }
 }
