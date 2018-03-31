@@ -24,7 +24,7 @@ export class HomePageContainer extends React.Component {
                   <h1 className='title2'>Looking for a new experience?</h1>
                 </div>
                 <div className='homeButtonWrapper'>
-                  <button className='homeButton'><h2>Find a Group</h2></button>
+                  <Link key='groups' to='/groups'><button className='homeButton'><h2>Find a Group</h2></button></Link>
                 </div>
               </div>
             </div>

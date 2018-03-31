@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router';
-import eventImage from './event_poster.jpg';
 
 export class EventItem extends React.Component {
   render() {
@@ -11,21 +10,21 @@ export class EventItem extends React.Component {
             <div className="eventItemContent">
               {/* Image */}
               <div className="eventItemImage">
-                <img src={eventImage} alt="image" />
+                <img src={this.props.eventImg} alt="image" />
               </div>
 
               {/* Date */}
               <div className="eventItemText">
-                <h3 className="eventItemTitle">Dead Poetry: SDHS Open Mic Night</h3>
+                <h3 className="eventItemTitle">{this.props.eventName}</h3>
                 <div className="eventItemHost">
                   <div className="from">
                     <h4>From </h4>
                   </div>
                   <div className="groupLink">
-                    <Link key='group-home' to='/group-home'><h4>Name of Student Group</h4></Link>
+                    <Link key='group-home' to='/group-home'><h4>{this.props.groupName}</h4></Link>
                   </div>
                 </div>
-                <h4 className="eventItemDate">Nov. 14th @ 5PM • SDHS Auditorium</h4>
+                <h4 className="eventItemDate">{this.props.eventDate} • {this.props.eventLoc}</h4>
                 {/* <h4 className="eventItemLoc">- Location</h4> */}
                 {/* Logo
                 <div>

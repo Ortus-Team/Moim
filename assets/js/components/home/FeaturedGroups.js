@@ -2,15 +2,11 @@ import React from 'react';
 
 import { StudentGroupItem } from '../StudentGroupItem';
 
-/*
-NavBar (On all pages)
-  Logo (link: Home)
-  Search
-  Student Group Directory
-  Events
-  Login
-  Translate
-*/
+import logo from './ksa_logo.png';
+var groupName = 'Korean Student Association';
+var groupCat1 = 'Business';
+var groupCat2 = 'Networking';
+var groupMembers = '250 members';
 
 export class FeaturedGroups extends React.Component {
   render() {
@@ -21,14 +17,14 @@ export class FeaturedGroups extends React.Component {
               <h3 className='seeAll'>See all</h3>
             </div>
             <div className="featuredGroups">
-              <StudentGroupItem />
-              <StudentGroupItem />
-              <StudentGroupItem />
+              <StudentGroupItem logo={logo} groupName={groupName} groupCat1={groupCat1} groupCat2={groupCat2} groupMembers={groupMembers} />
+              <StudentGroupItem logo={logo} groupName={groupName} groupCat1={groupCat1} groupCat2={groupCat2} groupMembers={groupMembers} />
+              <StudentGroupItem logo={logo} groupName={groupName} groupCat1={groupCat1} groupCat2={groupCat2} groupMembers={groupMembers} />
             </div>
             <div className="featuredGroups2">
-              <StudentGroupItem />
-              <StudentGroupItem />
-              <StudentGroupItem />
+              <StudentGroupItem logo={logo} groupName={groupName} groupCat1={groupCat1} groupCat2={groupCat2} groupMembers={groupMembers} />
+              <StudentGroupItem logo={logo} groupName={groupName} groupCat1={groupCat1} groupCat2={groupCat2} groupMembers={groupMembers} />
+              <StudentGroupItem logo={logo} groupName={groupName} groupCat1={groupCat1} groupCat2={groupCat2} groupMembers={groupMembers} />
             </div>
         </div>
     );

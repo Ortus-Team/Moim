@@ -8,16 +8,16 @@ export class GroupContentNav extends React.Component {
             <div className="groupContentNav">
                 <div className="groupContentNavLinksWrapper">
                     <div className="groupContentNavLink">
-                        <Link key='group-home' to='/group-home'>Home</Link>
+                        <Link key='group-home' to='/group-home'><p>Home</p></Link>
                     </div>
                     <div className="groupContentNavLink">
-                        <Link key='group-events' to='/group-events'>Events</Link>
+                        <Link key='group-events' to='/group-events'><p>Events</p></Link>
                     </div>
                     <div className="groupContentNavLink">
-                        <Link key='group-people' to='/group-people'>People</Link>
+                        <Link key='group-people' to='/group-people'><p>People</p></Link>
                     </div>
                     <div className="groupContentNavLink">
-                        <Link key='group-gallery' to='/group-gallery'>Gallery</Link>
+                        <Link key='group-gallery' to='/group-gallery'><p>Gallery</p></Link>
                     </div>
                 </div>
             </div>
