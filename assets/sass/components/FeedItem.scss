@@ -1,0 +1,26 @@
+.feedItem {
+    padding: 30px 30px;
+    border: solid 1px lightgrey;
+    border-radius: 2px;
+    height: 320px;
+    margin-bottom: 20px;
+    .feedItemTop {
+        display: flex;
+        .feedItemIcon {
+            height: 50px;
+            width: 50px;
+            background-color: lightgrey;
+            border-radius: 2px;
+            margin-right: 10px;
+        }
+    }
+
+    .feedItemTitle {
+        margin-top: 10px;
+    }
+
+    .feedItemPost {
+        margin-top: 15px;
+    }
+
+}

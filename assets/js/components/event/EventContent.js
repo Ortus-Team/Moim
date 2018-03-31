@@ -15,6 +15,7 @@ export class EventContent extends React.Component {
               <div className='overviewMain'>
                 <h1 className="eventTitle">Dead Poetry</h1>
                 <h3 className="whoDaHost">Hosted by <Link key='group-home' to='/group-home'>Name of Student Group</Link></h3>
+                <p className='eventType'>Social • Networking</p>
               </div>
               <div className="rsvpButts">
                 <button className="rsvpButtI">Interested</button>
@@ -34,7 +35,7 @@ export class EventContent extends React.Component {
                 fresh coconut, trust me. The key to more success is to
                 have alot of pillows. Find peace, life is like a waterfall. Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
                 fresh coconut, trust me. The key to more success is to
-                have alot of pillows. Find peace, life is like a waterfall.</p>
+                have alot of pillows. Find peace, life is like a waterfall. <a href="#">#freepizza</a></p>
               <br />
               <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut,
                 fresh coconut, trust me. The key to more success is to

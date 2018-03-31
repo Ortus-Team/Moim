@@ -13,12 +13,12 @@ export class GroupContent extends React.Component {
                         <div className="groupPageContentLeft">
                             <div className="groupPageAbout">
                                 <h3 className='subheading'>About Us</h3>
-                                <p className='groupSectionDescription'>This is what were about. Lorem Khaled Ipsum is a major key to success. Put it this way, it took me twenty five years to get these plants, twenty five years of blood sweat and tears, and I’m never giving up, I’m just getting started. You see that bamboo behind me though, you see that bamboo? Ain’t nothin’ like bamboo. Bless up. We don’t see them, we will never see them. Don’t ever play yourself. The weather is amazing, walk with me through the pathway of more success. Take this journey with me, Lion!</p>
+                                <p className='groupSectionDescription'>{this.props.aboutGroup}</p>
                                 <Feed />
                             </div>
                             <div className="groupPageEvent">
                                 <h3 className='subheading'>Upcoming Event</h3>
-                                <div className="groupUpcomingEvent"><EventItemSmall /></div>
+                                <div className="groupUpcomingEvent"><EventItemSmall eventImg={this.props.upcomingEvent} eventName={this.props.eventName} groupName={this.props.groupName} eventDate={this.props.eventDate} eventLoc={this.props.eventLoc} /></div>
                             </div>
                         </div>
                         

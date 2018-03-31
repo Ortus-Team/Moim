@@ -18,7 +18,7 @@ export class DynamicContent extends React.Component {
           <div className='dynamicContent'>
             <div className='layer' />
             <div className='dynamicContentTextWrapper'>
-              <div className='dynamicContentBackground' />
+              {/*<div className='dynamicContentBackground' />*/}
               <div className='dynamicContentText'>
                 <div className='titleAndLabel'>
                   <h2 className='titleLabel'>GROUP OF THE WEEK</h2>
@@ -41,6 +41,7 @@ export class DynamicContent extends React.Component {
                 {/*<Link key='group-home' to='/group-home'><button className='button2'><h5>Learn More</h5></button>{/*<p className='learnMore'>Learn more</p>*/}{/*</Link>*/}
               </div>
             </div>
+            <div className='dynamicContentImage' />
           </div>
         </div>
     );

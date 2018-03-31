@@ -57,6 +57,14 @@
                     padding: 5px 40px 10px 0;
                 }
             }
+
+            .dCActivity {
+                .dCInvite {
+                    border: solid 1px $theme-color-lightgrey;
+                    padding: 40px;
+                    margin-top: 40px;
+                }
+            }
         }
     }
 }

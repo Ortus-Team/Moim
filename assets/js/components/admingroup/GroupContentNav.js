@@ -11,7 +11,7 @@ export class GroupContentNav extends React.Component {
                         <Link key='group-home' to='/admin-group-home'>Home</Link>
                     </div>
                     <div className="groupContentNavLink">
-                        <Link key='group-events' to='/group-events'>Events</Link>
+                        <Link key='group-events' to='/admin-group-events'>Events</Link>
                     </div>
                     <div className="groupContentNavLink">
                         <Link key='group-people' to='/admin-group-people'>People</Link>

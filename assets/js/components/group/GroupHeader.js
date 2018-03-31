@@ -7,7 +7,7 @@ export class GroupHeader extends React.Component {
             <div className="groupHeaderContent">
                 <div className="groupHeaderCoverImageWrapper">
                     <div className="groupHeaderCoverImage">
-                        Cover Image
+                        <img src={this.props.coverImage} alt="cover image" />
                     </div>
                 </div>
                 {/*
@@ -22,27 +22,27 @@ export class GroupHeader extends React.Component {
                     
                     <div className="groupHeaderContentWrapperWidth">
                         <div className="groupHeaderLogo">
-                            Logo
+                            <img src={this.props.logo} alt="logo" />
                         </div>
                         <div className="groupHeaderText">
                             <div className="groupHeaderTextLeft">
-                                <h1>Name of Student Group</h1>
+                                <h1>{this.props.groupName}</h1>
                                 <div className="groupTags">
                                     <div className="groupCats">
                                         <div className="groupCat">
-                                            <p className="caption">Business</p>
+                                            <p className="caption">{this.props.groupCat1}</p>
                                         </div>
                                         <div className="groupCat">
-                                            <p className="caption">Networking</p>
+                                            <p className="caption">{this.props.groupCat2}</p>
                                         </div>
                                         <div className="groupSize">
-                                            <p className="caption">250 members</p>
+                                            <p className="caption">{this.props.groupMembers}</p>
                                         </div>
                                     </div> 
                                 </div>
                                 <div className='groupContact'>
-                                    <h6>www.ksauw.com</h6>
-                                    <h6>ksa@uw.edu</h6>
+                                    <h6>{this.props.groupSite}</h6>
+                                    <h6>{this.props.groupEmail}</h6>
                                 </div>
                                 
                             </div>

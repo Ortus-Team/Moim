@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from rest_framework.generics import ListAPIView
 from django.template.defaultfilters import slugify
 from rest_framework.generics import ListAPIView, CreateAPIView
@@ -6,6 +7,8 @@ from rest_framework.decorators import permission_classes
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 from category.models import Category
+from main.models import Member
+from officer.models import Officer
 from org.serializers import OrgSerializer
 from .models import Org
 
@@ -29,15 +32,98 @@ class OrgList(ListAPIView):
 # Add categories to the org
 def add_categories(org, org_categories_string):
     categories = org_categories_string.split(",")
-    org.categories.set([])
+    if not org.categories:
+        org.categories.set([])
     for category in categories:
         category_title = category.strip()
         category_slug = slugify(category_title)
         try:
             category = Category.objects.get(slug=category_slug)
-            org.event_types.add(category)
+            org.categories.add(category)
         except:
-            print('category not found')
+            print('category %s not found' % category_title)
+    return org
+
+
+def remove_categories(org, org_categories_string):
+    categories = org_categories_string.split(",")
+    for category in categories:
+        category_title = category.strip()
+        category_slug = slugify(category_title)
+        try:
+            category = Category.objects.get(slug=category_slug)
+            org.categories.add(category)
+        except:
+            print('category %s not found' % category_title)
+    return org
+
+
+def remove_members(org, members_to_remove):
+    members = members_to_remove.split(",")
+    for member in members:
+        email = member.strip()
+        try:
+            user = User.objects.get(email=email)
+            mem = Member.objects.get(user=user)
+            org.members.remove(mem)
+        except:
+            print('member %s not found' % email)
+    return org
+
+
+def add_members(org, members_to_add):
+    members = members_to_add.split(",")
+    if not org.members:
+        org.members.set([])
+    for member in members:
+        email = member.strip()
+        try:
+            user = User.objects.get(email=email)
+            mem = Member.objects.get(user=user)
+            org.members.add(mem)
+        except:
+            print('member %s not found' % email)
+    return org
+
+
+def remove_members(org, members_to_remove):
+    members = members_to_remove.split(",")
+    for member in members:
+        email = member.strip()
+        try:
+            user = User.objects.get(email=email)
+            mem = Member.objects.get(user=user)
+            org.members.remove(mem)
+        except:
+            print('member %s not found' % email)
+    return org
+
+
+def remove_officers(org, officers_to_remove):
+    officers = officers_to_remove.split(",")
+    for officer in officers:
+        email = officer.strip()
+        try:
+            user = User.objects.get(email=email)
+            offi = Officer.objects.get(user=user)
+            org.members.remove(offi)
+        except:
+            print('member %s not found' % email)
+    return org
+
+
+def add_officers(org, officers_to_add):
+    officers = officers_to_add.split(",")
+    if not org.officers:
+        org.officers.set([])
+    for officer in officers:
+        email = officer.strip()
+        try:
+            user = User.objects.get(email=email)
+            offi = Officer.objects.get(user=user)
+            org.members.add(offi)
+        except:
+            print('member %s not found' % email)
     return org
 
 
@@ -59,6 +145,7 @@ class OrgCreate(CreateAPIView):
 
         org.save()
 
+
 @permission_classes((IsAuthenticated,))
 class OrgRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
     queryset = Org.objects.all()
@@ -68,12 +155,49 @@ class OrgRetrieveUpdateDestroy(RetrieveUpdateDestroyAPIView):
     def perform_update(self, serializer):
         org = serializer.save()
 
-        # Replace categories
         try:
-            categories = str(self.request.data['categories'])
+            categories = str(self.request.data['categories_to_remove'])
+        except:
+            categories = ""
+        if categories:
+            org = remove_categories(org, categories)
+
+        try:
+            categories = str(self.request.data['categories_to_add'])
         except:
             categories = ""
         if categories:
             org = add_categories(org, categories)
 
+        # Remove member
+        try:
+            members_to_remove = str(self.request.data['members_to_remove'])
+        except:
+            members_to_remove = ""
+        if members_to_remove:
+            org = remove_members(org, members_to_remove)
+
+        # Add member
+        try:
+            members_to_add = str(self.request.data['members_to_add'])
+        except:
+            members_to_add = ""
+        if members_to_add:
+            org = add_members(org, members_to_add)
+
+        # Remove officer
+        try:
+            officers_to_remove = str(self.request.data['officers_to_remove'])
+        except:
+            officers_to_remove = ""
+        if members_to_remove:
+            org = remove_officers(org, officers_to_remove)
+
+        # add officer
+        try:
+            officers_to_add = str(self.request.data['officers_to_add'])
+        except:
+            officers_to_add = ""
+        if officers_to_add:
+            org = add_officers(org, officers_to_add)
         org.save()
