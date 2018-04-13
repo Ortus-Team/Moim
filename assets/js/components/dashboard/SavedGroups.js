@@ -6,7 +6,7 @@ var groupName = 'Korean Student Association';
 var groupCat1 = 'Business';
 var groupCat2 = 'Networking';
 var groupMembers = '250 members';
-
+// Need to talk with Yujin
 export class SavedGroups extends React.Component {
   render() {
     return (
